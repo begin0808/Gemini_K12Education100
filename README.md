@@ -14,7 +14,7 @@
 * **繁體中文化構想與在地化整理**：**國立南大附中 李佳恩老師**
   > 「有感於 Google 官方這份高達 129 頁的 AI 教育指南內容極具深度與前瞻性，但全英文且篇幅龐大，許多科目老師看到英文往往直接放棄。特提出繁中化構想並製作成互動實踐指南網頁，希望能推廣這寶貴教材。」
 * **意見交流與修訂建議**：歡迎各級學校教師來信交流教學心得或提供勘誤建議：[`begin@gm.tntcsh.tn.edu.tw`](mailto:begin@gm.tntcsh.tn.edu.tw)
-* **技術協作與前端建置**：Google Antigravity AI & Gemini 3.8 Flash
+* **技術協作與前端建置**：Google Antigravity IDE & Gemini 3.8 Flash
 
 ---
 
@@ -80,69 +80,10 @@ python -m http.server 8080
 
 ---
 
-## 📤 GitHub 上傳與公開發布教學
+## 🌐 線上公開實戰指南
 
-本專案對應之 GitHub 儲存庫：
-**`https://github.com/begin0808/Gemini_K12Education100`**
-
-### ⚠️ 重要提醒：哪些檔案可以上傳？哪些絕對不要上傳？
-
-| 檔案名稱 / 類型 | 是否上傳？ | 重要說明 |
-| :--- | :---: | :--- |
-| `index.html` | ✅ **必須上傳** | 網站主頁面結構與分頁切換容器 |
-| `css/style.css` | ✅ **必須上傳** | 樣式表、響應式選單、主題配色 |
-| `js/data.js` | ✅ **必須上傳** | 核心繁中資料庫（296 KB，內含 129 頁翻譯與 48+ 提示詞） |
-| `js/app.js` | ✅ **必須上傳** | 互動邏輯、分頁切換、搜尋、收藏夾 |
-| `assets/images/` | ✅ **必須上傳** | 簡報投影片截圖與示意圖檔 |
-| `README.md` | ✅ **必須上傳** | 專案說明、教學與版權致謝 |
-| `.gitignore` | ✅ **必須上傳** | 防止大檔案意外上傳的設定檔 |
-| `啟動網站.bat` | ✅ **可上傳** | 方便 Windows 使用者一鍵啟動的便利小工具 |
-| **`presentation.pptx` (251 MB)** | ❌ **絕對不可上傳** | **超過 GitHub 100MB 單一檔案上限**！若上傳會導致 `git push` 被 GitHub 拒絕報錯！已在 `.gitignore` 自動排除。 |
-| `slides.pptx` (13 MB) | ❌ **不要上傳** | 本機備份檔，網站運作不需要 |
-| `*.txt`, `*_extracted.json`, `scratch/` | ❌ **不要上傳** | 中間萃取產生的暫存檔，數據皆已收錄於 `js/data.js` |
-
----
-
-### 💻 3 步驟上傳至 GitHub（在專案資料夾執行）
-
-請在專案根目錄（`d:\Antigravity\100+`）打開 PowerShell 或 Terminal，依序複製貼上以下指令：
-
-```bash
-# 1. 初始化 Git 儲存庫
-git init
-
-# 2. 加入所有核心程式碼（.gitignore 會自動安全排除 251MB 的 pptx 與暫存檔）
-git add .
-
-# 3. 提交版本紀錄
-git commit -m "feat: 運用 Gemini 於 K-12 中小學教育的 100+ 種方法 (繁中互動實踐指南)"
-
-# 4. 設定 main 主分支
-git branch -M main
-
-# 5. 關聯至您的 GitHub Repo
-git remote add origin https://github.com/begin0808/Gemini_K12Education100.git
-
-# 6. 推送至 GitHub
-git push -u origin main
-```
-
----
-
-### 🌐 免費啟用 GitHub Pages 讓全台老師線上使用
-
-推送成功後，只需在 GitHub 點擊 2 下即可產生專屬線上網址：
-
-1. 進入您的 GitHub Repo 頁面：`https://github.com/begin0808/Gemini_K12Education100`
-2. 點擊頂部的 **「Settings」**（設定）標籤頁。
-3. 在左側選單點選 **「Pages」**。
-4. 在 **「Build and deployment」** 區塊：
-   - **Source** 選擇：`Deploy from a branch`
-   - **Branch** 選擇：`main`，資料夾選擇 `/ (root)`
-   - 按下 **「Save」**（儲存）。
-5. 等候約 1~2 分鐘，頁面頂端即會顯示您的正式公開網址：
-   👉 **`https://begin0808.github.io/Gemini_K12Education100/`**
-6. 現在您可以將這個網址分享給全台各級中小學老師、輔導團或各學科教師研習社群！
+本指南已正式發布於 GitHub Pages，歡迎全台中小學教師與教育夥伴直接線上使用與分享：
+👉 **[https://begin0808.github.io/Gemini_K12Education100/](https://begin0808.github.io/Gemini_K12Education100/)**
 
 ---
 
