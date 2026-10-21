@@ -58,10 +58,6 @@
         <button type="button" class="subnav-btn active" data-tab="tab-overview" onclick="switchTab('tab-overview')">
           <span>🏠 總覽導讀</span>
         </button>
-        <button type="button" class="subnav-btn" data-tab="tab-classroom" onclick="switchTab('tab-classroom')">
-          <span>🏫 Classroom 鷹架</span>
-          <span class="badge-num">12</span>
-        </button>
         <button type="button" class="subnav-btn" data-tab="tab-parts" onclick="switchTab('tab-parts')">
           <span>✨ PARTS 心法</span>
         </button>
@@ -72,10 +68,6 @@
           <span>📚 實戰提示詞庫</span>
           <span class="badge-num">48+</span>
         </button>
-        <button type="button" class="subnav-btn" data-tab="tab-deck" onclick="switchTab('tab-deck')">
-          <span>📖 129頁全簡報</span>
-          <span class="badge-num">129</span>
-        </button>
         <button type="button" class="subnav-btn" data-tab="tab-gems" onclick="switchTab('tab-gems')">
           <span>💎 自訂專家 Gems</span>
           <span class="badge-num">7</span>
@@ -83,8 +75,16 @@
         <button type="button" class="subnav-btn" data-tab="tab-notebooklm" onclick="switchTab('tab-notebooklm')">
           <span>📓 NotebookLM</span>
         </button>
+        <button type="button" class="subnav-btn" data-tab="tab-classroom" onclick="switchTab('tab-classroom')">
+          <span>🏫 Classroom 鷹架</span>
+          <span class="badge-num">12</span>
+        </button>
         <button type="button" class="subnav-btn" data-tab="tab-workspace" onclick="switchTab('tab-workspace')">
           <span>💼 Workspace 整合</span>
+        </button>
+        <button type="button" class="subnav-btn" data-tab="tab-deck" onclick="switchTab('tab-deck')">
+          <span>📖 129頁全簡報</span>
+          <span class="badge-num">129</span>
         </button>
       </div>
     </nav>
@@ -112,11 +112,7 @@
 
           <!-- Action Chips -->
           <div class="hero-quick-actions">
-            <button type="button" class="action-chip featured" onclick="switchTab('tab-classroom')">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-              探索 Classroom 鷹架工具
-            </button>
-            <button type="button" class="action-chip" onclick="switchTab('tab-parts')">
+            <button type="button" class="action-chip featured" onclick="switchTab('tab-parts')">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
               學習 PARTS 提示詞心法
             </button>
@@ -128,10 +124,6 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
               瀏覽 48+ 實戰提示詞
             </button>
-            <button type="button" class="action-chip" onclick="switchTab('tab-deck')">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-              129 頁全簡報閱覽
-            </button>
             <button type="button" class="action-chip" onclick="switchTab('tab-gems')">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"></path></svg>
               自訂專家 Gems
@@ -140,9 +132,17 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
               NotebookLM 知識庫
             </button>
+            <button type="button" class="action-chip" onclick="switchTab('tab-classroom')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              Classroom 鷹架工具
+            </button>
             <button type="button" class="action-chip" onclick="switchTab('tab-workspace')">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
               Workspace 跨工具整合
+            </button>
+            <button type="button" class="action-chip" onclick="switchTab('tab-deck')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              129 頁全簡報閱覽
             </button>
           </div>
 
@@ -168,7 +168,183 @@
         </div>
       </section>
 
-      <!-- 9-Module Feature Portal Cards -->
+      <!-- 🏛️ Official Curriculum Architecture Roadmap (Google 129-Page 5-Pillar Blueprint) -->
+      <section class="roadmap-section" id="curriculum-roadmap">
+        <div class="roadmap-card">
+          <div class="roadmap-header">
+            <div class="roadmap-badge">
+              <span class="roadmap-badge-dot"></span>
+              <span>核心課程骨幹 · 五大支柱與逐頁導引</span>
+            </div>
+            <h2 class="roadmap-title">
+              Google 129 頁官方簡報核心架構
+            </h2>
+            <p class="roadmap-subtitle">
+              本指南完整解構 Google 原廠 129 頁簡報教材，系統化梳理為<strong>五大核心教學支柱</strong>與<strong>全景對照附錄</strong>。透過結構化學習地圖，循序漸進從提問心法到行政整合，點擊專屬按鈕可直達功能專區：
+            </p>
+
+            <!-- Visual Terminal Tree Preview Box -->
+            <div class="roadmap-ascii-box">
+              <pre class="roadmap-ascii-pre"><code>Google 129 頁官方簡報核心架構
+├── 1. 提示詞基礎與 PARTS 心法（第 1 ~ 47 頁）          👉 【PARTS 心法】與【實戰提示詞庫】
+├── 2. 自訂教學專家 Gems（第 48 ~ 60 頁）             👉 【自訂專家 Gems】專區
+├── 3. Gemini in NotebookLM 知識庫（第 61 ~ 77 頁）     👉 【NotebookLM】專區
+├── 4. Classroom 課堂鷹架工具（第 78 ~ 108 頁）        👉 【Classroom 鷹架】專區
+├── 5. Google Workspace 跨工具實務（第 109 ~ 124 頁）   👉 【Workspace 整合】專區
+└── 附錄. 129 頁全簡報逐頁全景對照（第 1 ~ 129 頁）      👉 【129 頁全簡報】逐頁對照</code></pre>
+            </div>
+          </div>
+
+          <!-- Tree / Flow Nodes -->
+          <div class="roadmap-tree-container">
+            <!-- Pillar 1 -->
+            <div class="roadmap-node pillar-1">
+              <div class="node-left">
+                <span class="node-icon">✨</span>
+              </div>
+              <div class="node-body">
+                <div class="node-meta-row">
+                  <span class="node-pillar-tag">支柱 1</span>
+                  <span class="node-pages-badge">原報第 1 ~ 47 頁</span>
+                  <span class="node-status-chip">基礎奠定 · 核心心法</span>
+                </div>
+                <h3 class="node-title">提示詞基礎與 PARTS 心法</h3>
+                <p class="node-desc">
+                  掌握角色（Persona）、任務（Act）、對象（Recipient）、主題（Theme）與格式結構（Structure）五大提問要素。從單句模糊指令進階至專家級提示詞，並提供各學科 48+ 實戰提示詞範本與即時拼裝生成器。
+                </p>
+                <div class="node-chips-row">
+                  <button type="button" class="node-chip" onclick="switchTab('tab-parts')">
+                    👉 前往【PARTS 心法】
+                  </button>
+                  <button type="button" class="node-chip" onclick="switchTab('tab-builder')">
+                    👉 前往【提示詞生成器】
+                  </button>
+                  <button type="button" class="node-chip" onclick="switchTab('tab-catalog')">
+                    👉 瀏覽【48+ 實戰提示詞庫】
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="roadmap-node pillar-2">
+              <div class="node-left">
+                <span class="node-icon">💎</span>
+              </div>
+              <div class="node-body">
+                <div class="node-meta-row">
+                  <span class="node-pillar-tag">支柱 2</span>
+                  <span class="node-pages-badge">原報第 48 ~ 60 頁</span>
+                  <span class="node-status-chip">進階客製 · 專屬教練</span>
+                </div>
+                <h3 class="node-title">自訂教學專家 Gems</h3>
+                <p class="node-desc">
+                  無需程式碼！利用系統指示詞（System Prompt）打造 24 小時在線學科助教、蘇格拉底探究夥伴、寫作評量導師與個別化學習教練，實現差異化分層引導。
+                </p>
+                <div class="node-chips-row">
+                  <button type="button" class="node-chip primary" onclick="switchTab('tab-gems')">
+                    👉 前往【自訂專家 Gems】專區
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="roadmap-node pillar-3">
+              <div class="node-left">
+                <span class="node-icon">📓</span>
+              </div>
+              <div class="node-body">
+                <div class="node-meta-row">
+                  <span class="node-pillar-tag">支柱 3</span>
+                  <span class="node-pages-badge">原報第 61 ~ 77 頁</span>
+                  <span class="node-status-chip">零幻覺教研 · 智慧知識庫</span>
+                </div>
+                <h3 class="node-title">Gemini in NotebookLM 知識庫</h3>
+                <p class="node-desc">
+                  回答 100% 嚴格根植於教師上傳的教材與課綱，徹底解決 AI 幻覺問題。支援多格式教材交叉比對、生成單元心智圖、雙人語音對談 Podcast 與 8 週物理貫穿範例。
+                </p>
+                <div class="node-chips-row">
+                  <button type="button" class="node-chip primary" onclick="switchTab('tab-notebooklm')">
+                    👉 前往【NotebookLM】專區
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="roadmap-node pillar-4">
+              <div class="node-left">
+                <span class="node-icon">🏫</span>
+              </div>
+              <div class="node-body">
+                <div class="node-meta-row">
+                  <span class="node-pillar-tag">支柱 4</span>
+                  <span class="node-pages-badge">原報第 78 ~ 108 頁</span>
+                  <span class="node-status-chip">課堂即用 · 引導鷹架</span>
+                </div>
+                <h3 class="node-title">Classroom 課堂鷹架工具</h3>
+                <p class="node-desc">
+                  專為中小學課堂教學情境設計的 12 種引導式 AI 鷹架：課程單元設計、說明用教材、分層提問、表現規準評分量表（Rubrics）與情境化引導，大幅減少課前準備負擔。
+                </p>
+                <div class="node-chips-row">
+                  <button type="button" class="node-chip primary" onclick="switchTab('tab-classroom')">
+                    👉 前往【Classroom 鷹架】專區
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pillar 5 -->
+            <div class="roadmap-node pillar-5">
+              <div class="node-left">
+                <span class="node-icon">💼</span>
+              </div>
+              <div class="node-body">
+                <div class="node-meta-row">
+                  <span class="node-pillar-tag">支柱 5</span>
+                  <span class="node-pages-badge">原報第 109 ~ 124 頁</span>
+                  <span class="node-status-chip">行政協同 · 辦公生態圈</span>
+                </div>
+                <h3 class="node-title">Google Workspace 跨工具實務</h3>
+                <p class="node-desc">
+                  無縫串聯 Google 常用教學辦公工具：Docs 批改回饋、Gmail 親師信函、Sheets 函數評量、Forms 一鍵出題、Meet 摘要及 Vids 影音教材。
+                </p>
+                <div class="node-chips-row">
+                  <button type="button" class="node-chip primary" onclick="switchTab('tab-workspace')">
+                    👉 前往【Workspace 整合】專區
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Appendix / Deck Node -->
+            <div class="roadmap-node pillar-appendix">
+              <div class="node-left">
+                <span class="node-icon">📖</span>
+              </div>
+              <div class="node-body">
+                <div class="node-meta-row">
+                  <span class="node-pillar-tag appendix">全景對照附錄</span>
+                  <span class="node-pages-badge highlight">原報第 1 ~ 129 頁完整對照</span>
+                  <span class="node-status-chip">官方原貌 · 逐頁參照</span>
+                </div>
+                <h3 class="node-title">129 頁全簡報逐頁全景閱覽</h3>
+                <p class="node-desc">
+                  完整收錄 Google 原廠 129 張高解析度投影片截圖與中英雙語對照，包含完整章節目錄跳轉、核心提示詞提煉與英文原稿複製，作為教師備課與研習時的權威查閱對照庫。
+                </p>
+                <div class="node-chips-row">
+                  <button type="button" class="node-chip highlight" onclick="switchTab('tab-deck')">
+                    👉 前往【129 頁全簡報】逐頁對照
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9-Module Feature Portal Cards (Ordered by Curriculum Pillars) -->
       <section class="portal-matrix-section">
         <div class="portal-matrix-head">
           <h2 class="portal-matrix-title">
@@ -178,42 +354,37 @@
         </div>
 
         <div class="portal-matrix-grid">
-          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #1a73e8, #0d904f);" onclick="switchTab('tab-classroom')">
-            <div class="portal-card-top">
-              <div class="portal-card-icon" style="background: rgba(26, 115, 232, 0.12); color: #1a73e8;">🏫</div>
-              <div class="portal-card-meta">
-                <div class="portal-card-title">
-                  Classroom 鷹架工具
-                  <span class="portal-card-badge">12 種</span>
-                </div>
-                <div class="portal-card-desc">引導式 AI 範本：備課規劃、說明用教材、分層提問、表現規準量表一鍵生成。</div>
-              </div>
-            </div>
-            <div class="portal-card-action">進入專區 ➜</div>
-          </div>
-
+          <!-- Card 1: PARTS (Pillar 1) -->
           <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #7c3aed, #ea4335);" onclick="switchTab('tab-parts')">
             <div class="portal-card-top">
               <div class="portal-card-icon" style="background: rgba(124, 58, 237, 0.12); color: #7c3aed;">✨</div>
               <div class="portal-card-meta">
-                <div class="portal-card-title">PARTS 提示詞心法</div>
+                <div class="portal-card-title">
+                  PARTS 提示詞心法
+                  <span class="portal-card-badge">支柱 1</span>
+                </div>
                 <div class="portal-card-desc">Google 官方提問心法：Persona, Act, Recipient, Theme, Structure 五大要素與實戰進化對比。</div>
               </div>
             </div>
             <div class="portal-card-action">學習心法 ➜</div>
           </div>
 
+          <!-- Card 2: Builder (Pillar 1 Tool) -->
           <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #f29900, #ea4335);" onclick="switchTab('tab-builder')">
             <div class="portal-card-top">
               <div class="portal-card-icon" style="background: rgba(242, 153, 0, 0.12); color: #f29900;">⚡</div>
               <div class="portal-card-meta">
-                <div class="portal-card-title">提示詞客製生成器</div>
+                <div class="portal-card-title">
+                  提示詞客製生成器
+                  <span class="portal-card-badge">工具</span>
+                </div>
                 <div class="portal-card-desc">4 步自選年級、學科領域、單元核心主題與 5E/量表架構，即時拼裝專業高階提示詞。</div>
               </div>
             </div>
             <div class="portal-card-action">立即生成 ➜</div>
           </div>
 
+          <!-- Card 3: Catalog (Pillar 1 Library) -->
           <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #0d904f, #1a73e8);" onclick="switchTab('tab-catalog')">
             <div class="portal-card-top">
               <div class="portal-card-icon" style="background: rgba(13, 144, 79, 0.12); color: #0d904f;">📚</div>
@@ -228,27 +399,14 @@
             <div class="portal-card-action">查閱詞庫 ➜</div>
           </div>
 
-          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #1a73e8, #7c3aed);" onclick="switchTab('tab-deck')">
-            <div class="portal-card-top">
-              <div class="portal-card-icon" style="background: rgba(26, 115, 232, 0.12); color: #7c3aed;">📖</div>
-              <div class="portal-card-meta">
-                <div class="portal-card-title">
-                  129 頁全簡報閱覽
-                  <span class="portal-card-badge">129 頁</span>
-                </div>
-                <div class="portal-card-desc">逐頁原廠高解析投影片截圖、繁中重點導讀、核心提示詞提煉與章節目錄跳轉。</div>
-              </div>
-            </div>
-            <div class="portal-card-action">逐頁閱覽 ➜</div>
-          </div>
-
+          <!-- Card 4: Gems (Pillar 2) -->
           <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #7c3aed, #12b5cb);" onclick="switchTab('tab-gems')">
             <div class="portal-card-top">
               <div class="portal-card-icon" style="background: rgba(124, 58, 237, 0.12); color: #12b5cb;">💎</div>
               <div class="portal-card-meta">
                 <div class="portal-card-title">
                   自訂專家 Gems
-                  <span class="portal-card-badge">7 位</span>
+                  <span class="portal-card-badge">7 位 · 支柱 2</span>
                 </div>
                 <div class="portal-card-desc">打造 24 小時在線學科專家：學習教練、寫作評量導師、蘇格拉底探究夥伴等完整 System Prompt。</div>
               </div>
@@ -256,28 +414,67 @@
             <div class="portal-card-action">探索專家 ➜</div>
           </div>
 
+          <!-- Card 5: NotebookLM (Pillar 3) -->
           <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #12b5cb, #1a73e8);" onclick="switchTab('tab-notebooklm')">
             <div class="portal-card-top">
               <div class="portal-card-icon" style="background: rgba(18, 181, 203, 0.12); color: #12b5cb;">📓</div>
               <div class="portal-card-meta">
-                <div class="portal-card-title">NotebookLM 知識庫</div>
+                <div class="portal-card-title">
+                  NotebookLM 知識庫
+                  <span class="portal-card-badge">支柱 3</span>
+                </div>
                 <div class="portal-card-desc">100% 根植於教師上傳文件的零幻覺教研神器！8 週物理單元貫穿示範、音訊導覽 Podcast 與心智圖。</div>
               </div>
             </div>
             <div class="portal-card-action">了解實戰 ➜</div>
           </div>
 
+          <!-- Card 6: Classroom (Pillar 4) -->
+          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #1a73e8, #0d904f);" onclick="switchTab('tab-classroom')">
+            <div class="portal-card-top">
+              <div class="portal-card-icon" style="background: rgba(26, 115, 232, 0.12); color: #1a73e8;">🏫</div>
+              <div class="portal-card-meta">
+                <div class="portal-card-title">
+                  Classroom 鷹架工具
+                  <span class="portal-card-badge">12 種 · 支柱 4</span>
+                </div>
+                <div class="portal-card-desc">引導式 AI 範本：備課規劃、說明用教材、分層提問、表現規準量表一鍵生成。</div>
+              </div>
+            </div>
+            <div class="portal-card-action">進入專區 ➜</div>
+          </div>
+
+          <!-- Card 7: Workspace (Pillar 5) -->
           <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #e37400, #ea4335);" onclick="switchTab('tab-workspace')">
             <div class="portal-card-top">
               <div class="portal-card-icon" style="background: rgba(227, 116, 0, 0.12); color: #ea4335;">💼</div>
               <div class="portal-card-meta">
-                <div class="portal-card-title">Workspace 跨工具整合</div>
+                <div class="portal-card-title">
+                  Workspace 跨工具整合
+                  <span class="portal-card-badge">支柱 5</span>
+                </div>
                 <div class="portal-card-desc">Docs 個別化回饋、Gmail 同理心家長回信、Sheets 複雜加權公式、Forms 一鍵出題、Meet 逐字摘要與 Vids 微短片。</div>
               </div>
             </div>
             <div class="portal-card-action">探索工具 ➜</div>
           </div>
 
+          <!-- Card 8: 129 Full Deck (Appendix) -->
+          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #ea4335, #7c3aed);" onclick="switchTab('tab-deck')">
+            <div class="portal-card-top">
+              <div class="portal-card-icon" style="background: rgba(234, 67, 53, 0.12); color: #ea4335;">📖</div>
+              <div class="portal-card-meta">
+                <div class="portal-card-title">
+                  129 頁全簡報閱覽
+                  <span class="portal-card-badge">附錄 · 129 頁</span>
+                </div>
+                <div class="portal-card-desc">逐頁原廠高解析投影片截圖、繁中重點導讀、核心提示詞提煉與章節目錄跳轉。</div>
+              </div>
+            </div>
+            <div class="portal-card-action">逐頁閱覽 ➜</div>
+          </div>
+
+          <!-- Card 9: Favorites Modal Trigger -->
           <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #ea4335, #f28b82);" onclick="openFavoritesModal()">
             <div class="portal-card-top">
               <div class="portal-card-icon" style="background: rgba(234, 67, 53, 0.12); color: #ea4335;">❤️</div>
