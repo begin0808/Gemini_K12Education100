@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>運用 Gemini 於 K-12 中小學教育的 100+ 種方法 | Google for Education 繁體中文互動實戰指南</title>
+  <meta name="description" content="Google 官方《100+ ways to use Gemini in K-12 education》完整繁體中文網站。收錄 Google Classroom 鷹架工具、PARTS 提示詞框架、48+ 實戰教學提示詞庫、自訂 Gems 專家與 129 頁全簡報互動解析。">
+  <meta name="keywords" content="Google Classroom, Gemini, 生成式AI, K-12教育, 教師AI工具, PARTS提示詞, NotebookLM, Google Workspace">
+  
+  <!-- Google Fonts: Noto Sans TC, Inter, Roboto Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Glassmorphism Navigation Bar -->
+  <header class="navbar" id="top-nav">
+    <div class="nav-container">
+      <a class="nav-brand" href="#overview" onclick="switchTab('tab-overview'); return false;">
+        <div class="nav-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">Gemini in K-12 Education</span>
+          <span class="nav-brand-subtitle">Google 教育官方指南 · 繁體中文實戰手冊</span>
+        </div>
+      </a>
+
+      <!-- Quick Search Bar -->
+      <div class="nav-search-wrap">
+        <svg class="nav-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="nav-search-input" class="nav-search-input" placeholder="搜尋提示詞、功能（如：教案、評量、測驗、Classroom）...">
+        <kbd class="nav-search-kbd">/</kbd>
+      </div>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <button class="nav-btn" onclick="openFavoritesModal()" title="查看已收藏的提示詞">
+          <span>❤️ 收藏</span>
+          <span class="badge-pill" id="fav-count-badge" style="display: none; background: var(--accent-coral); color: white; border: none;">0</span>
+        </button>
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="切換深色/淺色主題">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Secondary Sticky Subnav Bar -->
+    <nav class="subnav-bar" id="main-subnav">
+      <div class="subnav-container">
+        <button type="button" class="subnav-btn active" data-tab="tab-overview" onclick="switchTab('tab-overview')">
+          <span>🏠 總覽導讀</span>
+        </button>
+        <button type="button" class="subnav-btn" data-tab="tab-classroom" onclick="switchTab('tab-classroom')">
+          <span>🏫 Classroom 鷹架</span>
+          <span class="badge-num">12</span>
+        </button>
+        <button type="button" class="subnav-btn" data-tab="tab-parts" onclick="switchTab('tab-parts')">
+          <span>✨ PARTS 心法</span>
+        </button>
+        <button type="button" class="subnav-btn" data-tab="tab-builder" onclick="switchTab('tab-builder')">
+          <span>⚡ 提示詞生成器</span>
+        </button>
+        <button type="button" class="subnav-btn" data-tab="tab-catalog" onclick="switchTab('tab-catalog')">
+          <span>📚 實戰提示詞庫</span>
+          <span class="badge-num">48+</span>
+        </button>
+        <button type="button" class="subnav-btn" data-tab="tab-deck" onclick="switchTab('tab-deck')">
+          <span>📖 129頁全簡報</span>
+          <span class="badge-num">129</span>
+        </button>
+        <button type="button" class="subnav-btn" data-tab="tab-gems" onclick="switchTab('tab-gems')">
+          <span>💎 自訂專家 Gems</span>
+          <span class="badge-num">7</span>
+        </button>
+        <button type="button" class="subnav-btn" data-tab="tab-notebooklm" onclick="switchTab('tab-notebooklm')">
+          <span>📓 NotebookLM</span>
+        </button>
+        <button type="button" class="subnav-btn" data-tab="tab-workspace" onclick="switchTab('tab-workspace')">
+          <span>💼 Workspace 整合</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Layout (Single-View Tabbed Architecture) -->
+  <main class="main-wrapper">
+
+    <!-- VIEW 1: 首頁總覽與導讀 -->
+    <div class="tab-view active" id="tab-overview">
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero">
+        <div class="hero-glow-blob"></div>
+        <div class="hero-header">
+          <div class="hero-badge-pill">
+            <span>🌟 Google for Education 官方指南 · 繁體中文全解讀版</span>
+          </div>
+          <h1 class="hero-title">
+            運用 Gemini 於 K-12 教育的 <br>
+            <span class="gradient-text">100+ 種創新實踐方法</span>
+          </h1>
+          <p class="hero-desc">
+            由 Google 與全球頂尖教育工作者共同編撰。將複雜的英文簡報轉化為親切易懂的繁體中文互動實戰指南，幫助中小學教師、行政團隊與學生把構想化為初稿，釋放時間、激發創意、深化教學成效！
+          </p>
+
+          <!-- Action Chips -->
+          <div class="hero-quick-actions">
+            <button type="button" class="action-chip featured" onclick="switchTab('tab-classroom')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              探索 Classroom 鷹架工具
+            </button>
+            <button type="button" class="action-chip" onclick="switchTab('tab-parts')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              學習 PARTS 提示詞心法
+            </button>
+            <button type="button" class="action-chip" onclick="switchTab('tab-builder')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              提示詞客製生成器
+            </button>
+            <button type="button" class="action-chip" onclick="switchTab('tab-catalog')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              瀏覽 48+ 實戰提示詞
+            </button>
+            <button type="button" class="action-chip" onclick="switchTab('tab-deck')">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              129 頁全簡報閱覽
+            </button>
+          </div>
+
+          <!-- Stats Grid -->
+          <div class="hero-stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">129<span class="stat-unit">頁</span></div>
+              <div class="stat-label">官方簡報完整在地化</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">12<span class="stat-unit">個</span></div>
+              <div class="stat-label">Classroom 課堂鷹架工具</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">48<span class="stat-unit">+則</span></div>
+              <div class="stat-label">各學科雙語提示詞範本</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">9<span class="stat-unit">大</span></div>
+              <div class="stat-label">教育生成式 AI 核心模組</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9-Module Feature Portal Cards -->
+      <section class="portal-matrix-section">
+        <div class="portal-matrix-head">
+          <h2 class="portal-matrix-title">
+            <span>🧭</span> 核心實戰模組導覽地圖
+          </h2>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">點選任一卡片可直接切換至該專屬頁面</span>
+        </div>
+
+        <div class="portal-matrix-grid">
+          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #1a73e8, #0d904f);" onclick="switchTab('tab-classroom')">
+            <div class="portal-card-top">
+              <div class="portal-card-icon" style="background: rgba(26, 115, 232, 0.12); color: #1a73e8;">🏫</div>
+              <div class="portal-card-meta">
+                <div class="portal-card-title">
+                  Classroom 鷹架工具
+                  <span class="portal-card-badge">12 種</span>
+                </div>
+                <div class="portal-card-desc">引導式 AI 範本：備課規劃、說明用教材、分層提問、表現規準量表一鍵生成。</div>
+              </div>
+            </div>
+            <div class="portal-card-action">進入專區 ➜</div>
+          </div>
+
+          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #7c3aed, #ea4335);" onclick="switchTab('tab-parts')">
+            <div class="portal-card-top">
+              <div class="portal-card-icon" style="background: rgba(124, 58, 237, 0.12); color: #7c3aed;">✨</div>
+              <div class="portal-card-meta">
+                <div class="portal-card-title">PARTS 提示詞心法</div>
+                <div class="portal-card-desc">Google 官方提問心法：Persona, Act, Recipient, Theme, Structure 五大要素與實戰進化對比。</div>
+              </div>
+            </div>
+            <div class="portal-card-action">學習心法 ➜</div>
+          </div>
+
+          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #f29900, #ea4335);" onclick="switchTab('tab-builder')">
+            <div class="portal-card-top">
+              <div class="portal-card-icon" style="background: rgba(242, 153, 0, 0.12); color: #f29900;">⚡</div>
+              <div class="portal-card-meta">
+                <div class="portal-card-title">提示詞客製生成器</div>
+                <div class="portal-card-desc">4 步自選年級、學科領域、單元核心主題與 5E/量表架構，即時拼裝專業高階提示詞。</div>
+              </div>
+            </div>
+            <div class="portal-card-action">立即生成 ➜</div>
+          </div>
+
+          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #0d904f, #1a73e8);" onclick="switchTab('tab-catalog')">
+            <div class="portal-card-top">
+              <div class="portal-card-icon" style="background: rgba(13, 144, 79, 0.12); color: #0d904f;">📚</div>
+              <div class="portal-card-meta">
+                <div class="portal-card-title">
+                  實戰提示詞資料庫
+                  <span class="portal-card-badge">48+ 則</span>
+                </div>
+                <div class="portal-card-desc">依學科、工具、角色多維篩選；附帶繁中翻譯、英文原文對照、愛心隨身收藏與一鍵複製。</div>
+              </div>
+            </div>
+            <div class="portal-card-action">查閱詞庫 ➜</div>
+          </div>
+
+          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #1a73e8, #7c3aed);" onclick="switchTab('tab-deck')">
+            <div class="portal-card-top">
+              <div class="portal-card-icon" style="background: rgba(26, 115, 232, 0.12); color: #7c3aed;">📖</div>
+              <div class="portal-card-meta">
+                <div class="portal-card-title">
+                  129 頁全簡報閱覽
+                  <span class="portal-card-badge">129 頁</span>
+                </div>
+                <div class="portal-card-desc">逐頁原廠高解析投影片截圖、繁中重點導讀、核心提示詞提煉與章節目錄跳轉。</div>
+              </div>
+            </div>
+            <div class="portal-card-action">逐頁閱覽 ➜</div>
+          </div>
+
+          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #7c3aed, #12b5cb);" onclick="switchTab('tab-gems')">
+            <div class="portal-card-top">
+              <div class="portal-card-icon" style="background: rgba(124, 58, 237, 0.12); color: #12b5cb;">💎</div>
+              <div class="portal-card-meta">
+                <div class="portal-card-title">
+                  自訂專家 Gems
+                  <span class="portal-card-badge">7 位</span>
+                </div>
+                <div class="portal-card-desc">打造 24 小時在線學科專家：學習教練、寫作評量導師、蘇格拉底探究夥伴等完整 System Prompt。</div>
+              </div>
+            </div>
+            <div class="portal-card-action">探索專家 ➜</div>
+          </div>
+
+          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #12b5cb, #1a73e8);" onclick="switchTab('tab-notebooklm')">
+            <div class="portal-card-top">
+              <div class="portal-card-icon" style="background: rgba(18, 181, 203, 0.12); color: #12b5cb;">📓</div>
+              <div class="portal-card-meta">
+                <div class="portal-card-title">NotebookLM 知識庫</div>
+                <div class="portal-card-desc">100% 根植於教師上傳文件的零幻覺教研神器！8 週物理單元貫穿示範、音訊導覽 Podcast 與心智圖。</div>
+              </div>
+            </div>
+            <div class="portal-card-action">了解實戰 ➜</div>
+          </div>
+
+          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #e37400, #ea4335);" onclick="switchTab('tab-workspace')">
+            <div class="portal-card-top">
+              <div class="portal-card-icon" style="background: rgba(227, 116, 0, 0.12); color: #ea4335;">💼</div>
+              <div class="portal-card-meta">
+                <div class="portal-card-title">Workspace 跨工具整合</div>
+                <div class="portal-card-desc">Docs 個別化回饋、Gmail 同理心家長回信、Sheets 複雜加權公式、Forms 一鍵出題、Meet 逐字摘要與 Vids 微短片。</div>
+              </div>
+            </div>
+            <div class="portal-card-action">探索工具 ➜</div>
+          </div>
+
+          <div class="portal-nav-card" style="--accent-gradient: linear-gradient(180deg, #ea4335, #f28b82);" onclick="openFavoritesModal()">
+            <div class="portal-card-top">
+              <div class="portal-card-icon" style="background: rgba(234, 67, 53, 0.12); color: #ea4335;">❤️</div>
+              <div class="portal-card-meta">
+                <div class="portal-card-title">我的隨身收藏庫</div>
+                <div class="portal-card-desc">瀏覽過程中隨時點擊愛心圖示，將心儀的實戰提示詞保存至專屬清單，備課時一鍵調用。</div>
+              </div>
+            </div>
+            <div class="portal-card-action">查看收藏 ➜</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- VIEW 2: CLASSROOM 鷹架工具專區 -->
+    <div class="tab-view" id="tab-classroom">
+      <section class="section-block" id="classroom-section">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="section-icon-badge" style="background: linear-gradient(135deg, #1a73e8, #0d904f);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          </div>
+          <div>
+            <h2 class="section-title">運用 Gemini 建立內容和資源 (Google Classroom)</h2>
+            <div class="section-subtitle">根據適用年級、主題或學習目標生成資源，把構想化為初稿</div>
+          </div>
+        </div>
+        <span class="section-tag-badge">對應投影片 第 78 - 108 頁</span>
+      </div>
+
+      <!-- Classroom Filter Bar (Matching user screenshot tabs) -->
+      <div class="classroom-banner-card">
+        <div style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+          在 Google Classroom 內，彩色圖示代表<strong>「鷹架工具 (Scaffolded Tools)」</strong>。它們是專為常見教學任務設計的引導式 AI 範本，只要輸入年級、學科主題與學習目標，就能快速生成高品質初稿，並在 Classroom 中直接對話微調，或一鍵匯出至 Google Docs 文件！
+        </div>
+
+        <div class="classroom-tabs-bar" id="classroom-tabs-bar">
+          <button class="c-tab-btn active" data-tab="all">🌟 全部工具 (12)</button>
+          <button class="c-tab-btn" data-tab="精選">⭐ 精選</button>
+          <button class="c-tab-btn" data-tab="規劃">📖 規劃</button>
+          <button class="c-tab-btn" data-tab="視覺輔助">🎨 視覺輔助</button>
+          <button class="c-tab-btn" data-tab="說明用教材">📄 說明用教材</button>
+          <button class="c-tab-btn" data-tab="評量">📝 評量</button>
+          <button class="c-tab-btn" data-tab="學生支援">🤝 學生支援</button>
+          <button class="c-tab-btn" data-tab="行政工作">⚙️ 行政工作</button>
+        </div>
+
+        <!-- Scaffolded Tools Grid -->
+        <div class="tools-grid" id="classroom-tools-grid">
+          <!-- Populated dynamically via app.js -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- VIEW 3: PARTS 提示詞設計黃金心法 -->
+  <div class="tab-view" id="tab-parts">
+    <section class="section-block" id="parts-section">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="section-icon-badge" style="background: linear-gradient(135deg, #7c3aed, #ea4335);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <div>
+            <h2 class="section-title">PARTS 提示詞黃金架構與專業心法</h2>
+            <div class="section-subtitle">Google 官方推薦的教學提示詞設計心法：從模糊發問晉升為大師級提問</div>
+          </div>
+        </div>
+        <span class="section-tag-badge">對應投影片 第 12 - 15 頁</span>
+      </div>
+
+      <!-- PARTS Cards Grid -->
+      <div class="parts-cards-grid">
+        <div class="part-element-card">
+          <div class="part-letter-badge">P</div>
+          <div class="part-card-title">Persona (角色設定)</div>
+          <div class="part-card-what">設定 Gemini 的專業身份與視角</div>
+          <div class="part-card-why">讓 AI 採用正確的語氣、專業知識深度與行為準則，如「探究教學顧問」或「資深國中生物教師」。</div>
+          <div class="part-card-example">範例：「你是一位擁有10年教學經驗的高中物理老師。」</div>
+        </div>
+
+        <div class="part-element-card">
+          <div class="part-letter-badge">A</div>
+          <div class="part-card-title">Act (行動任務)</div>
+          <div class="part-card-what">使用具體動詞明確提出要求</div>
+          <div class="part-card-why">使用如「設計」、「重寫」、「解構」、「評估」等動詞，獲得精確、可操作的輸出成果。</div>
+          <div class="part-card-example">範例：「請設計一份為期 3 天的探究教學教案。」</div>
+        </div>
+
+        <div class="part-element-card">
+          <div class="part-letter-badge">R</div>
+          <div class="part-card-title">Recipient (受眾對象)</div>
+          <div class="part-card-what">指明內容是給誰看的</div>
+          <div class="part-card-why">精準契合學習者的認知層次、先備知識與特殊需求（例如：不同閱讀程度的學生、家長、教職員）。</div>
+          <div class="part-card-example">範例：「目標對象是初次接觸遺傳學的國中八年級學生。」</div>
+        </div>
+
+        <div class="part-element-card">
+          <div class="part-letter-badge">T</div>
+          <div class="part-card-title">Theme (主題情境)</div>
+          <div class="part-card-what">具體的學科概念或生活情境</div>
+          <div class="part-card-why">為 AI 設定清晰的知識邊界與脈絡，例如「光的折射與司乃耳定律」、「牛頓第三定律的生活應用」。</div>
+          <div class="part-card-example">範例：「主題為光學中的『光的折射與全反射原理』。」</div>
+        </div>
+
+        <div class="part-element-card">
+          <div class="part-letter-badge">S</div>
+          <div class="part-card-title">Structure (格式架構)</div>
+          <div class="part-card-what">指定你需要的輸出結構或模型</div>
+          <div class="part-card-why">引導 AI 生成專業的教育格式，如 5E 教學架構、4 等級規準表格、CER 聲明-證據-推理課堂退出票。</div>
+          <div class="part-card-example">範例：「請採用 5E 架構，並在最後附上 1 道 CER 課堂退出票。」</div>
+        </div>
+      </div>
+
+      <!-- Evolution Comparison Card -->
+      <div class="evolution-card">
+        <div class="evolution-header">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <h3>提示詞演進：三層境界對比（九年級生物課為例）</h3>
+        </div>
+
+        <div class="evolution-grid">
+          <div class="evo-col">
+            <span class="evo-level-badge">❌ 初階 (Simple)</span>
+            <div class="evo-prompt-quote">「給我一些九年級生物課的教案點子。」</div>
+            <div class="evo-critique"><strong>盲點剖析：</strong>指令過於籠統模糊，沒有具體主題（生物範疇廣大）、教學活動型態或評量目標。AI 只能給出泛泛而談的教科書建議。</div>
+          </div>
+
+          <div class="evo-col">
+            <span class="evo-level-badge">⚠️ 進階 (Better)</span>
+            <div class="evo-prompt-quote">「建議三個教九年級學生認識 DNA 的活動。」</div>
+            <div class="evo-critique"><strong>進步與不足：</strong>限縮了主題至 DNA 並指定了數量，但仍缺乏教學架構指引與課堂實施型態（如：探究實驗、合作學習還是自主閱讀）。</div>
+          </div>
+
+          <div class="evo-col best">
+            <span class="evo-level-badge">🏆 大師級 (Best - PARTS 完整體)</span>
+            <div class="evo-prompt-quote">「你是一位九年級生物老師的課程設計專家 (P)。請為即將向學生介紹 DNA 結構與功能的課堂 (T)，建議三個教學活動 (A)：包含一個動手操作互動實驗、一個探究式引導活動、一個小組合作專案 (S)，目標對象是初次學習此概念的 14-15 歲學生 (R)。」</div>
+            <div class="evo-critique"><strong>卓越之處：</strong>角色明確、受眾具體、學習目標清晰、精確指定教學架構與型態，生成的點子能立即排入教案中！</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- VIEW 4: INTERACTIVE PROMPT BUILDER (互動提示詞產生器) -->
+  <div class="tab-view" id="tab-builder">
+    <section class="section-block" id="builder-section">
+      <div class="builder-box">
+        <div class="builder-head">
+          <div class="builder-head-left">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              互動式 PARTS 提示詞客製產生器
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem;">
+              選擇您的年級、學科、單元主題與期待架構，系統將自動為您組裝出完美的高階提示詞！
+            </p>
+          </div>
+        </div>
+
+        <div class="builder-inputs-grid">
+          <div class="builder-field">
+            <label for="builder-grade">🎓 適用年級</label>
+            <select id="builder-grade">
+              <option value="國中七年級">國中七年級 (國一)</option>
+              <option value="國中八年級">國中八年級 (國二)</option>
+              <option value="國中九年級">國中九年級 (國三)</option>
+              <option value="高中十年級" selected>高中十年級 (高一)</option>
+              <option value="高中十一年級">高中十一年級 (高二)</option>
+              <option value="高中十二年級">高中十二年級 (高三)</option>
+              <option value="國小高年級">國小五、六年級</option>
+            </select>
+          </div>
+
+          <div class="builder-field">
+            <label for="builder-subject">🔬 學科領域</label>
+            <select id="builder-subject">
+              <option value="物理科" selected>自然科 / 物理</option>
+              <option value="化學科">自然科 / 化學</option>
+              <option value="生物科">自然科 / 生物</option>
+              <option value="地球科學科">自然科 / 地科</option>
+              <option value="數學科">數學領域</option>
+              <option value="英語科">英語文領域</option>
+              <option value="國語文科">國語文領域</option>
+              <option value="歷史科">社會科 / 歷史</option>
+              <option value="地理科">社會科 / 地理</option>
+              <option value="資訊科技科">科技科 / 資訊科技</option>
+            </select>
+          </div>
+
+          <div class="builder-field">
+            <label for="builder-topic">💡 單元核心概念 / 主題</label>
+            <input type="text" id="builder-topic" value="牛頓第三運動定律與動量守恆" placeholder="例如：光的折射、光合作用、冷戰歷史...">
+          </div>
+
+          <div class="builder-field">
+            <label for="builder-structure">📐 期待輸出架構</label>
+            <select id="builder-structure">
+              <option value="5E" selected>5E 探究教學教案 + CER 課堂退出票</option>
+              <option value="rubric">4 等級表現規準評分量表 (Rubric)</option>
+              <option value="quiz">形成性測驗卷 (含選擇、簡答與迷思解析)</option>
+              <option value="choice">3x3 九宮格學習選項板 (Choice Board)</option>
+              <option value="hook">3 個課堂前 5 分鐘引起動機開場 (Hook)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Builder Output Result Box -->
+        <div class="builder-result-wrap">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-weight: 700; font-size: 0.85rem; color: var(--gemini-purple);">✨ 即時組裝之 PARTS 提示詞：</span>
+            <button class="copy-btn" id="copy-builder-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              一鍵複製提示詞
+            </button>
+          </div>
+          <div class="builder-result-text" id="builder-prompt-output">
+            <!-- Dynamically updated -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- VIEW 5: 48+ 實戰提示詞庫 -->
+  <div class="tab-view" id="tab-catalog">
+    <section class="section-block" id="prompts-catalog-section">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="section-icon-badge" style="background: linear-gradient(135deg, #0d904f, #1a73e8);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <div>
+            <h2 class="section-title">Google 官方 48+ 實戰教學提示詞庫</h2>
+            <div class="section-subtitle">附帶繁簡對照、PARTS 架構拆解、教學心法與各科實境應用</div>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span class="section-tag-badge" id="prompt-count-badge">48 則</span>
+        </div>
+      </div>
+
+      <!-- Toolbar / Multi-dimensional Filters -->
+      <div class="catalog-toolbar">
+        <!-- Category Filter -->
+        <div class="filter-row">
+          <span class="filter-label">依教學環節：</span>
+          <button class="filter-chip active" data-filter-type="category" data-value="all">全部環節</button>
+          <button class="filter-chip" data-filter-type="category" data-value="core_prompts">教案與評量</button>
+          <button class="filter-chip" data-filter-type="category" data-value="classroom">Classroom 課堂</button>
+          <button class="filter-chip" data-filter-type="category" data-value="notebooklm">NotebookLM 知識庫</button>
+          <button class="filter-chip" data-filter-type="category" data-value="gems">自訂 Gems 專家</button>
+          <button class="filter-chip" data-filter-type="category" data-value="advanced">進階研究與畫布</button>
+          <button class="filter-chip" data-filter-type="category" data-value="workspace">Workspace 套件</button>
+        </div>
+
+        <!-- Tool Filter -->
+        <div class="filter-row">
+          <span class="filter-label">依適用工具：</span>
+          <button class="filter-chip active" data-filter-type="tool" data-value="all">全部工具</button>
+          <button class="filter-chip" data-filter-type="tool" data-value="Gemini App">Gemini App</button>
+          <button class="filter-chip" data-filter-type="tool" data-value="Google Classroom">Classroom</button>
+          <button class="filter-chip" data-filter-type="tool" data-value="NotebookLM">NotebookLM</button>
+          <button class="filter-chip" data-filter-type="tool" data-value="Docs">Google Docs</button>
+          <button class="filter-chip" data-filter-type="tool" data-value="Sheets">Google Sheets</button>
+          <button class="filter-chip" data-filter-type="tool" data-value="Forms">Google Forms</button>
+          <button class="filter-chip" data-filter-type="tool" data-value="Meet">Google Meet</button>
+          <button class="filter-chip" data-filter-type="tool" data-value="Vids">Google Vids</button>
+        </div>
+
+        <!-- Audience Filter -->
+        <div class="filter-row">
+          <span class="filter-label">依目標對象：</span>
+          <button class="filter-chip active" data-filter-type="audience" data-value="all">全部角色</button>
+          <button class="filter-chip" data-filter-type="audience" data-value="教師">教師備課</button>
+          <button class="filter-chip" data-filter-type="audience" data-value="學生">學生自學</button>
+          <button class="filter-chip" data-filter-type="audience" data-value="行政主管">學校行政</button>
+        </div>
+      </div>
+
+      <!-- Prompts Grid -->
+      <div class="prompts-grid" id="prompts-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+  </div>
+
+  <!-- VIEW 6: 129 頁全簡報全景閱覽 (DECK READER) -->
+  <div class="tab-view" id="tab-deck">
+    <section class="section-block" id="deck-section">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="section-icon-badge" style="background: linear-gradient(135deg, #1a73e8, #7c3aed);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <div>
+            <h2 class="section-title">129 頁全簡報全景閱覽模式 (Slide-by-Slide Deck Reader)</h2>
+            <div class="section-subtitle">逐頁對照 Google 官方簡報原文、繁體中文導讀摘要與投影片截圖</div>
+          </div>
+        </div>
+        <span class="section-tag-badge">共 129 頁完整收錄</span>
+      </div>
+
+      <div class="deck-reader-container">
+        <!-- Deck Controls -->
+        <div class="deck-controls-bar">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <label for="slide-jump-select" style="font-weight: 700; font-size: 0.85rem; color: var(--text-muted);">快速跳轉：</label>
+            <select id="slide-jump-select" class="slide-jump-select">
+              <!-- Populated dynamically -->
+            </select>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <button class="nav-btn" id="prev-slide-btn">◀ 上一頁</button>
+            <button class="nav-btn primary" id="next-slide-btn">下一頁 ▶</button>
+          </div>
+        </div>
+
+        <!-- Deck Stage -->
+        <div class="deck-stage">
+          <!-- Left: Chinese Translation and Bullet Points -->
+          <div class="slide-canvas-card">
+            <div class="slide-num-tag" id="deck-slide-num">SLIDE 080 / 129</div>
+            <h3 class="slide-canvas-title" id="deck-slide-title">載入中...</h3>
+            <p class="slide-canvas-summary" id="deck-slide-summary"></p>
+            <div class="slide-canvas-points" id="deck-slide-points"></div>
+          </div>
+
+          <!-- Right: Presentation Media Screenshot Box -->
+          <div class="slide-media-preview-box" id="deck-media-box">
+            <!-- Image loaded dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- VIEW 7: GEMS 自訂教學專家專區 -->
+  <div class="tab-view" id="tab-gems">
+    <section class="section-block" id="gems-section">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="section-icon-badge" style="background: linear-gradient(135deg, #7c3aed, #12b5cb);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12l4 6-10 13L2 9z"></path></svg>
+          </div>
+          <div>
+            <h2 class="section-title">自訂教學專家：Gemini Gems 實戰指令集</h2>
+            <div class="section-subtitle">一次配置系統提示詞 (System Instructions)，打造 24 小時在線的學科專家</div>
+          </div>
+        </div>
+        <span class="section-tag-badge">對應投影片 第 48 - 60 頁</span>
+      </div>
+
+      <div class="gems-grid">
+        <!-- Gem 1 -->
+        <div class="gem-card">
+          <div class="gem-card-header">
+            <div class="gem-card-icon">📋</div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-weight: 750;">課程標準教案專家 Gem</h4>
+              <span style="font-size: 0.75rem; color: var(--text-subtle);">Standards-Based Lesson Planner</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55;">
+            專門協助教師依據素養指標與 5E 探究架構設計課程序列，整合形成性評量檢核點與時間配當。
+          </p>
+          <div style="margin-top: auto;">
+            <button class="copy-btn" onclick="copyTextToClipboard(`你是一位專精於素養導向與標準本位 (Standards-based) 的資深教學教練。你的任務是協助教師設計結構嚴謹、高學生參與度且精準對齊教育標準的單元教案。當教師提供單元主題時，請依序執行：1. 協助釐清對應的核心素養指標；2. 運用 5E 教學模式規劃課程序列；3. 嵌入形成性評量檢核點與差異化學習策略；4. 提供清晰的課堂時間配置。`, this)">
+              複製系統指令
+            </button>
+          </div>
+        </div>
+
+        <!-- Gem 2 -->
+        <div class="gem-card">
+          <div class="gem-card-header">
+            <div class="gem-card-icon">🌍</div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-weight: 750;">課堂多語翻譯與親師通訊 Gem</h4>
+              <span style="font-size: 0.75rem; color: var(--text-subtle);">Classroom Translator Gem</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55;">
+            以專業溫暖的教育語氣，將通知信、作業說明翻譯為中英、越南文、印尼文等多語對照版。
+          </p>
+          <div style="margin-top: auto;">
+            <button class="copy-btn" onclick="copyTextToClipboard(`請擔任一位專業的教育翻譯專家，專門協助教師將課堂教材、家庭作業指引、學校重要通知與親師聯絡信函翻譯為多種目標語言。請保持溫暖、尊重且鼓勵的教育專用親師溝通語氣；精準轉換學術術語，避免生硬字面直譯；每次輸出時並列提供雙語對照版。`, this)">
+              複製系統指令
+            </button>
+          </div>
+        </div>
+
+        <!-- Gem 3 -->
+        <div class="gem-card">
+          <div class="gem-card-header">
+            <div class="gem-card-icon">🎮</div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-weight: 750;">課堂教學遊戲化專家 Gem</h4>
+              <span style="font-size: 0.75rem; color: var(--text-subtle);">Lesson-to-Game Gamifier</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55;">
+            將枯燥的單元知識轉化為 10-15 分鐘的低門檻分組益智競賽、小組積分挑戰或解謎任務。
+          </p>
+          <div style="margin-top: auto;">
+            <button class="copy-btn" onclick="copyTextToClipboard(`你是一位專精於遊戲化學習的教學創意顧問。你的使命是將教師提供的任何學科知識點，轉化為生動、刺激且高度參與的課堂小遊戲（益智問答 Trivia、角色扮演、逃脫解謎）。每次產出需具備：遊戲情境、10-15分鐘規則機制、題目清單與計分規則。`, this)">
+              複製系統指令
+            </button>
+          </div>
+        </div>
+
+        <!-- Gem 4 -->
+        <div class="gem-card">
+          <div class="gem-card-header">
+            <div class="gem-card-icon">⚗️</div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-weight: 750;">中學化學專屬學伴 Gem</h4>
+              <span style="font-size: 0.75rem; color: var(--text-subtle);">Chemistry Tutor Gem</span>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55;">
+            透過生動日常生活比喻解構微觀原子分子世界，每步拋出診斷問題，不直接給答案。
+          </p>
+          <div style="margin-top: auto;">
+            <button class="copy-btn" onclick="copyTextToClipboard(`你是我專屬的化學課後輔導家教。請幫助我搞懂課堂上的重要主題（如化學鍵、酸鹼平衡）。將抽象原子概念拆解為生活比喻；每次只解釋一個小概念隨後向我丟出檢核問題；答錯時溫和指出思維偏差，不要直接罵我或丟答案。`, this)">
+              複製系統指令
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- VIEW 8: NOTEBOOKLM 知識庫專區 -->
+  <div class="tab-view" id="tab-notebooklm">
+    <section class="section-block" id="notebooklm-section">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="section-icon-badge" style="background: linear-gradient(135deg, #12b5cb, #1a73e8);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          </div>
+          <div>
+            <h2 class="section-title">Gemini Notebook (NotebookLM) 知識庫深度實戰</h2>
+            <div class="section-subtitle">以 8 週物理單元貫穿示範的精準教研庫 · 零幻覺、零造假</div>
+          </div>
+        </div>
+        <span class="section-tag-badge">對應投影片 第 61 - 77 頁</span>
+      </div>
+
+      <div class="classroom-banner-card">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.75rem;">
+              🎯 為什麼 NotebookLM 是教師的備課神器？
+            </h3>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem; color: var(--text-muted); padding-left: 1.2rem;">
+              <li><strong>100% 根植於專屬文件：</strong>只使用你上傳的教科書、教案與課綱回答，徹底杜絕 AI 幻覺。</li>
+              <li><strong>精確引文回溯：</strong>所有回答均標註來源引註標號，點擊立即跳轉原始教材對應頁面。</li>
+              <li><strong>音訊導覽 (Audio Overview)：</strong>一鍵生成男女雙主持人的播客節目，讓學生在通勤時輕鬆預習。</li>
+              <li><strong>跨概念心智圖 (Mind Map)：</strong>將全學期 8 週講義自動梳理為直觀視覺化概念網絡圖。</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--bg-surface); border-radius: var(--radius-lg); padding: 1.25rem; border: 1px solid var(--border-subtle);">
+            <h4 style="font-size: 1.05rem; font-weight: 750; color: var(--text-main); margin-bottom: 0.5rem;">
+              🎧 翻轉課堂音訊導覽三步流程：
+            </h4>
+            <div style="display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem; color: var(--text-muted);">
+              <div><strong>步驟 1：</strong>上傳單元教材 PDF、Google 文件或 YouTube 影片字幕。</div>
+              <div><strong>步驟 2：</strong>在 Studio 面板中點擊『Audio Overview (音訊導覽)』。</div>
+              <div><strong>步驟 3：</strong>自訂導覽重點（如：聚焦期末考高頻考點），生成雙人 Podcast 並下載音檔指派至 Classroom！</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- VIEW 9: GOOGLE WORKSPACE 整合專區 -->
+  <div class="tab-view" id="tab-workspace">
+    <section class="section-block" id="workspace-section">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="section-icon-badge" style="background: linear-gradient(135deg, #e37400, #ea4335);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <div>
+            <h2 class="section-title">Google Workspace 跨工具協作實務</h2>
+            <div class="section-subtitle">Docs, Gmail, Sheets, Forms, Meet, Vids 與 Imagen 全面賦能</div>
+          </div>
+        </div>
+        <span class="section-tag-badge">對應投影片 第 109 - 124 頁</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem;">
+        <div class="tool-card">
+          <div class="tool-card-head">
+            <div class="tool-icon-box" style="background: #1a73e8;">📄</div>
+            <div class="tool-card-titles">
+              <div class="tool-card-title">Gemini in Google Docs</div>
+              <div class="tool-card-en">教學進度表與個別化回饋</div>
+            </div>
+          </div>
+          <p class="tool-card-desc">在側邊欄直接請 AI 協助為學生現代詩創作提供具體意象讚賞與修訂建議，或生成 4 週單元進度配當表。</p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-card-head">
+            <div class="tool-icon-box" style="background: #ea4335;">✉️</div>
+            <div class="tool-card-titles">
+              <div class="tool-card-title">Gemini in Gmail</div>
+              <div class="tool-card-en">郵件討論串摘要與建議回信</div>
+            </div>
+          </div>
+          <p class="tool-card-desc">自動分析長篇家長信討論串，提煉 3 大核心關切，並擬定具備高情商與同理心的專業回覆信函。</p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-card-head">
+            <div class="tool-icon-box" style="background: #0d904f;">📊</div>
+            <div class="tool-card-titles">
+              <div class="tool-card-title">Gemini in Sheets</div>
+              <div class="tool-card-en">學業數據公式與風險預警</div>
+            </div>
+          </div>
+          <p class="tool-card-desc">用自然中文說出加權計分比例，AI 自動編寫複雜平均公式，並設定條件式格式自動標記不及格學生。</p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-card-head">
+            <div class="tool-icon-box" style="background: #7c3aed;">📝</div>
+            <div class="tool-card-titles">
+              <div class="tool-card-title">Gemini in Forms</div>
+              <div class="tool-card-en">關聯雲端文件一鍵出題</div>
+            </div>
+          </div>
+          <p class="tool-card-desc">在表單中輸入 @ 連結雲端硬碟的教材，AI 一鍵將講義轉為包含配分、標準答案與詳解的線上測驗卷！</p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-card-head">
+            <div class="tool-icon-box" style="background: #00897b;">📹</div>
+            <div class="tool-card-titles">
+              <div class="tool-card-title">Gemini in Meet</div>
+              <div class="tool-card-en">AI 自動會議逐字紀錄與摘要</div>
+            </div>
+          </div>
+          <p class="tool-card-desc">點擊鉛筆圖示，會議中自動記錄各發言重點，會後幾分鐘自動產出排版精美的 Google 文件會議紀要。</p>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-card-head">
+            <div class="tool-icon-box" style="background: #f29900;">🎬</div>
+            <div class="tool-card-titles">
+              <div class="tool-card-title">Gemini in Google Vids</div>
+              <div class="tool-card-en">科普微短片與學程宣傳影片</div>
+            </div>
+          </div>
+          <p class="tool-card-desc">輸入概念（如動能與位能差別），AI 自動生成 60 秒分鏡腳本、排版投影片畫面並合成逼真的 AI 語音旁白！</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  </main>
+
+  <!-- Favorites Modal -->
+  <div class="modal-overlay" id="favorites-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">❤️ 我的收藏提示詞清單</div>
+        <button class="modal-close-btn" onclick="closeFavoritesModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="favorites-list">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toast-notice">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toast-message">已成功複製！</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand-title">
+          <span>🎓</span> 運用 Gemini 於 K-12 中小學教育的 100+ 種方法
+        </div>
+        <div class="footer-desc">
+          本網站為非商業性質之教育研發與教學推廣資源，致力於協助廣大第一線教育工作者掌握 Google 生成式 AI 賦能教學。
+        </div>
+
+        <div class="footer-credits">
+          <div class="footer-credit-row">
+            <span class="credit-icon">📚</span>
+            <div class="credit-body">
+              <strong>原創內容來源：</strong>
+              <a href="https://docs.google.com/presentation/d/1MTyP-BBusYw2rHKE_lQ2QVDA7uT7ngYaGfBy9HypQdY/view" target="_blank" rel="noopener noreferrer" class="footer-link">
+                Google for Education 官方簡報《100+ ways to use Gemini in K-12 education》 ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-credit-row">
+            <span class="credit-icon">💡</span>
+            <div class="credit-body">
+              <strong>繁體中文化構想與在地化整理：</strong>
+              <span class="curator-tag">國立南大附中 李佳恩老師</span>
+              <span class="curator-note">（有感於優質官方教材高達 129 頁且為全英文，許多科目老師容易望而卻步，特提出繁中化構想並製作成互動實踐指南網頁，希望能推廣這寶貴教材。）</span>
+            </div>
+          </div>
+
+          <div class="footer-credit-row">
+            <span class="credit-icon">✉️</span>
+            <div class="credit-body">
+              <strong>意見回饋與教學交流：</strong>
+              如有任何建議、教學反饋或修訂想法，歡迎來信交流：
+              <a href="mailto:begin0808@gmail.com" class="footer-email-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                begin0808@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-credit-row">
+            <span class="credit-icon">🤖</span>
+            <div class="credit-body">
+              <strong>技術協作與前端建置：</strong>Google Antigravity AI & Gemini 3.8 Flash
+            </div>
+          </div>
+
+          <div class="footer-credit-row">
+            <span class="credit-icon">⚖️</span>
+            <div class="credit-body">
+              <strong>教材版權與使用聲明：</strong>
+              原創教材版權屬於 Google for Education。本站僅供非營利教育研究、中小學教師備課與校園教學社群研習交流使用 (Educational & Non-commercial Use Only)。
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-right">
+        <button type="button" class="back-to-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">回到頂部 ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

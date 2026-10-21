@@ -1,0 +1,38 @@
+# ===================================================================
+# Git Ignore Configuration for Gemini K-12 Education Web App
+# ===================================================================
+
+# [CRITICAL] Large Presentation Files (Exceeds GitHub 100MB Limit)
+# presentation.pptx is ~251MB, GitHub hard limit is 100MB!
+*.pptx
+*.ppt
+*.pdf
+
+# Intermediate Scratch Dumps & Analysis Data (App uses js/data.js)
+all_slides_summary.txt
+section_1_to_4.txt
+section_5_to_6.txt
+section_7_classroom.txt
+section_8_to_9.txt
+slides_table.txt
+slides_data.json
+slide_media_map.json
+prompts_raw.json
+prompts_extracted.json
+scratch/
+
+# Python & System Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.log
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
