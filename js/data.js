@@ -1,4 +1,4 @@
-// Google Gemini 於 K-12 中小學教育的 100+ 種應用指南 - 完整繁體中文數據庫
+// Google Gemini 於 K-12 中小學教育的 100+ 種應用指南 - 完整繁體中文資料庫
 window.APP_DATA = {
   "siteInfo": {
     "title": "Google Gemini 於 K-12 中小學教育的 100+ 種應用指南",
@@ -42,7 +42,7 @@ window.APP_DATA = {
         "letter": "T",
         "nameZh": "Theme 主題與情境",
         "nameEn": "Theme",
-        "whatZh": "鎖定具體的學科知識點、核心概念或真實生活情境",
+        "whatZh": "鎖定具體的學科核心概念、學習重點或真實生活情境",
         "whyZh": "為 AI 提供清晰的邊界與專業語境（例如：『DNA雙螺旋結構與轉錄轉譯』、『牛頓第三運動定律與火箭推進』）。",
         "example": "主題為光學中的『光的折射與全反射原理』及其在光纖通訊中的生活應用。"
       },
@@ -256,7 +256,7 @@ window.APP_DATA = {
       "color": "#ea4335",
       "descZh": "將枯燥或繁瑣的學科知識，編織進充滿冒險、懸疑、幽默或歷史背景的引人入勝教學故事中，大幅強化學生的情境記憶與情感共鳴。",
       "descEn": "Weave complex curricular concepts into imaginative, relatable pedagogical narratives that boost retention, empathy, and emotional engagement.",
-      "inputGuideZh": "提供想要融入故事中的核心知識點、故事主角設定、情節氛圍與篇幅字數，並可設定中途留有需要學生協助解決的懸念問題。",
+      "inputGuideZh": "提供想要融入故事中的核心概念與學習重點、故事主角設定、情節氛圍與篇幅字數，並可設定中途留有需要學生協助解決的懸念問題。",
       "promptTemplateZh": "你是一位富有想像力的科普作家與教育家。請為[年級學生]創作一篇約 500 字的引人入勝冒險故事，以生動有趣的方式帶出[學科主題，例如：紅血球在人體循環系統中的旅程，或是電子在電路中的冒險]。故事中需自然融入關鍵概念[如：養分輸送、肺泡交換、動脈與靜脈壓力差別]，並在故事高潮處設計一個需要學生運用本課知識來破解的難題。",
       "promptTemplateEn": "Write an engaging educational narrative for [grade level] students that brings [scientific / historical concept] to life. Weave core facts seamlessly into character dialogue and end with a cliffhanger question for students to solve.",
       "proTipsZh": "可將故事匯入『Gemini Notebook (NotebookLM)』生成播客音訊導覽 (Audio Overview)，讓學生戴上耳機彷彿在聽廣播劇！",
@@ -295,7 +295,7 @@ window.APP_DATA = {
       "descZh": "一鍵生成結構嚴謹、條理分明且高度注重安全的學生端科學實驗手冊，包含實驗目的、器材清單、圖解步驟說明、數據紀錄表與分析反思問題。",
       "descEn": "Generate comprehensive, student-friendly science laboratory manuals with safety protocols, apparatus checklists, step-by-step procedures, data tables, and post-lab analysis prompts.",
       "inputGuideZh": "指定年級、實驗主題（例如：光的折射率測量、洋蔥表皮細胞顯微鏡觀察）、現有實驗器材限制與預計課堂時間。",
-      "promptTemplateZh": "你是一位資深中學科學實驗室指導教師。請為[年級學生]設計一份[實驗主題，例如：利用半圓形玻璃磚測量光在不同介質中的折射率]的學生端實作指引手冊。格式需包含：1. 實驗目標與探究問題；2. 安全注意事項與器材盤點清單；3. 分步驟實作程序（附操作提示）；4. 空白數據觀察紀錄表格；5. 三題引導學生進行誤差分析與推論的課後討論題。",
+      "promptTemplateZh": "你是一位資深中學科學實驗室指導教師。請為[年級學生]設計一份[實驗主題，例如：利用半圓形玻璃磚測量光在不同介質中的折射率]的學生端實作指引手冊。格式需包含：1. 實驗目標與探究問題；2. 安全注意事項與器材盤點清單；3. 分步驟實作步驟（附操作提示）；4. 空白數據觀察紀錄表格；5. 三題引導學生進行誤差分析與推論的課後討論題。",
       "promptTemplateEn": "You are a science lab coordinator. Create a student-facing lab guide for a [grade level] experiment on [topic]. Include learning objectives, safety rules, required materials, step-by-step procedures, a data collection table, and post-lab analysis questions.",
       "proTipsZh": "若將現有的實驗教案 PDF 上傳至 Gemini Notebook (NotebookLM)，可直接一鍵生成完全吻合您實驗室器材規格的客製化實驗單！",
       "slideRef": 22
@@ -327,7 +327,7 @@ window.APP_DATA = {
       "icon": "book-open",
       "badge": "實用提示詞",
       "slideRange": "第 16 - 32 頁",
-      "desc": "包含 5 天單元課程序列、差異化評量命題、實驗指引製作、考程規劃、補助企劃案、學生自學導航等立即可用的範本。"
+      "desc": "包含 5 天單元課程序列、差異化評量命題、實驗指引製作、考程規劃、補助企劃案、學生自主學習導引等立即可用的範本。"
     },
     {
       "id": "gems",
@@ -354,7 +354,7 @@ window.APP_DATA = {
       "icon": "cpu",
       "badge": "強大科技",
       "slideRange": "第 33 - 47 頁",
-      "desc": "數分鐘產出數十頁學術研究報告 (Deep Research)、以蘇格拉底式提問引導學生解題 (Guided Learning)，以及在雙欄畫布即時編修教案與執行代碼 (Canvas)。"
+      "desc": "數分鐘產出數十頁學術研究報告 (Deep Research)、以蘇格拉底式提問引導學生解題 (Guided Learning)，以及在雙欄畫布即時編修教案與執行程式碼 (Canvas)。"
     },
     {
       "id": "workspace",
@@ -500,7 +500,7 @@ window.APP_DATA = {
         "act": "製作學生專用實驗操作指引手冊",
         "recipient": "初次操作光學顯微鏡的九年級學生",
         "theme": "動植物細胞（洋蔥表皮與口腔皮膜細胞）顯微觀察",
-        "structure": "分步驟操作程序 + 安全須知 + 觀察紀錄表格 + 3 道課後探究問題"
+        "structure": "分步驟操作步驟 + 安全須知 + 觀察紀錄表格 + 3 道課後探究問題"
       },
       "tipsZh": "可以直接將手冊複製到 Google 文件中加上插圖，或直接匯入 Google Classroom 作為作業附加材料！",
       "applicableTools": [
@@ -683,17 +683,17 @@ window.APP_DATA = {
       "slideNum": 46,
       "category": "advanced",
       "subCategory": "Gemini Canvas 畫布協作",
-      "titleZh": "代碼即時編寫與執行：自由落體與空氣阻力物理模擬動畫",
+      "titleZh": "程式碼即時撰寫與執行：自由落體與空氣阻力物理模擬動畫",
       "titleEn": "Gemini Canvas: Coding in Canvas - Physics Simulation",
       "roleScenarioZh": "自然科教師或學生在 Canvas 中撰寫 HTML5/JS 動態模擬並即時預覽",
       "promptZh": "請在 Gemini Canvas 中幫我建立一個簡單直覺的 HTML/JavaScript 物理模擬網頁。模擬內容為：在畫面上有一個小球從頂部下落，使用者可以透過滑動軸 (Sliders) 即時調整『物體質量、重力加速度常數 g、以及空氣阻力係數』，畫面上需即時顯示小球當前的速度向量與位移曲線圖表，並支援一鍵重設與慢動作播放。",
       "promptEn": "Help me build a simple interactive physics simulation in Canvas using HTML, CSS, and JavaScript. Show a ball falling under gravity. Allow users to adjust mass, gravitational constant (g), and air resistance coefficient using sliders. Display live velocity and distance graphs alongside the animation with reset and slow-motion toggles.",
       "parts": {
         "persona": "STEM 科學教育程式設計工程師",
-        "act": "編寫單一檔案的互動式物理模擬網頁代碼",
+        "act": "撰寫單一檔案的互動式物理模擬網頁程式碼",
         "recipient": "學習運動學與力學的高中物理學生",
         "theme": "自由落體、終端速度與空氣阻力之數值模擬",
-        "structure": "Canvas 即時可執行代碼（包含 Canvas 動畫渲染、即時圖表與控制滑桿）"
+        "structure": "Canvas 即時可執行程式碼（包含 Canvas 動畫渲染、即時圖表與控制滑桿）"
       },
       "tipsZh": "在 Canvas 介面中，右側可直接切換『預覽 (Preview)』標籤，無需下載任何開發軟體，直接在瀏覽器中操作互動模擬！",
       "applicableTools": [
@@ -801,7 +801,7 @@ window.APP_DATA = {
       "titleZh": "自訂 Gem 系統指令：課堂教學遊戲化專家 Gem",
       "titleEn": "Custom Gem Instructions: Lesson-to-Game Gamifier Gem",
       "roleScenarioZh": "教師將任何抽象枯燥的章節快速變身為趣味課堂分組競賽遊戲",
-      "promptZh": "【Gem 系統設定指令 / Instructions】：\n你是一位專精於遊戲化學習 (Gamification) 的教學創意顧問。你的使命是將教師提供的任何學科知識點或複習單元，轉化為生動、刺激且高度參與的課堂小遊戲（例如：益智問答競賽 Trivia、角色扮演任務、逃脫解謎密室或分組積分挑戰）。\n每次產出需具備：\n1. 遊戲名稱與引人入勝的情境背景設定\n2. 規則簡明、可在 10-15 分鐘內完成的流程機制\n3. 即開即用的題目清單與對應分值\n4. 團隊合作與策略討論設計，確保不同程度學生都能參與貢獻。",
+      "promptZh": "【Gem 系統設定指令 / Instructions】：\n你是一位專精於遊戲化學習 (Gamification) 的教學創意顧問。你的使命是將教師提供的任何學科核心概念或單元重點，轉化為生動、刺激且高度參與的課堂小遊戲（例如：益智問答競賽 Trivia、角色扮演任務、逃脫解謎密室或分組積分挑戰）。\n每次產出需具備：\n1. 遊戲名稱與引人入勝的情境背景設定\n2. 規則簡明、可在 10-15 分鐘內完成的流程機制\n3. 即開即用的題目清單與對應分值\n4. 團隊合作與策略討論設計，確保不同程度學生都能參與貢獻。",
       "promptEn": "[Gem Instructions]: Create a Gem that helps me turn classroom lessons into short, engaging group games. Focus on simple, low-prep mechanics like trivia competitions, team challenges, or collaborative puzzle-solving that can be run in about 10-15 minutes. Ensure rules are dead simple and inclusive of all ability levels.",
       "parts": {
         "persona": "遊戲化學習與課堂互動設計大師",
@@ -856,7 +856,7 @@ window.APP_DATA = {
         "theme": "生成式 AI 教育工具落地、數位增能與資料保護法規",
         "structure": "痛點診斷 -> 步驟化指引 -> 實用範本 -> 隱私安心叮嚀"
       },
-      "tipsZh": "資訊組長可將校內的資安規範與帳號權限須知放入知識庫，讓同仁隨時提問，成為 24 小時在線的資訊科技助教！",
+      "tipsZh": "資訊組長可將校內的資安規範與帳號權限須知放入知識庫，讓同仁隨時提問，成為 24 小時線上的資訊科技助教！",
       "applicableTools": [
         "Gemini Gems"
       ],
@@ -918,7 +918,7 @@ window.APP_DATA = {
       "titleZh": "NotebookLM 課程串接：第 8 週物理單元總複習課程序列設計",
       "titleEn": "NotebookLM Planning: Sequence the Unit Lessons (Physics Unit)",
       "roleScenarioZh": "以 8 週物理單元為例，讓 AI 研讀全部來源文件後規劃跨章節複習",
-      "promptZh": "【在 Gemini Notebook / NotebookLM 中提問】：\n根據我上傳的 8 週物理單元教材，第 7 週（光與光學）中介紹了哪些核心概念，應該在即將到來的第 8 週（單元總複習）中進行全面複習？請為第 8 週的複習課提出一個循序漸進的課序規劃，並明確指出哪些知識點（例如：折射率與司乃耳定律）是學生最容易在期末評量中混淆的高風險點。",
+      "promptZh": "【在 Gemini Notebook / NotebookLM 中提問】：\n根據我上傳的 8 週物理單元教材，第 7 週（光與光學）中介紹了哪些核心概念，應該在即將到來的第 8 週（單元總複習）中進行全面複習？請為第 8 週的複習課提出一個循序漸進的課序規劃，並明確指出哪些學習重點與核心概念（例如：折射率與司乃耳定律）是學生最容易在期末評量中混淆的高風險盲點。",
       "promptEn": "Prompt (in NotebookLM): What concepts introduced in Week 7 (Light & Optics) should be reviewed in Week 8’s unit review lesson to best prepare students for the final assessment? Suggest a progressive pacing sequence highlighting high-misconception topics.",
       "parts": {
         "persona": "基於專屬物理單元教材的精準課程專家",
@@ -1011,7 +1011,7 @@ window.APP_DATA = {
       "titleZh": "NotebookLM 心智圖生成：8 週物理單元跨章節概念視覺化",
       "titleEn": "NotebookLM Pro Tip: Generate a Visual Mind Map Across Sources",
       "roleScenarioZh": "一鍵將厚重繁複的 8 週講義轉化為層次分明的知識架構心智圖",
-      "promptZh": "【在 Gemini Notebook / NotebookLM Studio 中操作】：\n在 Studio 面板中點擊『心智圖 (Mind Map)』按鈕。NotebookLM 將自動通盤分析上傳的 8 週教材，建立一張可縮放、可點擊展開的互動式視覺概念網絡圖。從運動學（速度、加速度）、動力學（牛頓三定律、動量）、能量（功與能）到波動與光學，將所有核心概念如何相互關聯視覺化呈現。",
+      "promptZh": "【在 Gemini Notebook / NotebookLM Studio 中操作】：\n在 Studio 面板中點擊『心智圖 (Mind Map)』按鈕。NotebookLM 將自動通盤分析上傳的 8 週教材，建立一張可縮放、可點擊展開的互動式視覺概念關聯圖。從運動學（速度、加速度）、動力學（牛頓三定律、動量）、能量（功與能）到波動與光學，將所有核心概念如何相互關聯視覺化呈現。",
       "promptEn": "Generate a Mind Map in Gemini Notebook. What it does: Creates a visual overview connecting core concepts across all uploaded weekly sources (kinematics, dynamics, energy, waves, optics), allowing students to explore conceptual nodes interactively.",
       "parts": {
         "persona": "視覺化知識圖譜建構引擎",
@@ -1040,7 +1040,7 @@ window.APP_DATA = {
         "persona": "學校學科領域召集人與 PLC 教研引言人",
         "act": "通盤盤點 8 週教材，產出高效共備會議前導摘要與研討題綱",
         "recipient": "同領域授課教師、科召集人與觀課夥伴",
-        "theme": "單元教學進度盤點、學生迷思預測與跨班協同教學優化",
+        "theme": "單元教學進度盤點、學生迷思預測與跨班協同教學精進",
         "structure": "里程碑回顧 + 瓶頸預警 + 3 題 PLC 深層探討問題"
       },
       "tipsZh": "老師們可以共用同一個 NotebookLM 筆記本，每個人上傳自己的學習單與補充資料，幾秒鐘就能完成全領域的協同備課！",
@@ -1124,7 +1124,7 @@ window.APP_DATA = {
       "slideNum": 90,
       "category": "classroom",
       "subCategory": "Classroom 自訂 Gem",
-      "titleZh": "Classroom UDL 教學教練 Gem：優化波動單元多元評量",
+      "titleZh": "Classroom UDL 教學教練 Gem：完善波動單元多元評量",
       "titleEn": "Classroom Custom Gem: Universal Design for Learning (UDL) Coach",
       "roleScenarioZh": "教師建立專屬 UDL 教練 Gem，全面提升課程對多元學習者的包容性",
       "promptZh": "【向 UDL 教學教練 Gem 提問】：\n請擔任普及學習設計 (UDL) 專業顧問。請審視我上傳的第 6 週『波動與聲波』教案內容，並根據 UDL 的三大原則（多元表徵、多元表達、多元參與），為學生提出 3 種全新且多元的評量方式，讓學生能夠跳脫傳統紙筆測驗，展現他們對『光的折射與波長關係』的深層理解。",
@@ -1173,10 +1173,10 @@ window.APP_DATA = {
       "slideNum": 100,
       "category": "classroom",
       "subCategory": "Classroom 置頂資源",
-      "titleZh": "Classroom 課堂頂端置頂：牛頓運動定律導航員與隨身實驗手冊",
+      "titleZh": "Classroom 課堂頂端置頂：牛頓運動定律學習嚮導與隨身實驗手冊",
       "titleEn": "Classroom Highlighted Resources: Newton's Laws Navigator & Interactive Lab Companion",
       "roleScenarioZh": "將全學期/全單元不可或缺的核心 AI 工具置頂在課堂作業最頂端",
-      "promptZh": "【在 Google Classroom 課堂作業頁面置頂】：\n教師在『課堂作業 (Classwork)』分頁中，勾選『置頂於課堂頂端 (Highlight at top of class)』。\n工具 1：『牛頓運動定律導航員 Gem』：全單元期間學生隨時可點開提問。當學生問『為什麼滑冰選手推別人自己也會後退？』時，Gem 不直接給死板公式，而是引導學生思考冰面與推力的反作用力關係。\n工具 2：『物理實驗室數位隨身手冊 NotebookLM』：學生在實驗課隨時提問『這個步驟的安全規則是什麼？』，AI 立即精準引述官方實驗手冊回答。",
+      "promptZh": "【在 Google Classroom 課堂作業頁面置頂】：\n教師在『課堂作業 (Classwork)』分頁中，勾選『置頂於課堂頂端 (Highlight at top of class)』。\n工具 1：『牛頓運動定律學習嚮導 Gem』：全單元期間學生隨時可點開提問。當學生問『為什麼滑冰選手推別人自己也會後退？』時，Gem 不直接給死板公式，而是引導學生思考冰面與推力的反作用力關係。\n工具 2：『物理實驗室數位隨身手冊 NotebookLM』：學生在實驗課隨時提問『這個步驟的安全規則是什麼？』，AI 立即精準引述官方實驗手冊回答。",
       "promptEn": "Provide highlighted class learning resources at the top of the 'Classwork' tab. 1: Newton's Laws Navigator Gem: an on-demand tutor answering conceptual physics questions using everyday analogies. 2: Interactive Lab Companion NotebookLM: allows students to instantly ask questions about lab procedures and safety grounded strictly in official manuals.",
       "parts": {
         "persona": "班級常駐專屬智慧助教 (Class-level Persistent AI Assistant)",
@@ -1204,7 +1204,7 @@ window.APP_DATA = {
       "promptZh": "【在 Google Classroom 中查看使用數據】：\n在指派的任何 Notebook 或 Gem 旁，教師會看到即時的『開啟狀態 (Opened by)』徽章（例如顯示『15 位學生已開啟』）。\n點擊狀態連結即可展開學生名單，清楚分為『已開啟 (Opened)』與『尚未開啟 (Not opened)』兩大清單。\n教師可一鍵發送溫馨提醒給尚未啟動學習工具的同學，或結合課堂觀察，關心遇到學習阻礙的學生，實現精準教學干預！",
       "promptEn": "Get insights into student use in Classroom. An 'Opened by' status shows live counts of which students have accessed assigned AI tools. Teachers can easily see who has opened and who has not opened, allowing targeted reminders and intervention.",
       "parts": {
-        "persona": "數據驅動的精準課堂管理教師",
+        "persona": "以學習資料為本的精準課堂管理教師",
         "act": "檢視學生自主學習工具開啟紀錄並實施差異化督導提醒",
         "recipient": "全班已登入與尚未參與 AI 學習活動的學生",
         "theme": "自主學習參與度監控、預警機制與個別化輔導介入",
@@ -1341,13 +1341,13 @@ window.APP_DATA = {
       "slideNum": 117,
       "category": "workspace",
       "subCategory": "Google Sheets 試算表公式",
-      "titleZh": "Google Sheets 數據分析：自動編寫複雜加權成績與統計公式",
+      "titleZh": "Google Sheets 資料分析：自動編寫複雜加權成績與統計公式",
       "titleEn": "Gemini in Sheets: Create Formula to Calculate Average Grade and Analyze Data",
       "roleScenarioZh": "教師期末結算段考、平常考、作業與出席之複雜加權總成績",
       "promptZh": "【在 Google Sheets 側邊欄提問】：\n請幫我在 H 欄建立一個試算表公式，用來計算全班每位學生的學期總成績。計算權重為：第一次段考（B欄）佔 20%、第二次段考（C欄）佔 20%、期末考（D欄）佔 30%、平常隨堂測驗（E欄）佔 15%、課堂參與與作業（F欄）佔 15%。若有缺考者請自動以其他成績比例等權重折算，並為低於 60 分的欄位自動設定條件式格式醒目提示。",
       "promptEn": "In Google Sheets: Create a formula that calculates the weighted average semester grade in column H (Exam 1 20%, Exam 2 20%, Final 30%, Quizzes 15%, Participation 15%). Handle missing scores gracefully and suggest a conditional formatting rule to highlight at-risk students below 60%.",
       "parts": {
-        "persona": "試算表公式與學業數據統計專家",
+        "persona": "試算表公式與學業成績統計專家",
         "act": "自動撰寫加權平均與防錯公式，並配置預警條件式格式",
         "recipient": "期末結算成績、需要辨識學習預警學生的導師與科任老師",
         "theme": "多元評量加權計分、防呆例外處理與學業風險標記",
@@ -1511,7 +1511,7 @@ window.APP_DATA = {
       "titleZh": "Google Docs 計畫書撰寫：高中化學實驗室現代化升級補助企劃案",
       "titleEn": "Gemini in Docs: Grant Proposal for Upgrading Chemistry Lab Equipment",
       "roleScenarioZh": "化學科召集人申請教育部或民間基金會專款補助升級實驗器材",
-      "promptZh": "【在 Google Docs 中提問】：\n我正在向教育主管機關申請一筆專案補助，用以全面現代化升級學校的化學實驗室（引進數位感測器、分光光度計、通風櫥安全設施與微型化綠色化學器材）。請協助我根據以下痛點草稿，撰寫一份具說服力且格式正規的補助申請企劃案：\n1. 專案摘要與背景緣起\n2. 現有設備老舊對學生實作探究與安全的嚴重限制\n3. 新設備導入對培養學生 STEM 核心素養與科展專案的具體提升效益\n4. 為期一年的推動甘特圖與成效評估 KPI 指標\n5. 初步經費預算估算表。",
+      "promptZh": "【在 Google Docs 中提問】：\n我正在向教育主管機關申請一筆專案補助，用以全面現代化升級學校的化學實驗室（引進數位感測器、分光光度計、通風櫥安全設施與微型化綠色化學器材）。請協助我根據以下痛點草稿，撰寫一份具說服力且格式正規的補助申請企劃案：\n1. 專案摘要與背景緣起\n2. 現有設備老舊對學生實作探究與安全的嚴重限制\n3. 引進新設備對培養學生 STEM 核心素養與科展專案的具體提升效益\n4. 為期一年的推動甘特圖與成效評估 KPI 指標\n5. 初步經費預算估算表。",
       "promptEn": "I’m applying for a grant to upgrade the science equipment in our chemistry labs (digital sensors, spectrophotometers, modern fume hoods). Help me create a persuasive grant proposal based on these draft notes: executive summary, urgent statement of lab safety and obsolescence, educational impact on student STEM inquiry, project milestones, and a categorized budget table.",
       "parts": {
         "persona": "專業教育基金與校園設施改善企劃專家",
@@ -1587,7 +1587,7 @@ window.APP_DATA = {
     {
       "slideNumber": 4,
       "sectionId": "overview",
-      "titleZh": "專為教育量身打造的 AI 智能助手",
+      "titleZh": "專為教育量身打造的 AI 智慧助理",
       "titleEn": "Your AI-powered \u000bassistant for education",
       "summaryZh": "以安全、嚴謹的學習科學為基礎，賦能教師教學創新與學生自主學習。",
       "allTextsEn": [
