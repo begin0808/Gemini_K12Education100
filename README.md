@@ -13,7 +13,7 @@
 * **原創內容來源**：[Google for Education 官方簡報《100+ ways to use Gemini in K-12 education》 ↗](https://docs.google.com/presentation/d/1MTyP-BBusYw2rHKE_lQ2QVDA7uT7ngYaGfBy9HypQdY/view)
 * **繁體中文化構想與在地化整理**：**國立南大附中 李佳恩老師**
   > 「有感於 Google 官方這份高達 129 頁的 AI 教育指南內容極具深度與前瞻性，但全英文且篇幅龐大，許多科目老師看到英文往往直接放棄。特提出繁中化構想並製作成互動實踐指南網頁，希望能推廣這寶貴教材。」
-* **意見交流與修訂建議**：歡迎各級學校教師來信交流教學心得或提供勘誤建議：[`begin0808@gmail.com`](mailto:begin0808@gmail.com)
+* **意見交流與修訂建議**：歡迎各級學校教師來信交流教學心得或提供勘誤建議：[`begin@gm.tntcsh.tn.edu.tw`](mailto:begin@gm.tntcsh.tn.edu.tw)
 * **技術協作與前端建置**：Google Antigravity AI & Gemini 3.8 Flash
 
 ---
