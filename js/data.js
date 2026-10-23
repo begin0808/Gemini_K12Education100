@@ -259,7 +259,7 @@ window.APP_DATA = {
       "inputGuideZh": "提供想要融入故事中的核心概念與學習重點、故事主角設定、情節氛圍與篇幅字數，並可設定中途留有需要學生協助解決的懸念問題。",
       "promptTemplateZh": "你是一位富有想像力的科普作家與教育家。請為[年級學生]創作一篇約 500 字的引人入勝冒險故事，以生動有趣的方式帶出[學科主題，例如：紅血球在人體循環系統中的旅程，或是電子在電路中的冒險]。故事中需自然融入關鍵概念[如：養分輸送、肺泡交換、動脈與靜脈壓力差別]，並在故事高潮處設計一個需要學生運用本課知識來破解的難題。",
       "promptTemplateEn": "Write an engaging educational narrative for [grade level] students that brings [scientific / historical concept] to life. Weave core facts seamlessly into character dialogue and end with a cliffhanger question for students to solve.",
-      "proTipsZh": "可將故事匯入『Gemini Notebook (NotebookLM)』生成播客音訊導覽 (Audio Overview)，讓學生戴上耳機彷彿在聽廣播劇！",
+      "proTipsZh": "可將故事匯入『Gemini Notebook (NotebookLM)』在工作室中生成「語音摘要 (Audio Overview)」，讓學生戴上耳機彷彿在聽廣播劇！",
       "slideRef": 80
     },
     {
@@ -345,7 +345,7 @@ window.APP_DATA = {
       "icon": "folder-git2",
       "badge": "無幻覺精準",
       "slideRange": "第 61 - 77 頁",
-      "desc": "基於上傳教材與課程綱要進行精準問答、生成播客語音導覽 (Audio Overviews)、影片導覽、跨章節心智圖 (Mind Map)，以及教師 PLC 專業社群共備。"
+      "desc": "基於上傳教材與課程綱要進行精準問答，在「工作室」一鍵生成「語音摘要 (Audio Overview)」、「影片摘要」、「報告」、「測驗」、「心智圖 (Mind Map)」，以及支援教師 PLC 專業學習社群共備。"
     },
     {
       "id": "advanced",
@@ -974,7 +974,7 @@ window.APP_DATA = {
         "theme": "光在不同光學介質中的行進速度改變與折射方向",
         "structure": "情境檢核題 2 道 + 正確思維評分規準 + 典型錯誤思維指引"
       },
-      "tipsZh": "利用 NotebookLM 的 Studio 工作室面板，還可以直接將這些題目一鍵轉成互動式 Quiz 測驗卡！",
+      "tipsZh": "利用 NotebookLM 的「工作室」面板，還可以直接將這些題目一鍵轉成互動式「測驗」與「學習卡」！",
       "applicableTools": [
         "Gemini Notebook (NotebookLM)"
       ],
@@ -1011,7 +1011,7 @@ window.APP_DATA = {
       "titleZh": "NotebookLM 心智圖生成：8 週物理單元跨章節概念視覺化",
       "titleEn": "NotebookLM Pro Tip: Generate a Visual Mind Map Across Sources",
       "roleScenarioZh": "一鍵將厚重繁複的 8 週講義轉化為層次分明的知識架構心智圖",
-      "promptZh": "【在 Gemini Notebook / NotebookLM Studio 中操作】：\n在 Studio 面板中點擊『心智圖 (Mind Map)』按鈕。NotebookLM 將自動通盤分析上傳的 8 週教材，建立一張可縮放、可點擊展開的互動式視覺概念關聯圖。從運動學（速度、加速度）、動力學（牛頓三定律、動量）、能量（功與能）到波動與光學，將所有核心概念如何相互關聯視覺化呈現。",
+      "promptZh": "【在 Gemini Notebook (NotebookLM) 的「工作室」中操作】：\n在「工作室」面板中點擊『心智圖』按鈕。NotebookLM 將自動通盤分析上傳的 8 週教材，建立一張可縮放、可點擊展開的互動式視覺概念關聯圖。從運動學（速度、加速度）、動力學（牛頓三定律、動量）、能量（功與能）到波動與光學，將所有核心概念如何相互關聯視覺化呈現。",
       "promptEn": "Generate a Mind Map in Gemini Notebook. What it does: Creates a visual overview connecting core concepts across all uploaded weekly sources (kinematics, dynamics, energy, waves, optics), allowing students to explore conceptual nodes interactively.",
       "parts": {
         "persona": "視覺化知識圖譜建構引擎",
@@ -1077,17 +1077,17 @@ window.APP_DATA = {
       "slideNum": 70,
       "category": "notebooklm",
       "subCategory": "知識庫教學實戰",
-      "titleZh": "NotebookLM 翻轉課堂：生成雙主持播客語音導覽 (Audio Overview)",
+      "titleZh": "NotebookLM 翻轉課堂：生成雙主持「語音摘要 (Audio Overview)」",
       "titleEn": "NotebookLM Pro Tip: Generate Podcast-Style Audio Overviews for Flipped Learning",
-      "roleScenarioZh": "將枯燥繁複的單元講義一鍵轉化為生動逼真的男女雙主持廣播節目",
-      "promptZh": "【在 Gemini Notebook / NotebookLM Studio 中操作】：\n在 Studio 面板中點擊『音訊導覽 (Audio Overview)』。選取第 7 週『光與光學』的所有材料。NotebookLM 將自動透過 AI 生成兩位主持人生動自然對談的 Podcast 音檔！兩位主持人會像真正的廣播節目一樣互相搭腔、討論光的折射原理、分享生動比喻，甚至探討學生最容易犯錯的陷阱。教師還可自訂導覽重點（例如：專注於期末考複習或實驗步驟）。",
+      "roleScenarioZh": "將枯燥繁複的單元講義一鍵轉化為生動逼真的男女雙主持語音對談",
+      "promptZh": "【在 Gemini Notebook (NotebookLM) 的「工作室」中操作】：\n在「工作室」面板中點擊『語音摘要 (Audio Overview)』。選取第 7 週『光與光學』的所有材料。NotebookLM 將自動透過 AI 生成兩位主持人生動自然對談的雙人語音摘要音檔！兩位主持人會像專業廣播節目一樣互相搭腔、討論光的折射原理、分享生動比喻，甚至探討學生最容易犯錯的陷阱。教師還可自訂摘要重點（例如：專注於期末考複習或實驗步驟）。",
       "promptEn": "Generate a podcast-style Audio Overview in Gemini Notebook. Choose Week 7 sources on light and optics. NotebookLM generates an engaging deep-dive conversation between two AI hosts who explain core concepts, break down complex ideas with banter and analogies, and review key takeaways. Downloadable for offline listening.",
       "parts": {
         "persona": "幽默專業且具備極佳化學反應的科學廣播雙主持人",
-        "act": "將多份學術講義轉譯為高品質口語化播客音訊導覽",
+        "act": "將多份學術講義轉譯為高品質口語化雙人對談語音摘要",
         "recipient": "通勤中、運動中或聽覺型學習的學生與教師",
         "theme": "以對話討論形式剖析光學定律、迷思陷阱與核心概念",
-        "structure": "雙人對談音訊檔 (.wav/.mp3) + 自訂聚焦指引"
+        "structure": "雙人對談語音檔 (.wav/.mp3) + 自訂聚焦指引"
       },
       "tipsZh": "教師可以在開車通勤或備課時用聽的吸收教材，也可以將音檔下載後指派給學生作為『翻轉課堂 (Flipped Classroom)』的課前預習作業！",
       "applicableTools": [
@@ -1736,7 +1736,7 @@ window.APP_DATA = {
       "sectionId": "overview",
       "titleZh": "深入與來源資料對話：工作室 (Studio) 多元產出",
       "titleEn": "Ask questions of your sources",
-      "summaryZh": "使用 Studio 面板一鍵將上傳的講義轉化為雙主持播客語音導覽 (Audio Overview)、研讀指南、測驗卷或心智圖。",
+      "summaryZh": "使用「工作室」面板一鍵將上傳的講義轉化為雙主持「語音摘要 (Audio Overview)」、「影片摘要」、「報告」、「測驗」、「心智圖」、「學習卡」或「資訊圖表」。",
       "allTextsEn": [
         "Ask questions of your sources",
         "Optional: Use the Studio panel to transform your uploaded resources into a podcast-style Audio Overview, study guide, Quiz, infographic, and more",
@@ -2579,9 +2579,9 @@ window.APP_DATA = {
     {
       "slideNumber": 37,
       "sectionId": "advanced",
-      "titleZh": "Deep Research\nAudio Overviews for flexible learnin",
+      "titleZh": "Deep Research 深度研究：靈活學習的「語音摘要 (Audio Overviews)」",
       "titleEn": "Deep Research\nAudio Overviews for flexible learning",
-      "summaryZh": "Don’t just read – listen",
+      "summaryZh": "不只能閱讀，更能直接聆聽！一鍵生成研究報告的雙人語音摘要，支援離線下載、嵌入課程平台或分享至教師專業學習社群 (PLC)。",
       "allTextsEn": [
         "Deep Research\nAudio Overviews for flexible learning",
         "Don’t just read – listen",
@@ -3135,9 +3135,9 @@ window.APP_DATA = {
     {
       "slideNumber": 61,
       "sectionId": "notebooklm",
-      "titleZh": "Understand anything with Gemini Notebook, your per",
+      "titleZh": "Gemini Notebook (NotebookLM)：您專屬的來源資料 AI 專家",
       "titleEn": "Understand anything with Gemini Notebook, your personalized AI expert on the inf",
-      "summaryZh": "Gemini Notebook",
+      "summaryZh": "只針對您最重視的專屬資料與講義進行理解、歸納與對話，零幻覺、零造假。",
       "allTextsEn": [
         "Understand anything with Gemini Notebook, your personalized AI expert on the information that matters most to you.",
         "Gemini Notebook"
@@ -3151,9 +3151,9 @@ window.APP_DATA = {
     {
       "slideNumber": 62,
       "sectionId": "notebooklm",
-      "titleZh": "Grounding \u000bour use case examples\nUsing a hypotheti",
-      "titleEn": "Grounding \u000bour use case examples\nUsing a hypothetical 8-week unit on foundationa",
-      "summaryZh": "While we use a physics unit to demonstrate an instructional workflow, Gemini Notebook is subject-agnostic. Simply swap i",
+      "titleZh": "以 8 週高中基礎物理單元示範真實教學工作流程",
+      "titleEn": "Grounding our use case examples\nUsing a hypothetical 8-week unit on foundational physics concepts",
+      "summaryZh": "教材不受學科限制，教師可直接替換為自己的學科講義；示範案例假設所有 8 週來源文件皆已建立於筆記本中。",
       "allTextsEn": [
         "Grounding \u000bour use case examples\nUsing a hypothetical 8-week unit on foundational physics concepts",
         "While we use a physics unit to demonstrate an instructional workflow, Gemini Notebook is subject-agnostic. Simply swap in your own materials to get started.\nStudents can also upload their own class notes for these weeks into their copies of this notebook.\nAll of the following examples assume the sources are already loaded."
@@ -3167,9 +3167,9 @@ window.APP_DATA = {
     {
       "slideNumber": 63,
       "sectionId": "notebooklm",
-      "titleZh": "Planning",
+      "titleZh": "教學規劃：跨單元銜接與學習進度規劃 (Prompt 範例)",
       "titleEn": "Planning",
-      "summaryZh": "Sequence the unit lessons\nPrompt",
+      "summaryZh": "分析第 7 週光學與第 8 週電磁學的核心概念關聯，生成溫故知新的銜接複習活動。",
       "allTextsEn": [
         "Planning",
         "Sequence the unit lessons\nPrompt",
@@ -3185,9 +3185,9 @@ window.APP_DATA = {
     {
       "slideNumber": 64,
       "sectionId": "notebooklm",
-      "titleZh": "Instructional materials",
+      "titleZh": "教學資源：依據光學教材快速生成學生實驗指南 (Lab Guide)",
       "titleEn": "Instructional materials",
-      "summaryZh": "Lab guide creation\nPrompt",
+      "summaryZh": "依據光的折射單元，自動產出含學習目標、器材清單、步驟指引與反思題的學生實驗手冊。",
       "allTextsEn": [
         "Instructional materials",
         "Lab guide creation\nPrompt",
@@ -3203,9 +3203,9 @@ window.APP_DATA = {
     {
       "slideNumber": 65,
       "sectionId": "notebooklm",
-      "titleZh": "Assessment",
+      "titleZh": "評量設計：生成檢驗光折射概念的開放式評量試題",
       "titleEn": "Assessment",
-      "summaryZh": "Building knowledge checks\nPrompt",
+      "summaryZh": "針對光在不同介質折射的理解程度，產出能激發批判性思考的高中試題，並儲存至筆記。",
       "allTextsEn": [
         "Assessment",
         "Building knowledge checks\nPrompt",
@@ -3221,9 +3221,9 @@ window.APP_DATA = {
     {
       "slideNumber": 66,
       "sectionId": "notebooklm",
-      "titleZh": "Differentiation",
+      "titleZh": "差異化教學：為基礎、常態與進階學習者設計分層選擇任務板 (Choice Board)",
       "titleEn": "Differentiation",
-      "summaryZh": "Ideas for diverse learners\nPrompt",
+      "summaryZh": "基於光的折射單元，為不同程度學生客製 3 種學習任務，並提供詞彙鷹架支撐。",
       "allTextsEn": [
         "Differentiation",
         "Ideas for diverse learners\nPrompt",
@@ -3239,9 +3239,9 @@ window.APP_DATA = {
     {
       "slideNumber": 67,
       "sectionId": "notebooklm",
-      "titleZh": "Visualize connections across sources by generating",
+      "titleZh": "生成跨來源關聯「心智圖 (Mind Map)」視覺化核心概念",
       "titleEn": "Visualize connections across sources by generating a Mind Map",
-      "summaryZh": "Pro tip",
+      "summaryZh": "自動將上傳的各週講義梳理為概念關聯心智圖，點擊任一概念即可展開教材中的所有討論，支援雙重編碼與檢索練習。",
       "allTextsEn": [
         "Visualize connections across sources by generating a Mind Map",
         "Pro tip",
@@ -3258,9 +3258,9 @@ window.APP_DATA = {
     {
       "slideNumber": 68,
       "sectionId": "notebooklm",
-      "titleZh": "Administrative tasks",
+      "titleZh": "行政與教研應用：為下一次 PLC 專業學習社群共備生成「報告」",
       "titleEn": "Administrative tasks",
-      "summaryZh": "Prep for your next professional learning community (PLC) event\nPrompt",
+      "summaryZh": "選取 8 週課程綱要，在「工作室」中點擊『報告 (Briefing doc)』，一鍵梳理教學重點、進度考量與共同觀課指標。",
       "allTextsEn": [
         "Administrative tasks",
         "Prep for your next professional learning community (PLC) event\nPrompt",
@@ -3276,9 +3276,9 @@ window.APP_DATA = {
     {
       "slideNumber": 69,
       "sectionId": "notebooklm",
-      "titleZh": "Student use",
+      "titleZh": "學生自主學習：釐清複雜概念並生成學習卡與自測練習",
       "titleEn": "Student use",
-      "summaryZh": "Clarifying complex topics\nPrompt",
+      "summaryZh": "讓學生針對難懂概念（如運動學）請 AI 淺白解釋，並在工作室中一鍵生成測驗題、問答練習與專有名詞表。",
       "allTextsEn": [
         "Student use",
         "Clarifying complex topics\nPrompt",
@@ -3295,9 +3295,9 @@ window.APP_DATA = {
     {
       "slideNumber": 70,
       "sectionId": "notebooklm",
-      "titleZh": "Generate a podcast style audio overview to use in ",
+      "titleZh": "在 Gemini Notebook 中快速生成學習指南與測驗題",
       "titleEn": "Generate a podcast style audio overview to use in flipped classroom activities.",
-      "summaryZh": "Pro tip",
+      "summaryZh": "在工作室面板中一鍵將教材轉化為含解答的測驗題目、申論題練習與名詞詞彙表，隨時自主複習。",
       "allTextsEn": [
         "Generate a podcast style audio overview to use in flipped classroom activities.",
         "Pro tip",
@@ -3313,9 +3313,9 @@ window.APP_DATA = {
     {
       "slideNumber": 71,
       "sectionId": "notebooklm",
-      "titleZh": "Generate a podcast style audio overview to use in ",
+      "titleZh": "生成雙主持「語音摘要 (Audio Overview)」應用於翻轉課堂",
       "titleEn": "Generate a podcast style audio overview to use in flipped classroom activities.",
-      "summaryZh": "Pro tip",
+      "summaryZh": "一鍵將筆記、教案、研究論文或 YouTube 影片轉為雙人對談的語音摘要，透過「自訂」功能精準導引討論焦點。",
       "allTextsEn": [
         "Generate a podcast style audio overview to use in flipped classroom activities.",
         "Pro tip",
@@ -3333,9 +3333,9 @@ window.APP_DATA = {
     {
       "slideNumber": 72,
       "sectionId": "notebooklm",
-      "titleZh": "How to generate an Audio Overview in Gemini Notebo",
+      "titleZh": "如何在 Gemini Notebook 中生成「語音摘要 (Audio Overview)」",
       "titleEn": "How to generate an Audio Overview in Gemini Notebook",
-      "summaryZh": "Select your sources\nChoose one or more files in your notebook, such as lesson plans, student notes, research articles.",
+      "summaryZh": "1. 選取來源教材；2. 在「工作室」面板點選『語音摘要』；3. 使用『自訂』指定受眾與語氣；4. 聆聽、下載音檔或在「互動模式」中語音加入提問！",
       "allTextsEn": [
         "How to generate an Audio Overview in Gemini Notebook",
         "Select your sources\nChoose one or more files in your notebook, such as lesson plans, student notes, research articles.",
@@ -3361,9 +3361,9 @@ window.APP_DATA = {
     {
       "slideNumber": 73,
       "sectionId": "notebooklm",
-      "titleZh": "Audio Overviews",
+      "titleZh": "「語音摘要 (Audio Overview)」在 K-12 教育的 7 大實戰應用與自訂提示詞",
       "titleEn": "Audio Overviews",
-      "summaryZh": "Audio Overviews",
+      "summaryZh": "涵蓋單元備課、翻轉教材、形成性評量、差異化輔導、文獻綜整、學生考前複習與 PLC 社群追蹤。",
       "allTextsEn": [
         "Audio Overviews"
       ],
@@ -3425,9 +3425,9 @@ window.APP_DATA = {
     {
       "slideNumber": 74,
       "sectionId": "notebooklm",
-      "titleZh": "Generate a podcast style audio overview to use in ",
+      "titleZh": "將教材轉化為生動直觀的「影片摘要 (Video Overview)」",
       "titleEn": "Generate a podcast style audio overview to use in flipped classroom activities.",
-      "summaryZh": "Pro tip",
+      "summaryZh": "運用 AI 主持人將長篇文件、教案或研究報告轉為圖文並茂的短影音摘要，非常適合視覺型學習者！",
       "allTextsEn": [
         "Generate a podcast style audio overview to use in flipped classroom activities.",
         "Pro tip",
@@ -3443,9 +3443,9 @@ window.APP_DATA = {
     {
       "slideNumber": 75,
       "sectionId": "notebooklm",
-      "titleZh": "How to generate a Video Overview in Gemini Noteboo",
+      "titleZh": "如何在 Gemini Notebook 中生成「影片摘要 (Video Overview)」",
       "titleEn": "How to generate a Video Overview in Gemini Notebook",
-      "summaryZh": "Select your sources\nChoose one or more files in your notebook, such as lesson plans, student notes, research articles.",
+      "summaryZh": "1. 選取來源文件；2. 在「工作室」面板中點擊『影片摘要』；3. 透過右上角『自訂』導引受眾與主題；4. 線上觀看、下載或分享。",
       "allTextsEn": [
         "How to generate a Video Overview in Gemini Notebook",
         "Select your sources\nChoose one or more files in your notebook, such as lesson plans, student notes, research articles.",
@@ -3469,9 +3469,9 @@ window.APP_DATA = {
     {
       "slideNumber": 76,
       "sectionId": "notebooklm",
-      "titleZh": "Video Overviews",
+      "titleZh": "「影片摘要 (Video Overview)」在 K-12 教育的 7 大實戰情境與自訂提示詞",
       "titleEn": "Video Overviews",
-      "summaryZh": "Video Overviews",
+      "summaryZh": "包含牛頓運動定律示範影片、動量守恆動態解說、雲霄飛車評量規準、電學概念直觀圖解等。",
       "allTextsEn": [
         "Video Overviews"
       ],
@@ -3533,9 +3533,9 @@ window.APP_DATA = {
     {
       "slideNumber": 77,
       "sectionId": "notebooklm",
-      "titleZh": "Getting the most \u000bout of Gemini Notebook",
+      "titleZh": "充分發揮 Gemini Notebook (NotebookLM) 的 6 大高階祕訣",
       "titleEn": "Getting the most \u000bout of Gemini Notebook",
-      "summaryZh": "Pro tip",
+      "summaryZh": "上傳優質來源、精準提問、探索工作室多元產出（語音摘要、影片摘要、報告、測驗、心智圖）、檢驗引文來源、儲存至筆記與持續迭代提問。",
       "allTextsEn": [
         "Getting the most \u000bout of Gemini Notebook",
         "Pro tip",
@@ -3795,9 +3795,9 @@ window.APP_DATA = {
     {
       "slideNumber": 91,
       "sectionId": "classroom",
-      "titleZh": "Classroom 深度整合：Tips for using Gemini Notebook for plann",
+      "titleZh": "Classroom 整合技巧：運用 Gemini Notebook 整合教案與生成「語音摘要」備課",
       "titleEn": "Tips for using Gemini Notebook for planning",
-      "summaryZh": "探討自訂 Gem、指派 Notebook/Gem 到課堂作業、頂端置頂資源、學生端受控體驗、教師後台洞察與 @Classroom 連動功能。",
+      "summaryZh": "將全單元課綱、標準文件與教材合併至單一筆記本，並運用「語音摘要 (Audio Overview)」在通勤或備課時隨聽隨學，輕鬆梳理教學盲點。",
       "allTextsEn": [
         "Tips for using Gemini Notebook for planning",
         "Use Gemini Notebook as your curriculum assistant to consolidate planning materials and save valuable prep time. By combining your professional documents into a single intelligent notebook, you can unlock new efficiencies.\nCreate a master notebook for the unit. Upload your entire unit’s materials – scope and sequence, lesson plans, readings, and standards documents – into one notebook. This creates a central hub for all your planning, which you can then ask questions of or listen to on the go.\nListen to your plans with Audio Overviews. Instead of rereading documents, use the Audio Overview feature to listen to a podcast-style summary of your lesson plans or weekly scope and sequence while you commute or prep your classroom – and it can be shared with your colleagues. Customize the overview to focus on key learning objectives or potential student misconceptions.\nGenerate differentiation and alignment ideas. Ask your notebook to generate targeted resources from your materials. For example, “Suggest three discussion questions for advanced learners based on this article,” or “Which specific standards does my ‘Newton’s Third Law’ lesson address?”"
@@ -4003,9 +4003,9 @@ window.APP_DATA = {
     {
       "slideNumber": 103,
       "sectionId": "classroom",
-      "titleZh": "Classroom 深度整合：Student experience",
+      "titleZh": "Classroom 深度整合：學生端受控學習體驗 (Student experience)",
       "titleEn": "Student experience",
-      "summaryZh": "探討自訂 Gem、指派 Notebook/Gem 到課堂作業、頂端置頂資源、學生端受控體驗、教師後台洞察與 @Classroom 連動功能。",
+      "summaryZh": "學生打開指派的 Notebook 或 Gem 時獲得「僅供檢視」的安全體驗，無法修改或刪除來源文件；而教師在「工作室 (Studio)」中產出的心智圖、語音摘要等輔具，學生皆可直接檢視與聆聽！",
       "allTextsEn": [
         "Student experience",
         "When students open an assigned notebook or Gem, they receive a curated, “view only” experience. This allows them to freely ask questions and interact with the content you’ve provided, but they can’t add, edit, or delete source materials.\nAny learning aids you create for them in the “Studio” pane – such as study guides, Mind Maps, and Audio Overviews – will be visible and ready for them to use, allowing all students access to the resources you’ve generated."
@@ -4019,9 +4019,9 @@ window.APP_DATA = {
     {
       "slideNumber": 104,
       "sectionId": "classroom",
-      "titleZh": "Classroom 深度整合：Student experience",
+      "titleZh": "Classroom 深度整合：學生端課堂學習工具應用示範 (Lab Companion 與 Gem)",
       "titleEn": "Student experience",
-      "summaryZh": "探討自訂 Gem、指派 Notebook/Gem 到課堂作業、頂端置頂資源、學生端受控體驗、教師後台洞察與 @Classroom 連動功能。",
+      "summaryZh": "學生可在課堂作業頂端直接開啟「課堂學習工具」，例如以官方實驗手冊為唯一真理來源的實驗助教 Notebook，或透過提問引導思考的物理 Gem。",
       "allTextsEn": [
         "Student experience",
         "Students can access the “Class learning tools” highlighted at the top of their “Classwork” tab. The tool loads in a new tab when clicked. Example use cases:\nInteractive Lab Companion (Gemini Notebook): When a student is prepping for an experiment and asks a question – like “What are the safety rules for this lab?” or “Can you find every mention of velocity?” – the Interactive Lab Companion provides a direct, concise answer pulled exclusively from the official Student Lab Book. All answers include citations, so students can see exactly where the information came from, making it a reliable single source of truth for all lab work.\nNewton’s Laws Navigator (Gem): When a student asks a conceptual question – like “How does inertia apply to hockey?” – the Newton’s Laws Navigator Gem avoids giving a direct definition. Instead, it uses its grounded sources to respond with a targeted, guiding question like “Think about the puck before the game starts. What has to happen for it to move? Once it’s sliding on the ice, what forces are trying to slow it down?” This helps the student use real-world scenarios to build their own understanding of the concept.",
