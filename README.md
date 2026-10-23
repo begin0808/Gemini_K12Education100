@@ -49,7 +49,7 @@
    - 包含：課程標準教案專家、寫作回饋導師、蘇格拉底探究夥伴、雙語沉浸語伴、UDL 差異化專家、自然科學生活家教等完整 System Prompts。
 
 7. **📓 NotebookLM 知識庫深度實戰**：
-   - 以 8 週物理單元貫穿示範！解析 100% 根植於教師教材的零幻覺教研、一鍵雙人 Podcast 語音導覽 (Audio Overview) 與跨章節心智圖 (Mind Map)。
+   - 以 8 週物理單元貫穿示範！解析 100% 根植於教師教材的零幻覺教研、一鍵雙人對談語音摘要 (Audio Overview) 與跨章節心智圖 (Mind Map)。
 
 8. **💼 Google Workspace 跨工具協作**：
    - 整合 Google Docs（現代詩回饋）、Gmail（同理心家長回信）、Sheets（複雜加權公式）、Forms（關聯教材一鍵出題）、Meet（AI 逐字記錄）與 Vids（科普微短片）。
