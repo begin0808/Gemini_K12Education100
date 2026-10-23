@@ -7,10 +7,10 @@
   <meta name="description" content="Google 官方《100+ ways to use Gemini in K-12 education》完整繁體中文網站。收錄 Google Classroom 鷹架工具、PARTS 提示詞框架、48+ 實戰教學提示詞庫、自訂 Gems 專家與 129 頁全簡報互動解析。">
   <meta name="keywords" content="Google Classroom, Gemini, 生成式AI, K-12教育, 教師AI工具, PARTS提示詞, NotebookLM, Google Workspace">
   
-  <!-- Google Fonts: Noto Sans TC, Inter, Roboto Mono -->
+  <!-- Google Fonts: Noto Sans TC, Noto Serif TC, Inter, Roboto Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@500;600;700;900&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="favicon.png">
   
   <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2.2.0">
+  <link rel="stylesheet" href="css/style.css?v=2.3.0">
 </head>
 <body>
 
@@ -50,6 +50,59 @@
 
       <!-- Actions -->
       <div class="nav-actions">
+        <!-- Visual Style Switcher Dropdown (4 大風格自由切換) -->
+        <div class="style-dropdown-wrap">
+          <button class="nav-btn style-toggle-btn" id="style-picker-btn" onclick="toggleStyleMenu(event)" title="切換視覺美學風格（4種教育主題）">
+            <span class="style-btn-icon">🎨</span>
+            <span class="style-btn-label" id="current-style-label">Google 原生</span>
+            <svg class="style-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          
+          <div class="style-dropdown-menu" id="style-dropdown-menu">
+            <div class="style-menu-header">
+              <span class="style-menu-title">視覺美學風格</span>
+              <span class="style-menu-badge">4 種主題</span>
+            </div>
+            <div class="style-options-list">
+              <button type="button" class="style-opt-btn active" data-style-opt="google" onclick="switchVisualStyle('google')">
+                <span class="style-opt-preview preview-google"></span>
+                <div class="style-opt-text">
+                  <div class="style-opt-name">Google 原生風 <span class="style-opt-tag">預設</span></div>
+                  <div class="style-opt-desc">Material 3 原廠純淨感 · 柔和科技</div>
+                </div>
+                <span class="style-opt-check">✓</span>
+              </button>
+
+              <button type="button" class="style-opt-btn" data-style-opt="warm" onclick="switchVisualStyle('warm')">
+                <span class="style-opt-preview preview-warm"></span>
+                <div class="style-opt-text">
+                  <div class="style-opt-name">暖心手帳風</div>
+                  <div class="style-opt-desc">米紙底色 · 螢光劃記 · 名師備課手札</div>
+                </div>
+                <span class="style-opt-check">✓</span>
+              </button>
+
+              <button type="button" class="style-opt-btn" data-style-opt="swiss" onclick="switchVisualStyle('swiss')">
+                <span class="style-opt-preview preview-swiss"></span>
+                <div class="style-opt-text">
+                  <div class="style-opt-name">極簡瑞士風</div>
+                  <div class="style-opt-desc">細黑線條 · 學院典藏 · 零模糊排版</div>
+                </div>
+                <span class="style-opt-check">✓</span>
+              </button>
+
+              <button type="button" class="style-opt-btn" data-style-opt="brutal" onclick="switchVisualStyle('brutal')">
+                <span class="style-opt-preview preview-brutal"></span>
+                <div class="style-opt-text">
+                  <div class="style-opt-name">新粗獷潮流風</div>
+                  <div class="style-opt-desc">2.5px 黑粗框 · 立體硬陰影 · 貼紙感</div>
+                </div>
+                <span class="style-opt-check">✓</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
         <button class="nav-btn" onclick="openFavoritesModal()" title="查看已收藏的提示詞">
           <span>❤️ 收藏</span>
           <span class="badge-pill" id="fav-count-badge" style="display: none; background: var(--accent-coral); color: white; border: none;">0</span>

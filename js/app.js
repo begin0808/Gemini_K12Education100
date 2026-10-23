@@ -12,8 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const { siteInfo, partsFramework, classroomTools, sections, prompts, slides } = window.APP_DATA;
 
   // --- STATE ---
+  // Read URL query params (e.g. ?style=warm or ?style=brutal)
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramStyle = urlParams.get('style');
+  const initialStyle = (paramStyle && ['google', 'warm', 'swiss', 'brutal'].includes(paramStyle))
+    ? paramStyle
+    : (localStorage.getItem('gemini_k12_style') || 'google');
+
   let state = {
     theme: localStorage.getItem('gemini_k12_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'),
+    visualStyle: initialStyle,
     activeClassroomTab: 'all',
     activePromptCategory: 'all',
     activeToolFilter: 'all',
@@ -24,8 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     bilingualDefault: false
   };
 
-  // Set Theme
+  // Set Theme & Visual Style
   document.documentElement.setAttribute('data-theme', state.theme);
+  document.documentElement.setAttribute('data-style', state.visualStyle);
 
   // --- DOM ELEMENTS ---
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
@@ -97,6 +106,63 @@ document.addEventListener('DOMContentLoaded', () => {
       showToast(state.theme === 'dark' ? '已切換至深色主題 🌙' : '已切換至淺色主題 ☀️');
     });
   }
+
+  // --- VISUAL STYLE (4 大風格自由切換) ---
+  const styleDropdownMenu = document.getElementById('style-dropdown-menu');
+  const currentStyleLabel = document.getElementById('current-style-label');
+
+  const styleNamesMap = {
+    'google': 'Google 原生',
+    'warm': '暖心手帳',
+    'swiss': '極簡瑞士',
+    'brutal': '新粗獷派'
+  };
+
+  window.toggleStyleMenu = function(e) {
+    if (e) e.stopPropagation();
+    if (!styleDropdownMenu) return;
+    styleDropdownMenu.classList.toggle('show');
+  };
+
+  window.switchVisualStyle = function(styleId) {
+    if (!['google', 'warm', 'swiss', 'brutal'].includes(styleId)) return;
+    state.visualStyle = styleId;
+    document.documentElement.setAttribute('data-style', styleId);
+    localStorage.setItem('gemini_k12_style', styleId);
+
+    // Update active in dropdown
+    document.querySelectorAll('.style-opt-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-style-opt') === styleId);
+    });
+
+    if (currentStyleLabel) {
+      currentStyleLabel.textContent = styleNamesMap[styleId] || '風格';
+    }
+
+    if (styleDropdownMenu) {
+      styleDropdownMenu.classList.remove('show');
+    }
+
+    showToast(`已切換至「${styleNamesMap[styleId]}」視覺美學風格 🎨`);
+  };
+
+  // Close style dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (styleDropdownMenu && styleDropdownMenu.classList.contains('show')) {
+      const wrap = document.querySelector('.style-dropdown-wrap');
+      if (wrap && !wrap.contains(e.target)) {
+        styleDropdownMenu.classList.remove('show');
+      }
+    }
+  });
+
+  // Init label & active option on load
+  if (currentStyleLabel) {
+    currentStyleLabel.textContent = styleNamesMap[state.visualStyle] || 'Google 原生';
+  }
+  document.querySelectorAll('.style-opt-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-style-opt') === state.visualStyle);
+  });
 
   // --- TABBED VIEW SWITCHING (SINGLE-VIEW PAGE ARCHITECTURE) ---
   const tabIdAliasMap = {
