@@ -581,13 +581,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let promptText = '';
     if (struct === '5E') {
-      promptText = `你是一位資深的${grade}${subject}教師與課程設計專家 (Persona)。請為我們即將進行的「${topic}」單元 (Theme)，設計一份為期 3 天的 5E 探究教學教案大綱 (Act)。對象為該年級初次接觸此概念的學生 (Recipient)。請嚴格依照 5E 階段（參與、探索、解釋、精緻化、評量）撰寫，並在最後提供一份結合生活情境的「主張-證據-推理 (CER)」課堂退出票 (Structure)。`;
+      promptText = `你是一位資深的${grade}${subject}教師與課程設計專家 (Persona)。請為我們即將進行的「${topic}」單元 (Theme)，設計一份為期 3 天的 5E 探究教學教案大綱 (Act)。對象為該年級初次接觸此概念的學生 (Recipient)。請嚴格依照 5E 階段（參與、探索、解釋、精緻化、評量）撰寫，並在最後提供一份結合生活情境的「主張-證據-推理 (CER)」課末檢核單 (Exit Ticket) (Structure)。`;
     } else if (struct === 'rubric') {
       promptText = `你是一位專業的學科評量規準設計師 (Persona)。請為${grade}${subject}的「${topic}」專案實作成果 (Theme)，建立一份 4 個等級（精熟4分、良好3分、基礎2分、待加強1分）的表現規準評分量表 (Act)。目標讀者為學生與評分教師 (Recipient)。請包含 4 個核心向度（概念掌握、探究方法、邏輯論述與視覺呈現），並為每個等級提供具體客觀的行為描述 (Structure)。`;
     } else if (struct === 'quiz') {
       promptText = `你是一位專精於形成性評量的${grade}${subject}名師 (Persona)。請根據「${topic}」的核心概念與學習重點 (Theme)，設計一份包含 5 題單選題與 2 題開放式探究簡答題的隨堂測驗卷 (Act)。請針對目標年級學生的認知層次 (Recipient)，在答案後附上每題的測驗目標、正確詳解，並特別點出學生容易陷入的典型迷思概念 (Structure)。`;
     } else if (struct === 'choice') {
-      promptText = `你是一位致力於普及學習設計 (UDL) 的教學顧問 (Persona)。請為${grade}${subject}的「${topic}」單元 (Theme)，設計一個 3x3 九宮格學習選項板 (Choice Board) (Act)。對象為班內具備不同學習風格與長處的多元學習者 (Recipient)。九個格子需涵蓋動手實驗、視覺圖解、邏輯分析、口語表達與寫作等多元展現方式，並具有同等的學術嚴謹度 (Structure)。`;
+      promptText = `你是一位致力於全方位學習設計 (UDL) 的教學顧問 (Persona)。請為${grade}${subject}的「${topic}」單元 (Theme)，設計一個 3x3 九宮格自主學習任務板 (Choice Board) (Act)。對象為班內具備不同學習風格與長處的多元學習者 (Recipient)。九個格子需涵蓋動手實驗、視覺圖解、邏輯分析、口語表達與寫作等多元展現方式，並具有同等的學術嚴謹度 (Structure)。`;
     } else {
       promptText = `你是一位富啟發性的${grade}${subject}老師 (Persona)。請為「${topic}」單元 (Theme) 設計 3 個在課堂前 3-5 分鐘實施的破冰引起動機開場 (Hook) (Act)。針對目標年級學生 (Recipient)，請包含一個反直覺的謎題、一個迷你小實驗與一個生活爭議討論，並附上引導問題 (Structure)。`;
     }

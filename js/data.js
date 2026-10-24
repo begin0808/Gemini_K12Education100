@@ -13,7 +13,7 @@ window.APP_DATA = {
   },
   "partsFramework": {
     "name": "PARTS 提示詞設計黃金心法",
-    "description": "Google 官方專為教育工作者研發的提問架構，透過清晰的五大步驟，讓 AI 精準產出吻合課程標準與教學情境的高品質成果。",
+    "description": "Google 官方專為教育工作者研發的提問架構，透過清晰的五大步驟，讓 AI 精準產出吻合課綱素養與教學情境的高品質成果。",
     "elements": [
       {
         "letter": "P",
@@ -52,8 +52,8 @@ window.APP_DATA = {
         "nameZh": "Structure 格式與架構",
         "nameEn": "Structure",
         "whatZh": "指定具體的輸出形式、架構模型或評量模式",
-        "whyZh": "讓 AI 將答案組織成教師熟悉的專業格式（例如：5E 教學架構、4 等級規準表格、CER 聲明-證據-推理課堂退出票、Markdown 格式）。",
-        "example": "請以表格呈現，包含：學習目標、探究步驟、引導提問，並在文末附上 1 道 CER 課堂退出票。"
+        "whyZh": "讓 AI 將答案組織成教師熟悉的專業格式（例如：5E 教學架構、4 等級規準表格、CER 主張-證據-推理課末檢核單 (Exit Ticket)、Markdown 格式）。",
+        "example": "請以表格呈現，包含：學習目標、探究步驟、引導提問，並在文末附上 1 道 CER 課末檢核單 (Exit Ticket)。"
       }
     ],
     "evolutionExample": {
@@ -89,8 +89,8 @@ window.APP_DATA = {
       "color": "#1a73e8",
       "descZh": "引導式 AI 範本，依據適用年級、學科主題、教學時長與教學模式（如 5E 探究教學法或通用模式），自動生成完整單元架構、學習目標、引導活動與評量規劃。",
       "descEn": "Guided AI template that generates a complete first draft of a standards-aligned lesson sequence based on your target grade, learning objectives, and instructional model.",
-      "inputGuideZh": "輸入年級（例如：國中七年級、高中十年級）、指定教學主題與對齊的課程標準指標（可直接複製貼上課綱標準），並可附加 Google 雲端硬碟中的單元教材或大綱以強化情境深度。",
-      "promptTemplateZh": "你是一位[年級與學科，例如：高一物理]老師。請為[單元主題，例如：牛頓第三運動定律與動量守恆]設計一個為期[天數，例如：3天]的教案大綱。請採用[教學模式，例如：5E 探究教學架構]，內容需包含：引起動機、探究活動、核心概念解說、應用延伸與形成性評量（附課堂退出票）。",
+      "inputGuideZh": "輸入年級（例如：國中七年級、高中十年級）、指定教學主題與對齊的課綱學習重點與核心素養指標（可直接複製貼上課綱標準），並可附加 Google 雲端硬碟中的單元教材或大綱以強化情境深度。",
+      "promptTemplateZh": "你是一位[年級與學科，例如：高一物理]老師。請為[單元主題，例如：牛頓第三運動定律與動量守恆]設計一個為期[天數，例如：3天]的教案大綱。請採用[教學模式，例如：5E 探究教學架構]，內容需包含：引起動機、探究活動、核心概念解說、應用延伸與形成性評量（附課末檢核單 Exit Ticket）。",
       "promptTemplateEn": "You are a [grade & subject] teacher. Outline a [number of days]-day lesson sequence introducing [topic & standard]. Use the [5E / General] instructional model and include engaging inquiry activities, student checks, and an exit ticket.",
       "proTipsZh": "在 Google Classroom 內生成初稿後，可直接在對話框中要求 Gemini 微調（例如：「請為第二天的活動增加分組合作學習策略」），滿意後點擊『匯出至 Google 文件』進行最終格式調整與分享！",
       "slideRef": 83
@@ -172,7 +172,7 @@ window.APP_DATA = {
     },
     {
       "id": "tool-choice-boards",
-      "nameZh": "建立選項板",
+      "nameZh": "建立學習任務選項板 (Choice Board)",
       "nameEn": "Create choice boards",
       "category": "說明用教材",
       "tags": [
@@ -181,12 +181,12 @@ window.APP_DATA = {
       ],
       "icon": "grid",
       "color": "#188038",
-      "descZh": "建立九宮格或多元選項板 (Choice Boards / Tic-Tac-Toe)，賦予學生自主選擇學習活動與評量展現方式的權力，體現差異化教學與普遍學習設計 (UDL)。",
+      "descZh": "建立九宮格自主學習任務板 (Choice Board / Tic-Tac-Toe)，賦予學生自主選擇學習活動與評量展現方式的權力，體現差異化教學與全方位學習設計 (UDL)。",
       "descEn": "Design 3x3 grid choice boards or flexible activity menus that give students agency over how they demonstrate their learning, embodying UDL principles.",
       "inputGuideZh": "指定單元主題與多元智能範疇（如：視覺圖像、動手實作、邏輯分析、口語表達、文學創作），確保不同強項的學生都能找到展現優勢的方式。",
-      "promptTemplateZh": "你是一位推動普及學習設計 (UDL) 的教學顧問。請為[年級與單元，例如：高一生物遺傳與變異]設計一個 3x3 九宮格學習選項板 (Choice Board)。每個格子需代表一項能展現學習成效的獨立任務，涵蓋不同學習風格（包含：數位資訊圖表、微播客錄音、手繪漫畫、實驗模型、短篇故事等）。請明確標註各任務的評量重點與所需時間。",
+      "promptTemplateZh": "你是一位推動全方位學習設計 (UDL) 的教學顧問。請為[年級與單元，例如：高一生物遺傳與變異]設計一個 3x3 九宮格自主學習任務板 (Choice Board)。每個格子需代表一項能展現學習成效的獨立任務，涵蓋不同學習風格（包含：數位資訊圖表、Podcast 音訊錄音、手繪漫畫、實驗模型、短篇故事等）。請明確標註各任務的評量重點與所需時間。",
       "promptTemplateEn": "Design a 3x3 student choice board for a [grade level] unit on [topic]. Provide 9 diverse activities spanning visual, kinesthetic, analytical, and narrative expressions, ensuring equal rigor across all options.",
-      "proTipsZh": "在 Google Classroom 發布選項板作業時，學生可自由挑選連成一線的三個格子或挑選指定數量任務繳交，大幅提升學習動機！",
+      "proTipsZh": "在 Google Classroom 發布學習任務板作業時，學生可自由挑選連成一線的三個格子或挑選指定數量任務繳交，大幅提升學習動機！",
       "slideRef": 81
     },
     {
@@ -228,7 +228,7 @@ window.APP_DATA = {
     },
     {
       "id": "tool-misconceptions",
-      "nameZh": "解決常見的誤解",
+      "nameZh": "剖析常見迷思概念",
       "nameEn": "Address common misconceptions",
       "category": "學生支援",
       "tags": [
@@ -337,7 +337,7 @@ window.APP_DATA = {
       "icon": "gem",
       "badge": "專屬助理",
       "slideRange": "第 48 - 60 頁",
-      "desc": "掌握系統指令 (System Instructions) 與知識庫配置。提供課程標準教案專家、課堂翻譯小幫手、活動遊戲化專家、化學學伴等 7 套現成指令範本。"
+      "desc": "掌握系統指令 (System Instructions) 與知識庫配置。提供課綱素養教案專家、課堂翻譯小幫手、活動遊戲化專家、化學學伴等 7 套現成指令範本。"
     },
     {
       "id": "notebooklm",
@@ -419,16 +419,16 @@ window.APP_DATA = {
       "titleZh": "PARTS 黃金範例：十年級 DNA 結構與功能 5E 探究教案",
       "titleEn": "Breaking Down a Great Prompt with PARTS: 10th Grade DNA 5E Lesson",
       "roleScenarioZh": "高中生物教師規劃探究導向的 5E 教學單元與形成性評量",
-      "promptZh": "你是一位高中生物教師。請為十年級學生設計一個 5E 探究式教案，介紹 DNA 的結構與功能。請針對探究導向的科學課堂量身打造，內容需包含一個引人入勝的實驗活動，並在文末附上一道主張-證據-推理 (CER) 寫作提示作為課堂退出票。",
+      "promptZh": "你是一位高中生物教師。請為十年級學生設計一個 5E 探究式教案，介紹 DNA 的結構與功能。請針對探究導向的科學課堂量身打造，內容需包含一個引人入勝的實驗活動，並在文末附上一道主張-證據-推理 (CER) 寫作提示作為課末檢核單 (Exit Ticket)。",
       "promptEn": "You are a high school educator. Design a 5E lesson for 10th grade students introducing the structure and function of DNA. Tailor the lesson for an inquiry-based science class and include an engaging lab activity and a claim-evidence-reasoning (CER) writing prompt as the exit ticket.",
       "parts": {
         "persona": "高中生物專業教師 (High school educator)",
         "act": "設計完整的 5E 教案 (Design a 5E lesson)",
         "recipient": "十年級探究導向科學課堂學生 (10th grade students in an inquiry-based classroom)",
         "theme": "DNA 的分子結構與遺傳功能 (Structure and function of DNA)",
-        "structure": "5E 教學模式（參與、探索、解釋、精緻化、評量）+ 動手實驗 + CER 課堂退出票"
+        "structure": "5E 教學模式（參與、探索、解釋、精緻化、評量）+ 動手實驗 + CER 課末檢核單 (Exit Ticket)"
       },
-      "tipsZh": "CER (Claim-Evidence-Reasoning) 是國際標準的科學論證寫作框架，用來做課堂退出票 (Exit Ticket) 能立即診斷學生是否真正理解實驗數據背後的科學意涵。",
+      "tipsZh": "CER (Claim-Evidence-Reasoning) 是國際標準的科學論證寫作框架，用來做課末檢核單 (Exit Ticket) 能立即診斷學生是否真正理解實驗數據背後的科學意涵。",
       "applicableTools": [
         "Gemini App",
         "Google Classroom",
@@ -753,7 +753,7 @@ window.APP_DATA = {
       "slideNum": 54,
       "category": "gems",
       "subCategory": "自訂 Gem",
-      "titleZh": "自訂 Gem 系統指令：課程標準本位教案專家 Gem",
+      "titleZh": "自訂 Gem 系統指令：課綱素養導向教案專家 Gem",
       "titleEn": "Custom Gem Instructions: Standards-Based Lesson Planning Coach",
       "roleScenarioZh": "教師建立專屬教案設計專家，隨時為任何單元設計符合課綱的教案",
       "promptZh": "【Gem 系統設定指令 / Instructions】：\n你是一位專精於素養導向與標準本位 (Standards-based) 的資深教學教練。你的任務是協助教師設計結構嚴謹、高學生參與度且精準對齊教育標準的單元教案。當教師提供單元主題時，請依序執行以下任務：\n1. 協助釐清對應的核心素養指標與學習表現\n2. 運用 5E 教學模式或逆向設計 (Understanding by Design, UbD) 規劃完整課程序列\n3. 嵌入形成性評量檢核點與差異化學習策略\n4. 提供清晰的課堂時間配置與提問清單\n語氣請保持專業、鼓勵且高度聚焦於學生學習成效。",
@@ -762,7 +762,7 @@ window.APP_DATA = {
         "persona": "素養導向與標準本位資深教學教練 (Instructional coach)",
         "act": "標準對齊、5E/UbD 架構化教案生成、差異化支援",
         "recipient": "需要高效設計嚴謹單元課表的學科教師",
-        "theme": "課程標準轉化、逆向設計教學法與課堂實施細節",
+        "theme": "課綱素養導向轉化、逆向設計教學法與課堂實施細節",
         "structure": "完整 Gem 系統指令範本（角色、四大執行步驟、專業語氣）"
       },
       "tipsZh": "在建立 Gem 時，可將學校的課程綱要、學年行事曆或特定規準 PDF 直接上傳到 Gem 的『知識庫 (Knowledge)』中，Gem 就會完全依照你學校的標準回答！",
@@ -992,7 +992,7 @@ window.APP_DATA = {
       "promptZh": "【在 Gemini Notebook / NotebookLM 中提問】：\n請根據第 7 週第 3 課光的折射教材，為多元程度學生設計分層學習方案。請提供：1. 一個針對需要額外視覺與實體鷹架支援學生的補強探索活動；2. 一個針對已掌握基礎概念、準備接受進階挑戰學生的延伸探究活動（例如探討海市蜃樓成因或全反射光纖技術）。",
       "promptEn": "Prompt (in NotebookLM): Using Week 7, Lesson 3 on light refraction, create a differentiated activity menu for diverse learners: one scaffolded visual activity for students needing extra support, and one advanced inquiry extension exploring atmospheric mirages or total internal reflection.",
       "parts": {
-        "persona": "普及學習設計 (UDL) 與差異化教學教練",
+        "persona": "全方位學習設計 (UDL) 與差異化教學教練",
         "act": "從教材提煉並分化出基礎補強與高階挑戰兩套活動",
         "recipient": "同一個班級中學習節奏截然不同的學生",
         "theme": "光的折射原理在自然界與現代科技中的應用展現",
@@ -1128,10 +1128,10 @@ window.APP_DATA = {
       "titleZh": "Classroom UDL 教學教練 Gem：完善波動單元多元評量",
       "titleEn": "Classroom Custom Gem: Universal Design for Learning (UDL) Coach",
       "roleScenarioZh": "教師建立專屬 UDL 教練 Gem，全面提升課程對多元學習者的包容性",
-      "promptZh": "【向 UDL 教學教練 Gem 提問】：\n請擔任普及學習設計 (UDL) 專業顧問。請審視我上傳的第 6 週『波動與聲波』教案內容，並根據 UDL 的三大原則（多元表徵、多元表達、多元參與），為學生提出 3 種全新且多元的評量方式，讓學生能夠跳脫傳統紙筆測驗，展現他們對『光的折射與波長關係』的深層理解。",
+      "promptZh": "【向 UDL 教學教練 Gem 提問】：\n請擔任全方位學習設計 (UDL) 專業顧問。請審視我上傳的第 6 週『波動與聲波』教案內容，並根據 UDL 的三大原則（多元表徵、多元表達、多元參與），為學生提出 3 種全新且多元的評量方式，讓學生能夠跳脫傳統紙筆測驗，展現他們對『光的折射與波長關係』的深層理解。",
       "promptEn": "Using a custom Gem for instructional improvement, a teacher creates a 'UDL Coach' Gem, grounded in Universal Design for Learning principles, and asks it to review their Week 6 'Waves' lesson and suggest three new ways students could demonstrate their understanding of refraction beyond tests.",
       "parts": {
-        "persona": "普及學習設計 (UDL) 權威教學顧問 Gem",
+        "persona": "全方位學習設計 (UDL) 權威教學顧問 Gem",
         "act": "診斷現有教案並提出符合多元感官與多元智能的評量替代方案",
         "recipient": "班級內包含各類學習特質、特殊需求與資優學生",
         "theme": "波動特性、聲波傳播與光學折射概念理解",
@@ -1390,17 +1390,17 @@ window.APP_DATA = {
       "slideNum": 119,
       "category": "workspace",
       "subCategory": "Google Docs 教材設計",
-      "titleZh": "Google Docs 階梯式課堂退出票：七年級光合作用三層次檢核",
+      "titleZh": "Google Docs 階梯式課末檢核單：七年級光合作用三層次檢核",
       "titleEn": "Gemini in Docs: Generate Tiered Exit Ticket Questions on Photosynthesis",
       "roleScenarioZh": "七年級生物老師在下課前 5 分鐘進行分層次理解檢核",
-      "promptZh": "【在 Google Docs 中提問】：\n請擔任國中自然科理化老師。請為七年級剛學完『植物光合作用與能量轉換』的班級，編寫 3 道不同認知層次的下課退出票 (Exit Ticket) 問題：\n第 1 題（記憶與回想）：確認基礎原料與產物；\n第 2 題（理解與應用）：解釋葉綠體中光反應與暗反應（碳反應）的相互依賴關係；\n第 3 題（高階分析）：評估如果全球大氣中的二氧化碳濃度突然驟降 50%，對陸生植物與海洋藻類生態可能引發的連鎖生態衝擊。",
+      "promptZh": "【在 Google Docs 中提問】：\n請擔任國中自然科理化老師。請為七年級剛學完『植物光合作用與能量轉換』的班級，編寫 3 道不同認知歷程向度的課末檢核單 (Exit Ticket) 問題：\n第 1 題（記憶與回想）：確認基礎原料與產物；\n第 2 題（理解與應用）：解釋葉綠體中光反應與暗反應（碳反應）的相互依賴關係；\n第 3 題（高階分析）：評估如果全球大氣中的二氧化碳濃度突然驟降 50%，對陸生植物與海洋藻類生態可能引發的連鎖生態衝擊。",
       "promptEn": "Act as a middle school science teacher. Write three exit ticket questions on photosynthesis for a 7th-grade class: one recall question to check foundational knowledge, one comprehension question exploring light/dark reaction interdependence, and one analytical challenge asking students to predict the ecological cascade if global CO2 dropped by 50%.",
       "parts": {
         "persona": "資深中學自然科教學設計師",
-        "act": "設計 3 題階梯式布魯姆認知認知層次課堂退出票",
+        "act": "設計 3 題階梯式布魯姆認知歷程向度課末檢核單 (Exit Ticket)",
         "recipient": "剛完成光合作用章節學習的七年級國中生",
         "theme": "光合作用機制（光能轉化化學能）與全球碳循環生態關聯",
-        "structure": "三級階梯退出票：記憶題 -> 理解題 -> 高階情境分析題"
+        "structure": "三級階梯課末檢核單：記憶題 -> 理解題 -> 高階情境分析題"
       },
       "tipsZh": "印出成 3 格小紙條或直接發在 Classroom 的『提問』功能中，下課鐘響收回，立即掌握全班各層次的吸收狀況！",
       "applicableTools": [
