@@ -8,6 +8,7 @@ window.APP_DATA = {
     "author": "Google for Education 攜手全球教育工作者共同編撰",
     "totalSlides": 129,
     "totalPrompts": 48,
+    "totalOfficialPrompts": 25,
     "lastUpdated": "2026年7月"
   },
   "partsFramework": {
@@ -4614,5 +4615,283 @@ window.APP_DATA = {
         "assets/images/image60.png"
       ]
     }
-  ]
+  ],
+  "officialPrompts": [
+    {
+        "id": 1,
+        "title": "擬定教案架構",
+        "category": "planning",
+        "categoryZh": "規劃",
+        "description": "根據偏好的教學架構，製作邏輯嚴謹、符合教學原理的課程大綱。",
+        "url": "https://gemini.google.com/?prompt_id=UPz7dKhoIXIR",
+        "promptId": "UPz7dKhoIXIR",
+        "icon": "clipboard-list",
+        "badgeColor": "var(--primary)"
+    },
+    {
+        "id": 2,
+        "title": "讓學習目標更淺顯易懂",
+        "category": "planning",
+        "categoryZh": "規劃",
+        "description": "以學生可理解的適齡用語，改寫生硬的學習標準，確保內容清楚好懂，並能激發學習動力。",
+        "url": "https://gemini.google.com/?prompt_id=iu79afnYn5Jp",
+        "promptId": "iu79afnYn5Jp",
+        "icon": "smile",
+        "badgeColor": "var(--primary)"
+    },
+    {
+        "id": 3,
+        "title": "具體解說概念",
+        "category": "materials",
+        "categoryZh": "教材",
+        "description": "尋找貼切比喻、實際示範，或是生活舉例，讓學生牢牢記住難懂的主題。",
+        "url": "https://gemini.google.com/?prompt_id=2SFcCsltkStf",
+        "promptId": "2SFcCsltkStf",
+        "icon": "lightbulb",
+        "badgeColor": "#d97706"
+    },
+    {
+        "id": 4,
+        "title": "設計不同知識深度 (DOK) 等級的問題",
+        "category": "assessment",
+        "categoryZh": "評量",
+        "description": "生成涵蓋四個知識深度等級的問題，引導學生在課堂上深入思考。",
+        "url": "https://gemini.google.com/?prompt_id=y6bMEr3xEvNv",
+        "promptId": "y6bMEr3xEvNv",
+        "icon": "layers",
+        "badgeColor": "#059669"
+    },
+    {
+        "id": 5,
+        "title": "設計以學生為中心的活動",
+        "category": "materials",
+        "categoryZh": "教材",
+        "description": "根據全方位學習設計原則與探究式學習架構，規劃生動有趣的活動。",
+        "url": "https://gemini.google.com/?prompt_id=WtHV5HtektsF",
+        "promptId": "WtHV5HtektsF",
+        "icon": "users",
+        "badgeColor": "#d97706"
+    },
+    {
+        "id": 6,
+        "title": "將單元教學轉換為專案導向學習體驗",
+        "category": "planning",
+        "categoryZh": "規劃",
+        "description": "用專案導向學習法翻轉傳統單元教學，打造由學生主導的真實學習體驗。",
+        "url": "https://gemini.google.com/?prompt_id=eZ1lclH2XYwg",
+        "promptId": "eZ1lclH2XYwg",
+        "icon": "compass",
+        "badgeColor": "var(--primary)"
+    },
+    {
+        "id": 7,
+        "title": "草擬代課教案",
+        "category": "materials",
+        "categoryZh": "教材",
+        "description": "生成內容充實的獨立活動，吸引學生積極參與，代課老師也能輕鬆帶領。",
+        "url": "https://gemini.google.com/?prompt_id=9gdFhfIdz491",
+        "promptId": "9gdFhfIdz491",
+        "icon": "user-check",
+        "badgeColor": "#d97706"
+    },
+    {
+        "id": 8,
+        "title": "生成引人入勝的課程開場",
+        "category": "materials",
+        "categoryZh": "教材",
+        "description": "緊扣學習目標，構思吸引人的課前引導或課程開場。",
+        "url": "https://gemini.google.com/?prompt_id=6dhJpMKhVI1q",
+        "promptId": "6dhJpMKhVI1q",
+        "icon": "sparkles",
+        "badgeColor": "#d97706"
+    },
+    {
+        "id": 9,
+        "title": "發想生活中的實際例子",
+        "category": "materials",
+        "categoryZh": "教材",
+        "description": "舉出三個與課程相關的生活實例或故事。",
+        "url": "https://gemini.google.com/?prompt_id=Ewi2vVQJaX3r",
+        "promptId": "Ewi2vVQJaX3r",
+        "icon": "coffee",
+        "badgeColor": "#d97706"
+    },
+    {
+        "id": 10,
+        "title": "構思有趣的討論提示詞",
+        "category": "materials",
+        "categoryZh": "教材",
+        "description": "設計開放式討論問題，帶動課堂交流並激發多元觀點。",
+        "url": "https://gemini.google.com/?prompt_id=6fDgCSJ0SJAp",
+        "promptId": "6fDgCSJ0SJAp",
+        "icon": "message-circle",
+        "badgeColor": "#d97706"
+    },
+    {
+        "id": 11,
+        "title": "草擬課程大綱",
+        "category": "planning",
+        "categoryZh": "規劃",
+        "description": "擬定完整的教學大綱，清楚列出課堂期望、規範和學習目標。",
+        "url": "https://gemini.google.com/?prompt_id=3OTy7oEytjUw",
+        "promptId": "3OTy7oEytjUw",
+        "icon": "file-text",
+        "badgeColor": "var(--primary)"
+    },
+    {
+        "id": 12,
+        "title": "設計螺旋式數學複習題",
+        "category": "assessment",
+        "categoryZh": "評量",
+        "description": "製作練習題，幫助學生提升熟練度並複習舊概念。",
+        "url": "https://gemini.google.com/?prompt_id=lZQr64RuGx8V",
+        "promptId": "lZQr64RuGx8V",
+        "icon": "refresh-cw",
+        "badgeColor": "#059669"
+    },
+    {
+        "id": 13,
+        "title": "確保教材符合標準",
+        "category": "planning",
+        "categoryZh": "規劃",
+        "description": "依特定學習標準評估教材，找出缺漏並強化教學深度。",
+        "url": "https://gemini.google.com/?prompt_id=wd3poGv3mWuE",
+        "promptId": "wd3poGv3mWuE",
+        "icon": "check-circle",
+        "badgeColor": "var(--primary)"
+    },
+    {
+        "id": 14,
+        "title": "擬定單元教學計畫",
+        "category": "planning",
+        "categoryZh": "規劃",
+        "description": "設計單元大綱，涵蓋學習目標、標準和進度安排，確保教學環環相扣。",
+        "url": "https://gemini.google.com/?prompt_id=rFW1ue5zQt7U",
+        "promptId": "rFW1ue5zQt7U",
+        "icon": "calendar",
+        "badgeColor": "var(--primary)"
+    },
+    {
+        "id": 15,
+        "title": "複習主題相關知識",
+        "category": "materials",
+        "categoryZh": "教材",
+        "description": "取得清楚準確的單元總覽，快速重溫主題內容。",
+        "url": "https://gemini.google.com/?prompt_id=1KNuyv7jZhu3",
+        "promptId": "1KNuyv7jZhu3",
+        "icon": "book-open",
+        "badgeColor": "#d97706"
+    },
+    {
+        "id": 16,
+        "title": "擬定專業發展計畫",
+        "category": "admin",
+        "categoryZh": "行政工作",
+        "description": "根據 SMART 目標生成每週專業發展計畫，包含具體行動與里程碑。",
+        "url": "https://gemini.google.com/?prompt_id=g1n0oYogYeK3",
+        "promptId": "g1n0oYogYeK3",
+        "icon": "trending-up",
+        "badgeColor": "#7c3aed"
+    },
+    {
+        "id": 17,
+        "title": "生成測驗",
+        "category": "assessment",
+        "categoryZh": "評量",
+        "description": "根據課程或主題，生成涵蓋各種題型的測驗，並附上完整解答。",
+        "url": "https://gemini.google.com/?prompt_id=mRz6SZix52l7",
+        "promptId": "mRz6SZix52l7",
+        "icon": "help-circle",
+        "badgeColor": "#059669"
+    },
+    {
+        "id": 18,
+        "title": "發想科學實驗",
+        "category": "materials",
+        "categoryZh": "教材",
+        "description": "根據課程概念、年級和教材，設計探究式實驗活動。",
+        "url": "https://gemini.google.com/?prompt_id=sLXyorPX7ZXz",
+        "promptId": "sLXyorPX7ZXz",
+        "icon": "flask",
+        "badgeColor": "#d97706"
+    },
+    {
+        "id": 19,
+        "title": "構思戶外教學計畫",
+        "category": "planning",
+        "categoryZh": "規劃",
+        "description": "規劃符合課綱標準的校外教學，提供地點建議、學習目標和活動內容。",
+        "url": "https://gemini.google.com/?prompt_id=DMk0SMVYDe5r",
+        "promptId": "DMk0SMVYDe5r",
+        "icon": "map-pin",
+        "badgeColor": "var(--primary)"
+    },
+    {
+        "id": 20,
+        "title": "撰寫發音練習讀物",
+        "category": "materials",
+        "categoryZh": "教材",
+        "description": "撰寫專屬的發音練習教材，加強練習特定的自然發音能力。",
+        "url": "https://gemini.google.com/?prompt_id=nC5Nx4GFRwDJ",
+        "promptId": "nC5Nx4GFRwDJ",
+        "icon": "volume-2",
+        "badgeColor": "#d97706"
+    },
+    {
+        "id": 21,
+        "title": "設計拼圖學習活動",
+        "category": "materials",
+        "categoryZh": "教材",
+        "description": "規劃協作式拼圖學習課程，包含分組步驟與總結討論提示詞。",
+        "url": "https://gemini.google.com/?prompt_id=25FO1LYAzF25",
+        "promptId": "25FO1LYAzF25",
+        "icon": "grid",
+        "badgeColor": "#d97706"
+    },
+    {
+        "id": 22,
+        "title": "找出適合課程的 Google 工具",
+        "category": "admin",
+        "categoryZh": "行政工作",
+        "description": "找出最有效的 Google Workspace 工具和功能，提升特定課堂活動的學習成效。",
+        "url": "https://gemini.google.com/?prompt_id=mlH6ougALH5H",
+        "promptId": "mlH6ougALH5H",
+        "icon": "tool",
+        "badgeColor": "#7c3aed"
+    },
+    {
+        "id": 23,
+        "title": "設計數學情境應用題",
+        "category": "assessment",
+        "categoryZh": "評量",
+        "description": "構思情境應用題，引導學生用數學解決日常生活遇到的問題。",
+        "url": "https://gemini.google.com/?prompt_id=1CUMnfI53DU2",
+        "promptId": "1CUMnfI53DU2",
+        "icon": "divide-circle",
+        "badgeColor": "#059669"
+    },
+    {
+        "id": 24,
+        "title": "草擬班級電子報",
+        "category": "admin",
+        "categoryZh": "行政工作",
+        "description": "製作簡短溫馨的電子報，與家長分享最新消息。",
+        "url": "https://gemini.google.com/?prompt_id=GeYnXvPR4e5d",
+        "promptId": "GeYnXvPR4e5d",
+        "icon": "mail",
+        "badgeColor": "#7c3aed"
+    },
+    {
+        "id": 25,
+        "title": "撰寫適當提示詞",
+        "category": "planning",
+        "categoryZh": "規劃",
+        "description": "配合特定教學目標，與 Gemini 合力構思明確有效的提示詞。",
+        "url": "https://gemini.google.com/?prompt_id=TjgENc9026Tg",
+        "promptId": "TjgENc9026Tg",
+        "icon": "terminal",
+        "badgeColor": "var(--primary)"
+    }
+]
 };
+

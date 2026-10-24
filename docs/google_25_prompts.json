@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "擬定教案架構",
+    "description": "根據偏好的教學架構，製作邏輯嚴謹、符合教學原理的課程大綱。",
+    "url": "https://gemini.google.com/?prompt_id=UPz7dKhoIXIR"
+  },
+  {
+    "id": 2,
+    "title": "讓學習目標更淺顯易懂",
+    "description": "以學生可理解的適齡用語，改寫生硬的學習標準，確保內容清楚好懂，並能激發學習動力。",
+    "url": "https://gemini.google.com/?prompt_id=iu79afnYn5Jp"
+  },
+  {
+    "id": 3,
+    "title": "具體解說概念",
+    "description": "尋找貼切比喻、實際示範，或是生活舉例，讓學生牢牢記住難懂的主題。",
+    "url": "https://gemini.google.com/?prompt_id=2SFcCsltkStf"
+  },
+  {
+    "id": 4,
+    "title": "設計不同知識深度 (DOK) 等級的問題",
+    "description": "生成涵蓋四個知識深度等級的問題，引導學生在課堂上深入思考。",
+    "url": "https://gemini.google.com/?prompt_id=y6bMEr3xEvNv"
+  },
+  {
+    "id": 5,
+    "title": "設計以學生為中心的活動",
+    "description": "根據全方位學習設計原則與探究式學習架構，規劃生動有趣的活動。",
+    "url": "https://gemini.google.com/?prompt_id=WtHV5HtektsF"
+  },
+  {
+    "id": 6,
+    "title": "將單元教學轉換為專案導向學習體驗",
+    "description": "用專案導向學習法翻轉傳統單元教學，打造由學生主導的真實學習體驗。",
+    "url": "https://gemini.google.com/?prompt_id=eZ1lclH2XYwg"
+  },
+  {
+    "id": 7,
+    "title": "草擬代課教案",
+    "description": "生成內容充實的獨立活動，吸引學生積極參與，代課老師也能輕鬆帶領。",
+    "url": "https://gemini.google.com/?prompt_id=9gdFhfIdz491"
+  },
+  {
+    "id": 8,
+    "title": "生成引人入勝的課程開場",
+    "description": "緊扣學習目標，構思吸引人的課前引導或課程開場。",
+    "url": "https://gemini.google.com/?prompt_id=6dhJpMKhVI1q"
+  },
+  {
+    "id": 9,
+    "title": "發想生活中的實際例子",
+    "description": "舉出三個與課程相關的生活實例或故事。",
+    "url": "https://gemini.google.com/?prompt_id=Ewi2vVQJaX3r"
+  },
+  {
+    "id": 10,
+    "title": "構思有趣的討論提示詞",
+    "description": "設計開放式討論問題，帶動課堂交流並激發多元觀點。",
+    "url": "https://gemini.google.com/?prompt_id=6fDgCSJ0SJAp"
+  },
+  {
+    "id": 11,
+    "title": "草擬課程大綱",
+    "description": "擬定完整的教學大綱，清楚列出課堂期望、規範和學習目標。",
+    "url": "https://gemini.google.com/?prompt_id=3OTy7oEytjUw"
+  },
+  {
+    "id": 12,
+    "title": "設計螺旋式數學複習題",
+    "description": "製作練習題，幫助學生提升熟練度並複習舊概念。",
+    "url": "https://gemini.google.com/?prompt_id=lZQr64RuGx8V"
+  },
+  {
+    "id": 13,
+    "title": "確保教材符合標準",
+    "description": "依特定學習標準評估教材，找出缺漏並強化教學深度。",
+    "url": "https://gemini.google.com/?prompt_id=wd3poGv3mWuE"
+  },
+  {
+    "id": 14,
+    "title": "擬定單元教學計畫",
+    "description": "設計單元大綱，涵蓋學習目標、標準和進度安排，確保教學環環相扣。",
+    "url": "https://gemini.google.com/?prompt_id=rFW1ue5zQt7U"
+  },
+  {
+    "id": 15,
+    "title": "複習主題相關知識",
+    "description": "取得清楚準確的單元總覽，快速重溫主題內容。",
+    "url": "https://gemini.google.com/?prompt_id=1KNuyv7jZhu3"
+  },
+  {
+    "id": 16,
+    "title": "擬定專業發展計畫",
+    "description": "根據 SMART 目標生成每週專業發展計畫，包含具體行動與里程碑。",
+    "url": "https://gemini.google.com/?prompt_id=g1n0oYogYeK3"
+  },
+  {
+    "id": 17,
+    "title": "生成測驗",
+    "description": "根據課程或主題，生成涵蓋各種題型的測驗，並附上完整解答。",
+    "url": "https://gemini.google.com/?prompt_id=mRz6SZix52l7"
+  },
+  {
+    "id": 18,
+    "title": "發想科學實驗",
+    "description": "根據課程概念、年級和教材，設計探究式實驗活動。",
+    "url": "https://gemini.google.com/?prompt_id=sLXyorPX7ZXz"
+  },
+  {
+    "id": 19,
+    "title": "構思戶外教學計畫",
+    "description": "規劃符合課綱標準的校外教學，提供地點建議、學習目標和活動內容。",
+    "url": "https://gemini.google.com/?prompt_id=DMk0SMVYDe5r"
+  },
+  {
+    "id": 20,
+    "title": "撰寫發音練習讀物",
+    "description": "撰寫專屬的發音練習教材，加強練習特定的自然發音能力。",
+    "url": "https://gemini.google.com/?prompt_id=nC5Nx4GFRwDJ"
+  },
+  {
+    "id": 21,
+    "title": "設計拼圖學習活動",
+    "description": "規劃協作式拼圖學習課程，包含分組步驟與總結討論提示詞。",
+    "url": "https://gemini.google.com/?prompt_id=25FO1LYAzF25"
+  },
+  {
+    "id": 22,
+    "title": "找出適合課程的 Google 工具",
+    "description": "找出最有效的 Google Workspace 工具和功能，提升特定課堂活動的學習成效。",
+    "url": "https://gemini.google.com/?prompt_id=mlH6ougALH5H"
+  },
+  {
+    "id": 23,
+    "title": "設計數學情境應用題",
+    "description": "構思情境應用題，引導學生用數學解決日常生活遇到的問題。",
+    "url": "https://gemini.google.com/?prompt_id=1CUMnfI53DU2"
+  },
+  {
+    "id": 24,
+    "title": "草擬班級電子報",
+    "description": "製作簡短溫馨的電子報，與家長分享最新消息。",
+    "url": "https://gemini.google.com/?prompt_id=GeYnXvPR4e5d"
+  },
+  {
+    "id": 25,
+    "title": "撰寫適當提示詞",
+    "description": "配合特定教學目標，與 Gemini 合力構思明確有效的提示詞。",
+    "url": "https://gemini.google.com/?prompt_id=TjgENc9026Tg"
+  }
+]

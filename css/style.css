@@ -362,9 +362,9 @@ code, kbd {
   border: 2px solid var(--border-subtle);
   box-shadow: 2px 2px 0px var(--border-subtle);
   color: var(--text-main);
-  padding: 0.28rem 0.52rem; /* 精緻縮小內距，確保9個選單項目一口氣水平排開 */
+  padding: 0.24rem 0.46rem; /* 精緻縮小內距，確保10個選單項目一口氣水平單列排開 */
   border-radius: var(--radius-pill);
-  font-size: 0.76rem; /* 稍微縮小字體 */
+  font-size: 0.74rem; /* 精準微調字體 */
   font-weight: 700;
   font-family: inherit;
   display: inline-flex;
@@ -2344,5 +2344,326 @@ code, kbd {
   border-color: #FAFAFA !important;
   box-shadow: 1.5px 1.5px 0px #FAFAFA !important;
 }
+
+/* ===================================================================
+   GOOGLE 官方現成 25 款 AI 提示詞專區 (OFFICIAL PROMPTS SECTION)
+   =================================================================== */
+.official-source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-subtle);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  box-shadow: 1.5px 1.5px 0px var(--border-subtle);
+}
+
+.official-src-link {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.official-src-link:hover {
+  opacity: 0.8;
+}
+
+.official-tabs-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 1.75rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 2px solid var(--border-subtle);
+}
+
+.official-tab-btn {
+  background: var(--bg-card);
+  border: 2px solid var(--border-subtle);
+  box-shadow: 2px 2px 0px var(--border-subtle);
+  color: var(--text-main);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.official-tab-btn:hover {
+  background: var(--primary-light);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--border-subtle);
+}
+
+.official-tab-btn.active {
+  background: #FDE047;
+  color: #000000;
+  border: 2px solid var(--border-subtle);
+  box-shadow: 3px 3px 0px var(--border-subtle);
+  font-weight: 800;
+}
+
+.official-tab-btn .count-pill {
+  font-size: 0.72rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-pill);
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-subtle);
+  color: var(--text-main);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.official-tab-btn.active .count-pill {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.official-prompts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.official-card {
+  background: var(--bg-card);
+  border: 2.5px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: 4px 4px 0px var(--border-subtle);
+  padding: 1.35rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.official-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--border-subtle);
+  border-color: var(--primary);
+}
+
+.official-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.official-cat-badge {
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border-subtle);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.official-cat-badge.planning {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.official-cat-badge.materials {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.official-cat-badge.assessment {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.official-cat-badge.admin {
+  background: #f3e8ff;
+  color: #7e22ce;
+}
+
+[data-theme="dark"] .official-cat-badge.planning {
+  background: rgba(3, 105, 161, 0.25);
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .official-cat-badge.materials {
+  background: rgba(180, 83, 9, 0.25);
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .official-cat-badge.assessment {
+  background: rgba(21, 128, 61, 0.25);
+  color: #4ade80;
+}
+
+[data-theme="dark"] .official-cat-badge.admin {
+  background: rgba(126, 34, 206, 0.25);
+  color: #c084fc;
+}
+
+.official-fav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 0.2rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.official-fav-btn:hover {
+  color: #ea4335;
+  transform: scale(1.15);
+}
+
+.official-fav-btn.active {
+  color: #ea4335;
+}
+
+.official-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.official-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.official-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1.5px dashed var(--border-subtle);
+}
+
+.btn-copy-official {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-subtle);
+  box-shadow: 1.5px 1.5px 0px var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 0.38rem 0.72rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-copy-official:hover {
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border-color: var(--text-main);
+  transform: translate(-1px, -1px);
+}
+
+.btn-ask-gemini {
+  background: #1a73e8;
+  color: #ffffff !important;
+  border: 2px solid var(--border-subtle);
+  box-shadow: 2px 2px 0px var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 0.45rem 0.95rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-ask-gemini:hover {
+  background: #1557b0;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--border-subtle);
+  color: #ffffff;
+}
+
+.official-pro-tip-box {
+  background: var(--bg-card);
+  border: 2.5px solid var(--border-subtle);
+  box-shadow: 4px 4px 0px var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.official-pro-tip-box .tip-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.official-pro-tip-box h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.official-pro-tip-box p {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Dark Theme Overrides for Official Section */
+[data-theme="dark"] .official-card,
+[data-theme="dark"] .official-pro-tip-box {
+  border-color: #FAFAFA !important;
+  box-shadow: 4px 4px 0px #FAFAFA !important;
+}
+
+[data-theme="dark"] .official-card:hover {
+  box-shadow: 6px 6px 0px #FAFAFA !important;
+}
+
+[data-theme="dark"] .official-tab-btn,
+[data-theme="dark"] .btn-ask-gemini,
+[data-theme="dark"] .btn-copy-official,
+[data-theme="dark"] .official-source-badge {
+  border-color: #FAFAFA !important;
+  box-shadow: 2px 2px 0px #FAFAFA !important;
+}
+
+[data-theme="dark"] .official-tab-btn.active {
+  background: #FDE047 !important;
+  color: #000000 !important;
+}
+
 
 

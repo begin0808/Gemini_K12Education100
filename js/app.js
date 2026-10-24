@@ -103,6 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'overview': 'tab-overview',
     'home': 'tab-overview',
     'hero': 'tab-overview',
+    'official': 'tab-official',
+    'official-prompts': 'tab-official',
+    'google-prompts': 'tab-official',
     'classroom': 'tab-classroom',
     'classroom-section': 'tab-classroom',
     'parts': 'tab-parts',
@@ -175,14 +178,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navSearchInput) {
     navSearchInput.addEventListener('input', (e) => {
       state.searchQuery = e.target.value.trim().toLowerCase();
-      // If user starts typing a query, auto-switch to catalog view so they see matching prompts!
+      // If user starts typing a query, auto-switch to catalog view if not in catalog or official view
       if (state.searchQuery.length > 0) {
         const activeTab = document.querySelector('.tab-view.active');
-        if (activeTab && activeTab.id !== 'tab-catalog') {
+        if (activeTab && activeTab.id !== 'tab-catalog' && activeTab.id !== 'tab-official') {
           window.switchTab('tab-catalog', true);
         }
       }
       renderPrompts();
+      renderOfficialPrompts();
     });
   }
 
@@ -628,28 +632,150 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const favPrompts = prompts.filter(p => state.favorites.includes(p.id));
-    favoritesList.innerHTML = favPrompts.map(p => {
+    const favCatalogPrompts = prompts.filter(p => state.favorites.includes(p.id));
+    const favOfficialPrompts = (window.APP_DATA.officialPrompts || []).filter(p => state.favorites.includes(`official-${p.id}`));
+
+    let html = '';
+    if (favOfficialPrompts.length > 0) {
+      html += `<div style="font-weight: 800; font-size: 0.95rem; color: var(--primary); margin: 0.5rem 0 0.6rem; display: flex; align-items: center; gap: 0.4rem;"><span>🌟 Google 官方現成提示詞</span><span class="count-pill" style="font-size: 0.75rem;">${favOfficialPrompts.length}</span></div>`;
+      html += favOfficialPrompts.map(p => {
+        return `
+          <div style="background: var(--bg-surface); border: 2px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 0.85rem; box-shadow: 2px 2px 0px var(--border-subtle);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem;">
+              <div>
+                <span class="official-cat-badge ${p.category}" style="margin-bottom: 0.4rem;">${p.categoryZh}</span>
+                <div style="font-weight: 800; color: var(--text-main); font-size: 1.05rem; line-height: 1.4;">${p.title}</div>
+              </div>
+              <button class="fav-btn active" data-prompt-id="official-${p.id}" title="移除收藏" onclick="toggleFavoritePrompt('official-${p.id}')">
+                <svg class="heart-svg" width="20" height="20" viewBox="0 0 24 24" fill="#ea4335" stroke="#ea4335">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.55;">${p.description}</div>
+            <div style="display: flex; justify-content: flex-end; align-items: center; gap: 0.6rem; margin-top: 0.4rem;">
+              <button class="btn-copy-official" onclick="copyOfficialPrompt(${p.id}, this)">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>複製資訊</span>
+              </button>
+              <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="btn-ask-gemini" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+                <span>問問 Gemini</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    if (favCatalogPrompts.length > 0) {
+      if (favOfficialPrompts.length > 0) {
+        html += `<div style="font-weight: 800; font-size: 0.95rem; color: var(--primary); margin: 1.25rem 0 0.6rem; display: flex; align-items: center; gap: 0.4rem;"><span>📚 各學科實戰提示詞</span><span class="count-pill" style="font-size: 0.75rem;">${favCatalogPrompts.length}</span></div>`;
+      }
+      html += favCatalogPrompts.map(p => {
+        return `
+          <div style="background: var(--bg-surface); border: 2px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 0.85rem; box-shadow: 2px 2px 0px var(--border-subtle);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem;">
+              <div style="font-weight: 700; color: var(--text-main); font-size: 1rem; line-height: 1.4;">${p.titleZh}</div>
+              <button class="fav-btn active" data-prompt-id="${p.id}" title="移除收藏" onclick="toggleFavoritePrompt('${p.id}')">
+                <svg class="heart-svg" width="20" height="20" viewBox="0 0 24 24" fill="#ea4335" stroke="#ea4335">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.55;">${p.promptZh.substring(0, 120)}...</div>
+            <div style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 0.4rem;">
+              <button class="copy-btn" onclick="copyTextToClipboard('${p.promptZh.replace(/'/g, "\\'")}', this)">
+                複製提示詞
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    favoritesList.innerHTML = html;
+  }
+
+  // --- GOOGLE OFFICIAL PROMPTS (25 ITEMS) ---
+  let activeOfficialCategory = 'all';
+
+  function renderOfficialPrompts() {
+    const grid = document.getElementById('official-prompts-grid');
+    if (!grid || !window.APP_DATA.officialPrompts) return;
+
+    const items = window.APP_DATA.officialPrompts.filter(p => {
+      const matchCat = activeOfficialCategory === 'all' || p.category === activeOfficialCategory;
+      const matchSearch = !state.searchQuery || 
+                          p.title.toLowerCase().includes(state.searchQuery) || 
+                          p.description.toLowerCase().includes(state.searchQuery) ||
+                          p.categoryZh.includes(state.searchQuery);
+      return matchCat && matchSearch;
+    });
+
+    const badge = document.getElementById('official-prompt-count-badge');
+    if (badge) {
+      badge.textContent = `顯示 ${items.length} / 25 款官方提示詞`;
+    }
+
+    if (items.length === 0) {
+      grid.innerHTML = `
+        <div class="empty-state-box" style="grid-column: 1/-1; text-align: center; padding: 3rem 1rem;">
+          <p style="font-size: 1.1rem; font-weight: 700; color: var(--text-main);">查無符合的官方提示詞</p>
+          <p style="color: var(--text-muted); margin-top: 0.5rem;">請嘗試切換其他分類標籤或清除搜尋關鍵字</p>
+        </div>
+      `;
+      return;
+    }
+
+    grid.innerHTML = items.map(p => {
+      const isFav = state.favorites.includes(`official-${p.id}`);
       return `
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem; display: flex; flex-direction: column; gap: 0.6rem;">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-            <div style="font-weight: 700; color: var(--text-main); font-size: 1rem;">${p.titleZh}</div>
-            <button class="fav-btn active" data-prompt-id="${p.id}" title="移除收藏" onclick="toggleFavoritePrompt('${p.id}')">
-              <svg class="heart-svg" width="20" height="20" viewBox="0 0 24 24" fill="#ea4335" stroke="#ea4335">
+        <div class="official-card" data-category="${p.category}">
+          <div class="official-card-top-row">
+            <span class="official-cat-badge ${p.category}">
+              ${p.categoryZh}
+            </span>
+            <button type="button" class="official-fav-btn ${isFav ? 'active' : ''}" 
+                    data-prompt-id="official-${p.id}"
+                    onclick="toggleFavoritePrompt('official-${p.id}')" 
+                    title="${isFav ? '已收藏（點擊取消）' : '加入隨身收藏'}">
+              <svg class="heart-svg" width="18" height="18" viewBox="0 0 24 24" fill="${isFav ? '#ea4335' : 'none'}" stroke="${isFav ? '#ea4335' : 'currentColor'}" stroke-width="2">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
               </svg>
             </button>
           </div>
-          <div style="font-size: 0.85rem; color: var(--text-muted);">${p.promptZh.substring(0, 120)}...</div>
-          <div style="display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 0.4rem;">
-            <button class="copy-btn" onclick="copyTextToClipboard('${p.promptZh.replace(/'/g, "\\'")}', this)">
-              複製提示詞
+          <h3 class="official-card-title">${p.title}</h3>
+          <p class="official-card-desc">${p.description}</p>
+          <div class="official-card-actions">
+            <button type="button" class="btn-copy-official" onclick="copyOfficialPrompt(${p.id}, this)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>複製資訊</span>
             </button>
+            <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="btn-ask-gemini" title="直通開啟 Google Gemini 並載入官方指令">
+              <span>問問 Gemini</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
           </div>
         </div>
       `;
     }).join('');
   }
+
+  window.filterOfficialPrompts = function(category) {
+    activeOfficialCategory = category;
+    document.querySelectorAll('.official-tab-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-category') === category);
+    });
+    renderOfficialPrompts();
+  };
+
+  window.copyOfficialPrompt = function(id, btn) {
+    const item = window.APP_DATA.officialPrompts.find(p => p.id === id);
+    if (!item) return;
+    const textToCopy = `【Google 官方教育提示詞：${item.title}】\n分類：${item.categoryZh}\n功能說明：${item.description}\n直通 Gemini 網址：${item.url}`;
+    window.copyTextToClipboard(textToCopy, btn);
+  };
 
   // --- KEYBOARD SHORTCUTS ---
   document.addEventListener('keydown', (e) => {
@@ -667,6 +793,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- INITIALIZE UI ---
   renderClassroomTools();
   renderPrompts();
+  renderOfficialPrompts();
   initSlideJumpSelect();
   renderSlideDeck(80); // Default to Slide 80 (Gemini in Classroom)
   updatePromptBuilder();
