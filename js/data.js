@@ -204,7 +204,7 @@ window.APP_DATA = {
       "inputGuideZh": "提供閱讀章節、主題文章或指定學科單元，設定單字數量（例如：8-12個核心關鍵詞）與目標學生程度。",
       "promptTemplateZh": "你是一位學術詞彙教學專家。請為[年級與單元，例如：國七生物生態系與食物鏈]挑選 8 個最關鍵的核心詞彙。請以表格形式呈現：包含詞彙名稱、學生友善的簡明定義、一個貼近生活的課堂情境造句、詞彙記憶記憶法/聯想技巧，以及一題課堂快問快答檢核題。",
       "promptTemplateEn": "Generate a tier-2 and tier-3 academic vocabulary list of [number] essential terms for a [grade level] unit on [topic]. Include student-friendly definitions, contextual sentences, and memory hooks in a clear table.",
-      "proTipsZh": "可進一步請 Gemini 將單字清單轉化為『Gemini Notebook (NotebookLM)』的單元字彙庫，讓學生隨時在課堂提問查詢！",
+      "proTipsZh": "可進一步請 Gemini 將單字清單轉化為『Gemini Notebook』的單元字彙庫，讓學生隨時在課堂提問查詢！",
       "slideRef": 81
     },
     {
@@ -260,7 +260,7 @@ window.APP_DATA = {
       "inputGuideZh": "提供想要融入故事中的核心概念與學習重點、故事主角設定、情節氛圍與篇幅字數，並可設定中途留有需要學生協助解決的懸念問題。",
       "promptTemplateZh": "你是一位富有想像力的科普作家與教育家。請為[年級學生]創作一篇約 500 字的引人入勝冒險故事，以生動有趣的方式帶出[學科主題，例如：紅血球在人體循環系統中的旅程，或是電子在電路中的冒險]。故事中需自然融入關鍵概念[如：養分輸送、肺泡交換、動脈與靜脈壓力差別]，並在故事高潮處設計一個需要學生運用本課知識來破解的難題。",
       "promptTemplateEn": "Write an engaging educational narrative for [grade level] students that brings [scientific / historical concept] to life. Weave core facts seamlessly into character dialogue and end with a cliffhanger question for students to solve.",
-      "proTipsZh": "可將故事匯入『Gemini Notebook (NotebookLM)』在工作室中生成「語音摘要 (Audio Overview)」，讓學生戴上耳機彷彿在聽廣播劇！",
+      "proTipsZh": "可將故事匯入『Gemini Notebook』在工作室中生成「語音摘要 (Audio Overview)」，讓學生戴上耳機彷彿在聽廣播劇！",
       "slideRef": 80
     },
     {
@@ -298,7 +298,7 @@ window.APP_DATA = {
       "inputGuideZh": "指定年級、實驗主題（例如：光的折射率測量、洋蔥表皮細胞顯微鏡觀察）、現有實驗器材限制與預計課堂時間。",
       "promptTemplateZh": "你是一位資深中學科學實驗室指導教師。請為[年級學生]設計一份[實驗主題，例如：利用半圓形玻璃磚測量光在不同介質中的折射率]的學生端實作指引手冊。格式需包含：1. 實驗目標與探究問題；2. 安全注意事項與器材盤點清單；3. 分步驟實作步驟（附操作提示）；4. 空白數據觀察紀錄表格；5. 三題引導學生進行誤差分析與推論的課後討論題。",
       "promptTemplateEn": "You are a science lab coordinator. Create a student-facing lab guide for a [grade level] experiment on [topic]. Include learning objectives, safety rules, required materials, step-by-step procedures, a data collection table, and post-lab analysis questions.",
-      "proTipsZh": "若將現有的實驗教案 PDF 上傳至 Gemini Notebook (NotebookLM)，可直接一鍵生成完全吻合您實驗室器材規格的客製化實驗單！",
+      "proTipsZh": "若將現有的實驗教案 PDF 上傳至 Gemini Notebook，可直接一鍵生成完全吻合您實驗室器材規格的客製化實驗單！",
       "slideRef": 22
     }
   ],
@@ -310,7 +310,7 @@ window.APP_DATA = {
       "icon": "graduation-cap",
       "badge": "最熱門實用",
       "slideRange": "第 78 - 108 頁",
-      "desc": "深入探討 Google Classroom 內建的 12 種鷹架工具 (Scaffolded Tools)、起始提示詞、指派 Gem/NotebookLM 作業、置頂學習資源，以及 @Classroom 班級連動功能。"
+      "desc": "深入探討 Google Classroom 內建的 12 種鷹架工具 (Scaffolded Tools)、起始提示詞、指派 Gem/Notebook 作業、置頂學習資源，以及 @Classroom 班級連動功能。"
     },
     {
       "id": "parts",
@@ -341,7 +341,7 @@ window.APP_DATA = {
     },
     {
       "id": "notebooklm",
-      "title": "Gemini Notebook (NotebookLM) 知識庫實戰",
+      "title": "Gemini Notebook 知識庫實戰",
       "subtitle": "以 8 週物理單元貫穿示範的精準教研庫",
       "icon": "folder-git2",
       "badge": "無幻覺精準",
@@ -605,7 +605,7 @@ window.APP_DATA = {
       "tipsZh": "產出的內容可直接匯入 Quizlet、Anki 或直接貼在 Google Keep 中隨身翻閱複習！",
       "applicableTools": [
         "Gemini App",
-        "NotebookLM"
+        "Notebook"
       ],
       "targetAudience": "學生"
     },
@@ -629,7 +629,7 @@ window.APP_DATA = {
       "tipsZh": "Deep Research 啟動後會自動擬定搜尋計畫、走訪數十個高信度學術來源並生成數頁完整報告；報告完成後，可直接在對話中繼續追問細節！",
       "applicableTools": [
         "Gemini App (Deep Research)",
-        "NotebookLM"
+        "Notebook"
       ],
       "targetAudience": "教師"
     },
@@ -848,7 +848,7 @@ window.APP_DATA = {
       "titleZh": "自訂 Gem 系統指令：學校行政與 AI 培訓協調員 Gem",
       "titleEn": "Custom Gem Instructions: AI Onboarding and Tech Training Coordinator",
       "roleScenarioZh": "資訊組長或科技專任教師為全校同仁建立 AI 工具上手諮詢助理",
-      "promptZh": "【Gem 系統設定指令 / Instructions】：\n你是一位學校資訊科技組長兼 AI 教育培訓專員。你的使命是協助全校教職員輕鬆、安全、自信地將 Google AI 工具（包括 Gemini, NotebookLM, Classroom AI）融入日常教學與行政工作。指導準則：\n1. 用最親切、無技術門檻的白話語言解答老師的疑難雜症\n2. 提供立竿見影的日常教學省時小撇步 (Quick Wins)\n3. 每次建議方案時，主動提醒 Google Workspace 教育版的資料隱私安全優勢（絕不用校園資料訓練模型）\n4. 提供分步驟、可直接複製貼上的實用教學提示詞範例。",
+      "promptZh": "【Gem 系統設定指令 / Instructions】：\n你是一位學校資訊科技組長兼 AI 教育培訓專員。你的使命是協助全校教職員輕鬆、安全、自信地將 Google AI 工具（包括 Gemini, Notebook, Classroom AI）融入日常教學與行政工作。指導準則：\n1. 用最親切、無技術門檻的白話語言解答老師的疑難雜症\n2. 提供立竿見影的日常教學省時小撇步 (Quick Wins)\n3. 每次建議方案時，主動提醒 Google Workspace 教育版的資料隱私安全優勢（絕不用校園資料訓練模型）\n4. 提供分步驟、可直接複製貼上的實用教學提示詞範例。",
       "promptEn": "[Gem Instructions]: You are a technology coordinator developing AI onboarding and training materials. Create helpful, step-by-step guidance for educators on using Google AI tools safely and effectively. Keep technical jargon to an absolute minimum, emphasize data privacy assurances, and provide immediate quick wins.",
       "parts": {
         "persona": "校園 AI 科技融入推廣專員與資訊協調員",
@@ -916,11 +916,11 @@ window.APP_DATA = {
       "slideNum": 63,
       "category": "notebooklm",
       "subCategory": "知識庫教學實戰",
-      "titleZh": "NotebookLM 課程串接：第 8 週物理單元總複習課程序列設計",
-      "titleEn": "NotebookLM Planning: Sequence the Unit Lessons (Physics Unit)",
+      "titleZh": "Notebook 課程串接：第 8 週物理單元總複習課程序列設計",
+      "titleEn": "Notebook Planning: Sequence the Unit Lessons (Physics Unit)",
       "roleScenarioZh": "以 8 週物理單元為例，讓 AI 研讀全部來源文件後規劃跨章節複習",
-      "promptZh": "【在 Gemini Notebook / NotebookLM 中提問】：\n根據我上傳的 8 週物理單元教材，第 7 週（光與光學）中介紹了哪些核心概念，應該在即將到來的第 8 週（單元總複習）中進行全面複習？請為第 8 週的複習課提出一個循序漸進的課序規劃，並明確指出哪些學習重點與核心概念（例如：折射率與司乃耳定律）是學生最容易在期末評量中混淆的高風險盲點。",
-      "promptEn": "Prompt (in NotebookLM): What concepts introduced in Week 7 (Light & Optics) should be reviewed in Week 8’s unit review lesson to best prepare students for the final assessment? Suggest a progressive pacing sequence highlighting high-misconception topics.",
+      "promptZh": "【在 Gemini Notebook 中提問】：\n根據我上傳的 8 週物理單元教材，第 7 週（光與光學）中介紹了哪些核心概念，應該在即將到來的第 8 週（單元總複習）中進行全面複習？請為第 8 週的複習課提出一個循序漸進的課序規劃，並明確指出哪些學習重點與核心概念（例如：折射率與司乃耳定律）是學生最容易在期末評量中混淆的高風險盲點。",
+      "promptEn": "Prompt (in Notebook): What concepts introduced in Week 7 (Light & Optics) should be reviewed in Week 8’s unit review lesson to best prepare students for the final assessment? Suggest a progressive pacing sequence highlighting high-misconception topics.",
       "parts": {
         "persona": "基於專屬物理單元教材的精準課程專家",
         "act": "交叉檢索上傳的第 7 週與第 8 週講義，規劃針對性複習課序",
@@ -930,7 +930,7 @@ window.APP_DATA = {
       },
       "tipsZh": "Gemini Notebook 的回答全部帶有『行內引用來源編號』，點擊引文編號即可瞬間定位到你上傳的講義具體頁面，保證零幻覺、零瞎掰！",
       "applicableTools": [
-        "Gemini Notebook (NotebookLM)"
+        "Gemini Notebook"
       ],
       "targetAudience": "教師"
     },
@@ -939,11 +939,11 @@ window.APP_DATA = {
       "slideNum": 64,
       "category": "notebooklm",
       "subCategory": "知識庫教學實戰",
-      "titleZh": "NotebookLM 快速生成教材：根據第 7 週光學講義產出學生實驗單",
-      "titleEn": "NotebookLM Instructional Materials: Lab Guide Creation for Light Refraction",
-      "roleScenarioZh": "教師上傳教案大綱後，請 NotebookLM 自動提煉專屬實驗手冊",
-      "promptZh": "【在 Gemini Notebook / NotebookLM 中提問】：\n請根據我上傳的第 7 週第 3 課『光的折射與界面傳播』教案資料，建立一份以學生為中心的完整實驗手冊。格式需包含：本實驗探究目標、所需實驗器材清單、安全注意事項、條理分明的步驟指引，以及一張供學生填寫入射角與折射角測量值的空白數據表格。",
-      "promptEn": "Prompt (in NotebookLM): Create a student lab guide based on Week 7’s lesson on light and optics. Include learning objectives, required apparatus, step-by-step procedures, safety guidelines, and a blank data table for angle measurements.",
+      "titleZh": "Notebook 快速生成教材：根據第 7 週光學講義產出學生實驗單",
+      "titleEn": "Notebook Instructional Materials: Lab Guide Creation for Light Refraction",
+      "roleScenarioZh": "教師上傳教案大綱後，請 Notebook 自動提煉專屬實驗手冊",
+      "promptZh": "【在 Gemini Notebook 中提問】：\n請根據我上傳的第 7 週第 3 課『光的折射與界面傳播』教案資料，建立一份以學生為中心的完整實驗手冊。格式需包含：本實驗探究目標、所需實驗器材清單、安全注意事項、條理分明的步驟指引，以及一張供學生填寫入射角與折射角測量值的空白數據表格。",
+      "promptEn": "Prompt (in Notebook): Create a student lab guide based on Week 7’s lesson on light and optics. Include learning objectives, required apparatus, step-by-step procedures, safety guidelines, and a blank data table for angle measurements.",
       "parts": {
         "persona": "熟悉本學期教材進度的專案實驗助理",
         "act": "從上傳的教案材料中自動擷取並組織成學生端實驗手冊",
@@ -953,7 +953,7 @@ window.APP_DATA = {
       },
       "tipsZh": "因為完全基於教師自己的講義生成，實驗步驟使用的名詞與實驗室器材型號會跟課堂教的完全一致，不會出現外國規格不符的困擾！",
       "applicableTools": [
-        "Gemini Notebook (NotebookLM)",
+        "Gemini Notebook",
         "Google Docs"
       ],
       "targetAudience": "教師"
@@ -963,11 +963,11 @@ window.APP_DATA = {
       "slideNum": 65,
       "category": "notebooklm",
       "subCategory": "知識庫教學實戰",
-      "titleZh": "NotebookLM 命題檢核：光學折射概念形成性開放問答題",
-      "titleEn": "NotebookLM Assessment: Building Knowledge Checks on Light Refraction",
+      "titleZh": "Notebook 命題檢核：光學折射概念形成性開放問答題",
+      "titleEn": "Notebook Assessment: Building Knowledge Checks on Light Refraction",
       "roleScenarioZh": "快速從單元教材中提煉出精準檢驗學生高階思維的形成性問題",
-      "promptZh": "【在 Gemini Notebook / NotebookLM 中提問】：\n請參考第 7 週第 3 課關於光的折射之內容，建立 2 道開放式情境問題，用以檢核學生是否真正理解光從空氣進入水中時傳播方向與速度發生的變化。每題請附上預期的理想學生回答重點，以及可能代表學生尚未理解的典型錯誤徵兆。",
-      "promptEn": "Prompt (in NotebookLM): Using Week 7, Lesson 3 on light refraction, create 2 open-ended questions to check for understanding about how light bends as it enters a new medium. Include ideal answer criteria and warning signs of incomplete comprehension.",
+      "promptZh": "【在 Gemini Notebook 中提問】：\n請參考第 7 週第 3 課關於光的折射之內容，建立 2 道開放式情境問題，用以檢核學生是否真正理解光從空氣進入水中時傳播方向與速度發生的變化。每題請附上預期的理想學生回答重點，以及可能代表學生尚未理解的典型錯誤徵兆。",
+      "promptEn": "Prompt (in Notebook): Using Week 7, Lesson 3 on light refraction, create 2 open-ended questions to check for understanding about how light bends as it enters a new medium. Include ideal answer criteria and warning signs of incomplete comprehension.",
       "parts": {
         "persona": "專注於形成性評量診斷的學科評量專家",
         "act": "依據教材精準命製 2 道開放式概念理解檢核題與評核準則",
@@ -975,9 +975,9 @@ window.APP_DATA = {
         "theme": "光在不同光學介質中的行進速度改變與折射方向",
         "structure": "情境檢核題 2 道 + 正確思維評分規準 + 典型錯誤思維指引"
       },
-      "tipsZh": "利用 NotebookLM 的「工作室」面板，還可以直接將這些題目一鍵轉成互動式「測驗」與「學習卡」！",
+      "tipsZh": "利用 Notebook 的「工作室」面板，還可以直接將這些題目一鍵轉成互動式「測驗」與「學習卡」！",
       "applicableTools": [
-        "Gemini Notebook (NotebookLM)"
+        "Gemini Notebook"
       ],
       "targetAudience": "教師"
     },
@@ -986,11 +986,11 @@ window.APP_DATA = {
       "slideNum": 66,
       "category": "notebooklm",
       "subCategory": "知識庫教學實戰",
-      "titleZh": "NotebookLM 差異化教學：為光學單元多元學習者設計分層任務",
-      "titleEn": "NotebookLM Differentiation: Ideas for Diverse Learners in Optics",
+      "titleZh": "Notebook 差異化教學：為光學單元多元學習者設計分層任務",
+      "titleEn": "Notebook Differentiation: Ideas for Diverse Learners in Optics",
       "roleScenarioZh": "利用單元講義為超前學習者與需要支援的學生量身訂做分流任務",
-      "promptZh": "【在 Gemini Notebook / NotebookLM 中提問】：\n請根據第 7 週第 3 課光的折射教材，為多元程度學生設計分層學習方案。請提供：1. 一個針對需要額外視覺與實體鷹架支援學生的補強探索活動；2. 一個針對已掌握基礎概念、準備接受進階挑戰學生的延伸探究活動（例如探討海市蜃樓成因或全反射光纖技術）。",
-      "promptEn": "Prompt (in NotebookLM): Using Week 7, Lesson 3 on light refraction, create a differentiated activity menu for diverse learners: one scaffolded visual activity for students needing extra support, and one advanced inquiry extension exploring atmospheric mirages or total internal reflection.",
+      "promptZh": "【在 Gemini Notebook 中提問】：\n請根據第 7 週第 3 課光的折射教材，為多元程度學生設計分層學習方案。請提供：1. 一個針對需要額外視覺與實體鷹架支援學生的補強探索活動；2. 一個針對已掌握基礎概念、準備接受進階挑戰學生的延伸探究活動（例如探討海市蜃樓成因或全反射光纖技術）。",
+      "promptEn": "Prompt (in Notebook): Using Week 7, Lesson 3 on light refraction, create a differentiated activity menu for diverse learners: one scaffolded visual activity for students needing extra support, and one advanced inquiry extension exploring atmospheric mirages or total internal reflection.",
       "parts": {
         "persona": "全方位學習設計 (UDL) 與差異化教學教練",
         "act": "從教材提煉並分化出基礎補強與高階挑戰兩套活動",
@@ -1000,7 +1000,7 @@ window.APP_DATA = {
       },
       "tipsZh": "這讓老師在同一個單元中輕鬆落實彈性分組與個別化學習，無需再為不同程度學生挑燈夜戰編寫不同的講義！",
       "applicableTools": [
-        "Gemini Notebook (NotebookLM)"
+        "Gemini Notebook"
       ],
       "targetAudience": "教師"
     },
@@ -1009,10 +1009,10 @@ window.APP_DATA = {
       "slideNum": 67,
       "category": "notebooklm",
       "subCategory": "知識庫教學實戰",
-      "titleZh": "NotebookLM 心智圖生成：8 週物理單元跨章節概念視覺化",
-      "titleEn": "NotebookLM Pro Tip: Generate a Visual Mind Map Across Sources",
+      "titleZh": "Notebook 心智圖生成：8 週物理單元跨章節概念視覺化",
+      "titleEn": "Notebook Pro Tip: Generate a Visual Mind Map Across Sources",
       "roleScenarioZh": "一鍵將厚重繁複的 8 週講義轉化為層次分明的知識架構心智圖",
-      "promptZh": "【在 Gemini Notebook (NotebookLM) 的「工作室」中操作】：\n在「工作室」面板中點擊『心智圖』按鈕。NotebookLM 將自動通盤分析上傳的 8 週教材，建立一張可縮放、可點擊展開的互動式視覺概念關聯圖。從運動學（速度、加速度）、動力學（牛頓三定律、動量）、能量（功與能）到波動與光學，將所有核心概念如何相互關聯視覺化呈現。",
+      "promptZh": "【在 Gemini Notebook 的「工作室」中操作】：\n在「工作室」面板中點擊『心智圖』按鈕。Notebook 將自動通盤分析上傳的 8 週教材，建立一張可縮放、可點擊展開的互動式視覺概念關聯圖。從運動學（速度、加速度）、動力學（牛頓三定律、動量）、能量（功與能）到波動與光學，將所有核心概念如何相互關聯視覺化呈現。",
       "promptEn": "Generate a Mind Map in Gemini Notebook. What it does: Creates a visual overview connecting core concepts across all uploaded weekly sources (kinematics, dynamics, energy, waves, optics), allowing students to explore conceptual nodes interactively.",
       "parts": {
         "persona": "視覺化知識圖譜建構引擎",
@@ -1021,9 +1021,9 @@ window.APP_DATA = {
         "theme": "跨章節物理定律的內在邏輯與層級架構",
         "structure": "動態節點視覺圖 + 核心定義速覽 + 關聯脈絡標記"
       },
-      "tipsZh": "✨專家技巧：你可以直接點擊心智圖中的任何一個節點（如『全反射』），NotebookLM 會立即彈出該概念在講義中的具體定義與相關出處！",
+      "tipsZh": "✨專家技巧：你可以直接點擊心智圖中的任何一個節點（如『全反射』），Notebook 會立即彈出該概念在講義中的具體定義與相關出處！",
       "applicableTools": [
-        "Gemini Notebook (NotebookLM)"
+        "Gemini Notebook"
       ],
       "targetAudience": "教師"
     },
@@ -1032,11 +1032,11 @@ window.APP_DATA = {
       "slideNum": 68,
       "category": "notebooklm",
       "subCategory": "知識庫教學實戰",
-      "titleZh": "NotebookLM 教師共備：PLC 專業學習社群研習與觀議課準備",
-      "titleEn": "NotebookLM Administrative: Prep for Your Next PLC Meeting",
+      "titleZh": "Notebook 教師共備：PLC 專業學習社群研習與觀議課準備",
+      "titleEn": "Notebook Administrative: Prep for Your Next PLC Meeting",
       "roleScenarioZh": "學科領域教學研究會 (PLC) 教師群上傳共同教材，快速整合共備素材",
-      "promptZh": "【在 Gemini Notebook / NotebookLM 中提問】：\n根據我們學科團隊上傳的完整 8 週物理單元教材，請為我們明天即將召開的領域專業學習社群 (PLC) 共備會議建立一份準備清單。內容需包含：1. 過去數週各課進度中最關鍵的教學里程碑；2. 根據教材難度預測學生最可能卡關的 3 大觀念瓶頸；3. 建議領域夥伴在會議中共同研討的 3 個教學精進提問。",
-      "promptEn": "Prompt (in NotebookLM): Based on the full 8-week physics unit materials, create a preparation brief for our next Professional Learning Community (PLC) meeting. Summarize major milestones, predict top 3 student learning bottlenecks, and propose 3 collaborative discussion questions for our faculty team.",
+      "promptZh": "【在 Gemini Notebook 中提問】：\n根據我們學科團隊上傳的完整 8 週物理單元教材，請為我們明天即將召開的領域專業學習社群 (PLC) 共備會議建立一份準備清單。內容需包含：1. 過去數週各課進度中最關鍵的教學里程碑；2. 根據教材難度預測學生最可能卡關的 3 大觀念瓶頸；3. 建議領域夥伴在會議中共同研討的 3 個教學精進提問。",
+      "promptEn": "Prompt (in Notebook): Based on the full 8-week physics unit materials, create a preparation brief for our next Professional Learning Community (PLC) meeting. Summarize major milestones, predict top 3 student learning bottlenecks, and propose 3 collaborative discussion questions for our faculty team.",
       "parts": {
         "persona": "學校學科領域召集人與 PLC 教研引言人",
         "act": "通盤盤點 8 週教材，產出高效共備會議前導摘要與研討題綱",
@@ -1044,9 +1044,9 @@ window.APP_DATA = {
         "theme": "單元教學進度盤點、學生迷思預測與跨班協同教學精進",
         "structure": "里程碑回顧 + 瓶頸預警 + 3 題 PLC 深層探討問題"
       },
-      "tipsZh": "老師們可以共用同一個 NotebookLM 筆記本，每個人上傳自己的學習單與補充資料，幾秒鐘就能完成全領域的協同備課！",
+      "tipsZh": "老師們可以共用同一個 Notebook 筆記本，每個人上傳自己的學習單與補充資料，幾秒鐘就能完成全領域的協同備課！",
       "applicableTools": [
-        "Gemini Notebook (NotebookLM)"
+        "Gemini Notebook"
       ],
       "targetAudience": "教師"
     },
@@ -1055,11 +1055,11 @@ window.APP_DATA = {
       "slideNum": 69,
       "category": "notebooklm",
       "subCategory": "知識庫教學實戰",
-      "titleZh": "NotebookLM 學生自學：運動學 (Kinematics) 核心觀念解惑",
-      "titleEn": "NotebookLM Student Use: Clarifying Complex Topics in Kinematics",
+      "titleZh": "Notebook 學生自學：運動學 (Kinematics) 核心觀念解惑",
+      "titleEn": "Notebook Student Use: Clarifying Complex Topics in Kinematics",
       "roleScenarioZh": "學生在閱讀老師提供的講義時，隨時框選不懂的段落精準提問",
-      "promptZh": "【學生在 Gemini Notebook / NotebookLM 中提問】：\n我讀了第 1 週的講義，但我還是很難理解『運動學 (Kinematics)』到底是甚麼意思？它跟我們日常生活有甚麼關聯？它跟動力學 (Dynamics) 又有甚麼區別？請只根據老師上傳的物理講義內容，用生活化的方式為我解釋清楚。",
-      "promptEn": "Prompt (in NotebookLM): I’m struggling to understand what kinematics is based on the Week 1 materials. Help me understand what it means, why it matters in daily life, and how it differs from dynamics, using only what’s in the uploaded course notes.",
+      "promptZh": "【學生在 Gemini Notebook 中提問】：\n我讀了第 1 週的講義，但我還是很難理解『運動學 (Kinematics)』到底是甚麼意思？它跟我們日常生活有甚麼關聯？它跟動力學 (Dynamics) 又有甚麼區別？請只根據老師上傳的物理講義內容，用生活化的方式為我解釋清楚。",
+      "promptEn": "Prompt (in Notebook): I’m struggling to understand what kinematics is based on the Week 1 materials. Help me understand what it means, why it matters in daily life, and how it differs from dynamics, using only what’s in the uploaded course notes.",
       "parts": {
         "persona": "專為本門課程打造的專屬忠實助教",
         "act": "嚴格基於課堂指定教材解讀定義，杜絕課外超綱資訊混淆",
@@ -1067,9 +1067,9 @@ window.APP_DATA = {
         "theme": "運動學 (Kinematics) 的核心定義、描述方法與力學體系定位",
         "structure": "教材定義白話化 + 生活化例子 + 與動力學對比表 + 講義頁碼參照"
       },
-      "tipsZh": "學生永遠不用擔心 AI 會查到大學微積分程度的超綱解答，因為 NotebookLM 嚴格限定只在老師給的高中範圍內進行最貼切的引導！",
+      "tipsZh": "學生永遠不用擔心 AI 會查到大學微積分程度的超綱解答，因為 Notebook 嚴格限定只在老師給的高中範圍內進行最貼切的引導！",
       "applicableTools": [
-        "Gemini Notebook (NotebookLM)"
+        "Gemini Notebook"
       ],
       "targetAudience": "學生"
     },
@@ -1078,11 +1078,11 @@ window.APP_DATA = {
       "slideNum": 70,
       "category": "notebooklm",
       "subCategory": "知識庫教學實戰",
-      "titleZh": "NotebookLM 翻轉課堂：生成雙主持「語音摘要 (Audio Overview)」",
-      "titleEn": "NotebookLM Pro Tip: Generate Podcast-Style Audio Overviews for Flipped Learning",
+      "titleZh": "Notebook 翻轉課堂：生成雙主持「語音摘要 (Audio Overview)」",
+      "titleEn": "Notebook Pro Tip: Generate Podcast-Style Audio Overviews for Flipped Learning",
       "roleScenarioZh": "將枯燥繁複的單元講義一鍵轉化為生動逼真的男女雙主持語音對談",
-      "promptZh": "【在 Gemini Notebook (NotebookLM) 的「工作室」中操作】：\n在「工作室」面板中點擊『語音摘要 (Audio Overview)』。選取第 7 週『光與光學』的所有材料。NotebookLM 將自動透過 AI 生成兩位主持人生動自然對談的雙人語音摘要音檔！兩位主持人會像專業廣播節目一樣互相搭腔、討論光的折射原理、分享生動比喻，甚至探討學生最容易犯錯的陷阱。教師還可自訂摘要重點（例如：專注於期末考複習或實驗步驟）。",
-      "promptEn": "Generate a podcast-style Audio Overview in Gemini Notebook. Choose Week 7 sources on light and optics. NotebookLM generates an engaging deep-dive conversation between two AI hosts who explain core concepts, break down complex ideas with banter and analogies, and review key takeaways. Downloadable for offline listening.",
+      "promptZh": "【在 Gemini Notebook 的「工作室」中操作】：\n在「工作室」面板中點擊『語音摘要 (Audio Overview)』。選取第 7 週『光與光學』的所有材料。Notebook 將自動透過 AI 生成兩位主持人生動自然對談的雙人語音摘要音檔！兩位主持人會像專業廣播節目一樣互相搭腔、討論光的折射原理、分享生動比喻，甚至探討學生最容易犯錯的陷阱。教師還可自訂摘要重點（例如：專注於期末考複習或實驗步驟）。",
+      "promptEn": "Generate a podcast-style Audio Overview in Gemini Notebook. Choose Week 7 sources on light and optics. Gemini Notebook generates an engaging deep-dive conversation between two AI hosts who explain core concepts, break down complex ideas with banter and analogies, and review key takeaways. Downloadable for offline listening.",
       "parts": {
         "persona": "幽默專業且具備極佳化學反應的科學廣播雙主持人",
         "act": "將多份學術講義轉譯為高品質口語化雙人對談語音摘要",
@@ -1092,7 +1092,7 @@ window.APP_DATA = {
       },
       "tipsZh": "教師可以在開車通勤或備課時用聽的吸收教材，也可以將音檔下載後指派給學生作為『翻轉課堂 (Flipped Classroom)』的課前預習作業！",
       "applicableTools": [
-        "Gemini Notebook (NotebookLM)"
+        "Gemini Notebook"
       ],
       "targetAudience": "教師"
     },
@@ -1152,19 +1152,19 @@ window.APP_DATA = {
       "titleZh": "Classroom 作業附件：指派『Quiz me 測驗小助手』與辯論準備筆記本",
       "titleEn": "Classroom Assignment: Attach Quiz Me Gem and Debate Notebook to Assignments",
       "roleScenarioZh": "教師建立 Google Classroom 作業時，直接將互動 AI 學習工具作為附件發給學生",
-      "promptZh": "【在 Google Classroom 中發布作業操作情境】：\n情境 1（第一週複習）：教師在 Classroom 建立作業，直接點選附件中的『Gem』圖示，掛上『物理隨堂測驗小幫手 (Quiz me Gem)』。每位學生在繳交作業前，都可以點開該 Gem 生成專屬的運動學隨堂練習題，並獲得即時的個別化回饋。\n情境 2（第六週辯論）：教師建立作業並附上『能源科技爭議議題 NotebookLM 筆記本』，學生點開後即可在教師審核過的可靠文獻範圍內，進行正反方論點研究並模擬辯論攻防。",
-      "promptEn": "Attach AI learning experiences to Classroom assignments: Example 1: Attach a 'Quiz me' Gem to an assignment for Week 1 physics review so students get customized practice and feedback. Example 2: Attach a teacher-provided NotebookLM notebook to a debate assignment so students prep using curated sources.",
+      "promptZh": "【在 Google Classroom 中發布作業操作情境】：\n情境 1（第一週複習）：教師在 Classroom 建立作業，直接點選附件中的『Gem』圖示，掛上『物理隨堂測驗小幫手 (Quiz me Gem)』。每位學生在繳交作業前，都可以點開該 Gem 生成專屬的運動學隨堂練習題，並獲得即時的個別化回饋。\n情境 2（第六週辯論）：教師建立作業並附上『能源科技爭議議題 Notebook 筆記本』，學生點開後即可在教師審核過的可靠文獻範圍內，進行正反方論點研究並模擬辯論攻防。",
+      "promptEn": "Attach AI learning experiences to Classroom assignments: Example 1: Attach a 'Quiz me' Gem to an assignment for Week 1 physics review so students get customized practice and feedback. Example 2: Attach a teacher-provided Notebook notebook to a debate assignment so students prep using curated sources.",
       "parts": {
         "persona": "Google Classroom 課堂教學推動者",
         "act": "將受控安全之 AI 學習工具直接掛載於學生作業任務中",
         "recipient": "全班修課學生（以受控環境進行安全互動）",
         "theme": "物理概念自我檢核與公共議題批判性辯論準備",
-        "structure": "Classroom 作業指派流程 + Gem / NotebookLM 受控存取架構"
+        "structure": "Classroom 作業指派流程 + Gem / Notebook 受控存取架構"
       },
       "tipsZh": "學生打開時是專屬的『僅供檢視/互動 (View-only)』體驗，能自由問答但無法刪改老師設定的原始文獻，安全又有保障！",
       "applicableTools": [
         "Google Classroom",
-        "Gemini Notebook (NotebookLM)",
+        "Gemini Notebook",
         "Gemini Gems"
       ],
       "targetAudience": "教師"
@@ -1177,8 +1177,8 @@ window.APP_DATA = {
       "titleZh": "Classroom 課堂頂端置頂：牛頓運動定律學習嚮導與隨身實驗手冊",
       "titleEn": "Classroom Highlighted Resources: Newton's Laws Navigator & Interactive Lab Companion",
       "roleScenarioZh": "將全學期/全單元不可或缺的核心 AI 工具置頂在課堂作業最頂端",
-      "promptZh": "【在 Google Classroom 課堂作業頁面置頂】：\n教師在『課堂作業 (Classwork)』分頁中，勾選『置頂於課堂頂端 (Highlight at top of class)』。\n工具 1：『牛頓運動定律學習嚮導 Gem』：全單元期間學生隨時可點開提問。當學生問『為什麼滑冰選手推別人自己也會後退？』時，Gem 不直接給死板公式，而是引導學生思考冰面與推力的反作用力關係。\n工具 2：『物理實驗室數位隨身手冊 NotebookLM』：學生在實驗課隨時提問『這個步驟的安全規則是什麼？』，AI 立即精準引述官方實驗手冊回答。",
-      "promptEn": "Provide highlighted class learning resources at the top of the 'Classwork' tab. 1: Newton's Laws Navigator Gem: an on-demand tutor answering conceptual physics questions using everyday analogies. 2: Interactive Lab Companion NotebookLM: allows students to instantly ask questions about lab procedures and safety grounded strictly in official manuals.",
+      "promptZh": "【在 Google Classroom 課堂作業頁面置頂】：\n教師在『課堂作業 (Classwork)』分頁中，勾選『置頂於課堂頂端 (Highlight at top of class)』。\n工具 1：『牛頓運動定律學習嚮導 Gem』：全單元期間學生隨時可點開提問。當學生問『為什麼滑冰選手推別人自己也會後退？』時，Gem 不直接給死板公式，而是引導學生思考冰面與推力的反作用力關係。\n工具 2：『物理實驗室數位隨身手冊 Notebook』：學生在實驗課隨時提問『這個步驟的安全規則是什麼？』，AI 立即精準引述官方實驗手冊回答。",
+      "promptEn": "Provide highlighted class learning resources at the top of the 'Classwork' tab. 1: Newton's Laws Navigator Gem: an on-demand tutor answering conceptual physics questions using everyday analogies. 2: Interactive Lab Companion Notebook: allows students to instantly ask questions about lab procedures and safety grounded strictly in official manuals.",
       "parts": {
         "persona": "班級常駐專屬智慧助教 (Class-level Persistent AI Assistant)",
         "act": "置頂於 Classroom 課堂作業分頁最頂端，提供隨選即用支援",
@@ -1189,7 +1189,7 @@ window.APP_DATA = {
       "tipsZh": "置頂後學生不必在幾十篇發文中滾動翻找，一進 Classroom 就能直接點開求助，大幅降低迷航率！",
       "applicableTools": [
         "Google Classroom",
-        "Gemini Notebook (NotebookLM)",
+        "Gemini Notebook",
         "Gemini Gems"
       ],
       "targetAudience": "教師"
@@ -1553,7 +1553,7 @@ window.APP_DATA = {
       "sectionId": "overview",
       "titleZh": "本指南的核心學習目標",
       "titleEn": "This guide can help you learn how to:",
-      "summaryZh": "學習撰寫專業提示詞、掌握 Gems/Canvas/Deep Research、活用 NotebookLM、教學與評量提示詞庫，以及 Classroom 與 Workspace 整合。",
+      "summaryZh": "學習撰寫專業提示詞、掌握 Gems/Canvas/Deep Research、活用 Notebook、教學與評量提示詞庫，以及 Classroom 與 Workspace 整合。",
       "allTextsEn": [
         "This guide can help you learn how to:",
         "Apply best practices to write clear, effective prompts that maximize Gemini’s capabilities\nUnderstand how the Gemini app and many of its key features (Gems, Gemini Canvas, Deep Research) can support teaching, learning, and working\nUse Gemini Notebook to organize sources, deepen research, and support personalized learning workflows\nSelect and use prompts for planning, instruction, assessment, student support, and administrative work\nDiscover prompts students can use in Gemini to support independent learning, study skills, coding, career exploration, and creative projects\nExplore ways to improve efficiency with Gemini in Google Workspace apps\nUse Gemini in Classroom to plan lessons, personalize learning, and create interactive student experiences grounded in your course materials"
@@ -1569,7 +1569,7 @@ window.APP_DATA = {
       "sectionId": "overview",
       "titleZh": "本指南完整章節導覽 (目錄)",
       "titleEn": "Sections",
-      "summaryZh": "涵蓋 Gemini for Education、NotebookLM、Workspace、Classroom、Gems、AI 素養與 IT 管理員設定。",
+      "summaryZh": "涵蓋 Gemini for Education、Notebook、Workspace、Classroom、Gems、AI 素養與 IT 管理員設定。",
       "allTextsEn": [
         "Sections",
         "Ways to use Gemini for Education",
@@ -1717,7 +1717,7 @@ window.APP_DATA = {
     {
       "slideNumber": 10,
       "sectionId": "overview",
-      "titleZh": "認識 Gemini Notebook (NotebookLM)：基於專屬來源的個人化 AI",
+      "titleZh": "認識 Gemini Notebook：基於專屬來源的個人化 AI",
       "titleEn": "Understand anything with Gemini Notebook\nMeet your personal AI-powered research ",
       "summaryZh": "完全植基於你上傳的文件進行解答，零幻覺、零瞎掰，支援 80+ 種語言，並自動提供精確的原文引註出處。",
       "allTextsEn": [
@@ -1878,7 +1878,7 @@ window.APP_DATA = {
       "sectionId": "parts",
       "titleZh": "快速跳轉各單元章節",
       "titleEn": "Gemini Notebook",
-      "summaryZh": "方便讀者直接定位至 Gemini for Education、NotebookLM、Classroom 或 Workspace 各大應用模組。",
+      "summaryZh": "方便讀者直接定位至 Gemini for Education、Notebook、Classroom 或 Workspace 各大應用模組。",
       "allTextsEn": [
         "Gemini Notebook",
         "Gemini for Education",
@@ -3136,7 +3136,7 @@ window.APP_DATA = {
     {
       "slideNumber": 61,
       "sectionId": "notebooklm",
-      "titleZh": "Gemini Notebook (NotebookLM)：您專屬的來源資料 AI 專家",
+      "titleZh": "Gemini Notebook：您專屬的來源資料 AI 專家",
       "titleEn": "Understand anything with Gemini Notebook, your personalized AI expert on the inf",
       "summaryZh": "只針對您最重視的專屬資料與講義進行理解、歸納與對話，零幻覺、零造假。",
       "allTextsEn": [
@@ -3534,7 +3534,7 @@ window.APP_DATA = {
     {
       "slideNumber": 77,
       "sectionId": "notebooklm",
-      "titleZh": "充分發揮 Gemini Notebook (NotebookLM) 的 6 大高階祕訣",
+      "titleZh": "充分發揮 Gemini Notebook 的 6 大高階祕訣",
       "titleEn": "Getting the most \u000bout of Gemini Notebook",
       "summaryZh": "上傳優質來源、精準提問、探索工作室多元產出（語音摘要、影片摘要、報告、測驗、心智圖）、檢驗引文來源、儲存至筆記與持續迭代提問。",
       "allTextsEn": [

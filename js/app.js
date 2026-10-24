@@ -119,7 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'deck-section': 'tab-deck',
     'gems': 'tab-gems',
     'gems-section': 'tab-gems',
+    'notebook': 'tab-notebooklm',
     'notebooklm': 'tab-notebooklm',
+    'notebook-section': 'tab-notebooklm',
     'notebooklm-section': 'tab-notebooklm',
     'workspace': 'tab-workspace',
     'workspace-section': 'tab-workspace'

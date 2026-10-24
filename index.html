@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>運用 Gemini 於 K-12 中小學教育的 100+ 種方法 | Google for Education 繁體中文互動實戰指南</title>
   <meta name="description" content="Google 官方《100+ ways to use Gemini in K-12 education》完整繁體中文網站。收錄 Google Classroom 鷹架工具、PARTS 提示詞框架、48+ 實戰教學提示詞庫、自訂 Gems 專家與 129 頁全簡報互動解析。">
-  <meta name="keywords" content="Google Classroom, Gemini, 生成式AI, K-12教育, 教師AI工具, PARTS提示詞, NotebookLM, Google Workspace">
+  <meta name="keywords" content="Google Classroom, Gemini, 生成式AI, K-12教育, 教師AI工具, PARTS提示詞, Notebook, Google Workspace">
   
   <!-- Google Fonts: Noto Sans TC, Noto Serif TC, Inter, Roboto Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,7 +85,7 @@
           <span class="badge-num">7</span>
         </button>
         <button type="button" class="subnav-btn" data-tab="tab-notebooklm" onclick="switchTab('tab-notebooklm')">
-          <span>📓 NotebookLM</span>
+          <span>📓 Notebook</span>
         </button>
         <button type="button" class="subnav-btn" data-tab="tab-classroom" onclick="switchTab('tab-classroom')">
           <span>🏫 Classroom 鷹架</span>
@@ -145,7 +145,7 @@
             </button>
             <button type="button" class="action-chip" onclick="switchTab('tab-notebooklm')">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-              NotebookLM 知識庫
+              Notebook 知識庫
             </button>
             <button type="button" class="action-chip" onclick="switchTab('tab-classroom')">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
@@ -207,7 +207,7 @@
               <pre class="roadmap-ascii-pre"><code>Google 129 頁官方簡報核心架構
 ├── 1. 提示詞基礎與 PARTS 心法（第 1 ~ 47 頁）          👉 【PARTS 心法】與【實戰提示詞庫】
 ├── 2. 自訂教學專家 Gems（第 48 ~ 60 頁）             👉 【自訂專家 Gems】專區
-├── 3. Gemini in NotebookLM 知識庫（第 61 ~ 77 頁）     👉 【NotebookLM】專區
+├── 3. Gemini in Notebook 知識庫（第 61 ~ 77 頁）     👉 【Notebook】專區
 ├── 4. Classroom 課堂鷹架工具（第 78 ~ 108 頁）        👉 【Classroom 鷹架】專區
 ├── 5. Google Workspace 跨工具實務（第 109 ~ 124 頁）   👉 【Workspace 整合】專區
 └── 附錄. 129 頁全簡報逐頁全景對照（第 1 ~ 129 頁）      👉 【129 頁全簡報】逐頁對照</code></pre>
@@ -279,13 +279,13 @@
                   <span class="node-pages-badge">原報第 61 ~ 77 頁</span>
                   <span class="node-status-chip">零幻覺教研 · 智慧知識庫</span>
                 </div>
-                <h3 class="node-title">Gemini in NotebookLM 知識庫</h3>
+                <h3 class="node-title">Gemini in Notebook 知識庫</h3>
                 <p class="node-desc">
                   回答 100% 嚴格根植於教師上傳的教材與課綱，徹底解決 AI 幻覺問題。支援多格式教材交叉比對、生成單元心智圖、雙人語音對談 Podcast 與 8 週物理貫穿範例。
                 </p>
                 <div class="node-chips-row">
                   <button type="button" class="node-chip primary" onclick="switchTab('tab-notebooklm')">
-                    👉 前往【NotebookLM】專區
+                    👉 前往【Notebook】專區
                   </button>
                 </div>
               </div>
@@ -454,7 +454,7 @@
               <div class="portal-card-icon" style="background: rgba(18, 181, 203, 0.12); color: #12b5cb;">📓</div>
               <div class="portal-card-meta">
                 <div class="portal-card-title">
-                  NotebookLM 知識庫
+                  Notebook 知識庫
                   <span class="portal-card-badge">單元 3</span>
                 </div>
                 <div class="portal-card-desc">100% 根植於教師上傳文件的零幻覺教研神器！8 週物理單元貫穿示範、工作室「語音摘要」與「心智圖」。</div>
@@ -829,7 +829,7 @@
           <button class="filter-chip active" data-filter-type="category" data-value="all">全部環節</button>
           <button class="filter-chip" data-filter-type="category" data-value="core_prompts">教案與評量</button>
           <button class="filter-chip" data-filter-type="category" data-value="classroom">Classroom 課堂</button>
-          <button class="filter-chip" data-filter-type="category" data-value="notebooklm">NotebookLM 知識庫</button>
+          <button class="filter-chip" data-filter-type="category" data-value="notebooklm">Notebook 知識庫</button>
           <button class="filter-chip" data-filter-type="category" data-value="gems">自訂 Gems 專家</button>
           <button class="filter-chip" data-filter-type="category" data-value="advanced">進階研究與畫布</button>
           <button class="filter-chip" data-filter-type="category" data-value="workspace">Workspace 套件</button>
@@ -841,7 +841,7 @@
           <button class="filter-chip active" data-filter-type="tool" data-value="all">全部工具</button>
           <button class="filter-chip" data-filter-type="tool" data-value="Gemini App">Gemini App</button>
           <button class="filter-chip" data-filter-type="tool" data-value="Google Classroom">Classroom</button>
-          <button class="filter-chip" data-filter-type="tool" data-value="NotebookLM">NotebookLM</button>
+          <button class="filter-chip" data-filter-type="tool" data-value="Notebook">Notebook</button>
           <button class="filter-chip" data-filter-type="tool" data-value="Docs">Google Docs</button>
           <button class="filter-chip" data-filter-type="tool" data-value="Sheets">Google Sheets</button>
           <button class="filter-chip" data-filter-type="tool" data-value="Forms">Google Forms</button>
@@ -1022,7 +1022,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
           </div>
           <div>
-            <h2 class="section-title">Gemini Notebook (NotebookLM) 知識庫深度實戰</h2>
+            <h2 class="section-title">Gemini Notebook 知識庫深度實戰</h2>
             <div class="section-subtitle">以 8 週物理單元貫穿示範的精準教研庫 · 零幻覺、零造假</div>
           </div>
         </div>
@@ -1033,7 +1033,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
           <div>
             <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.75rem;">
-              🎯 為什麼 NotebookLM 是教師的備課神器？
+              🎯 為什麼 Notebook 是教師的備課神器？
             </h3>
             <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem; color: var(--text-muted); padding-left: 1.2rem;">
               <li><strong>100% 根植於專屬文件：</strong>只使用你上傳的教科書、教案與課綱回答，徹底杜絕 AI 幻覺。</li>
